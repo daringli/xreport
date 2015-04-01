@@ -1,0 +1,319 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+%\usepackage{relsize}
+
+%\usepackage{fixmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[small,font=it]{caption}
+\usepackage{amssymb}
+%\usepackage{icomma}
+%\usepackage{hyperref}
+%\usepackage{mcode}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{slashed}
+
+%\usepackage{units}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\footnotesize \parbox{11cm}{Planning report -- Event generator}}
+\rhead{\footnotesize \parbox{2cm}{\date}}
+\renewcommand\headheight{24pt}
+
+
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newlength\mylenA
+
+\newcommand*\obar[2][0.75]{% OverBAR, adds bar over an element
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+\makeatother
+
+%Wick Contractions
+\makeatletter
+\newcommand{\contraction}[5][1ex]{%
+  \mathchoice
+    {\contraction@\displaystyle{#2}{#3}{#4}{#5}{#1}}%
+    {\contraction@\textstyle{#2}{#3}{#4}{#5}{#1}}%
+    {\contraction@\scriptstyle{#2}{#3}{#4}{#5}{#1}}%
+    {\contraction@\scriptscriptstyle{#2}{#3}{#4}{#5}{#1}}}%
+\newcommand{\contraction@}[6]{%
+  \setbox0=\hbox{$#1#2$}%
+  \setbox2=\hbox{$#1#3$}%
+  \setbox4=\hbox{$#1#4$}%
+  \setbox6=\hbox{$#1#5$}%
+  \dimen0=\wd2%
+  \advance\dimen0 by \wd6%
+  \divide\dimen0 by 2%
+  \advance\dimen0 by \wd4%
+  \vbox{%
+    \hbox to 0pt{%
+      \kern \wd0%
+      \kern 0.5\wd2%
+      \contraction@@{\dimen0}{#6}%
+      \hss}%
+    \vskip 0.2ex%
+    \vskip\ht2}}
+\newcommand{\contracted}[5][1ex]{%
+  \contraction[#1]{#2}{#3}{#4}{#5}\ensuremath{#2#3#4#5}}
+\newcommand{\contraction@@}[3][0.06em]{%
+  \hbox{%
+    \vrule width #1 height 0pt depth #3%
+    \vrule width #2 height 0pt depth #1%
+    \vrule width #1 height 0pt depth #3%
+    \relax}}
+\makeatother
+%USAGE: [] optional argument specifies distance over text. Default 1ex
+%second argument specified what comes before the contraction starts
+%third argument where the contraction starts
+%fourth what the contraction passes over
+%fifth where the contraction ends
+%\begin{equation}
+%  \contraction[2ex]{}{A}{(x)B(y)}{C}
+%  \contraction{A(x)}{B}{(y)C(z)}{D}
+%     A(x)B(y)C(z)D(w)
+%\end{equation}
+
+%\def\equationautorefname{ekvation}
+%\def\tableautorefname{tabell}
+%\def\figureautorefname{figur}
+%\def\sectionautorefname{sektion}
+%\def\subsectionautorefname{sektion}
+
+\newcommand{\ordo}[1]{{\cal O}\left( #1 \right)}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\fvec}[1]{\boldsymbol{#1}}
+\newcommand{\im}{\ensuremath{\mathrm{i}}}
+\newcommand{\e}{\ensuremath{\mathrm{e}}}
+\newcommand{\bra}[1]{\langle #1 \mid}
+\newcommand{\ket}[1]{\mid \!#1 \rangle}
+\newcommand\matris[4]{\ensuremath{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}}
+\renewcommand{\d}{\ensuremath{\mathrm{d}}}
+\newcommand{\avgm}{\ensuremath{\langle |\mathcal{M}|^2\rangle}}
+\newcommand{\bu}{\ensuremath{\bar{u}(p')}}
+\newcommand{\up}{\ensuremath{u(p)}}
+%\DeclareMathOperator*{\sgn}{sgn}
+
+\newcommand{\rtb}{\ensuremath{\text{R}^3\text{B}}}
+\newcommand{\me}{\ensuremath{\mathcal{M}}}
+
+
+%=================================================================
+\begin{document}
+\title{Event Generators for \rtb{} --- Planning report}
+\author{Stefan Buller}
+\maketitle
+\section{Introduction}
+The international FAIR (Facility for Antiproton and Ion Research), the LAND experimental setup is succeeded by the \rtb{} (Reactions with Relativistic Radioactive Beams) setup, which includes a score of new detectors. During all stages of this process---from designing and calibrating the new individual detectors and the entire setup, to analyzing the data and extracting the underlying physics---simulations are or will be used. 
+
+The \rtb{} experiment aims at studying nuclear physics, in particular the properties of exotic nuclei far from the valley of stability \cite{r3b}. The experiments will be performed with radioactive beams, and the aim is to be able to determine the complete kinematics of the reaction. We will here describe a generic experiment of this kind.
+The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target---a so called \emph{event}---the reaction products are, ideally, identified by recording where they hit the detector, when they hit the detectors (which allows detector output to be attributed to individual events, which yields the initial and final momentum); how much energy they deposit in the detectors (yielding the charge); and their deflection in a magnetic field, which gives their charge-to-mass ratio, and thus their mass. 
+
+This is of course a simplification: the reaction products may decay in-flight, they may be deflected by interacting with the air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is non-deterministic. 
+
+While simulations are used to determine how a given reaction product propagates throughout the experimental setup, they are not necesarilly needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
+In many cases, this is not a problem: it is enough to simulate particles with specified initial momenta matching the kinematic constraints of the reaction and see how they propagate through the experimental setup---a setup which should be able to identify them even if they are not the result of an actual reaction.
+However, since the setup in practice only should identify actual reactions products, it would be more ideal if the simulations incorporated some of the theory regarding the reactions to be studied.
+%, and generated particles with initial momenta consistent with what is expected
+
+%To see when a more sophisticated model for the reactions could be useful, we will look at an example: an addback routine for the Crystal ball.
+%The Crystal Ball is a detector in the old (CURRENT?) LAND/\rtb{} setup. It is composed of 162 NaI(Tl) subdetectors arranged in a spherical shell around the target\cite{ronja}. The subdetectors are intended to measure the energy depositions of $\gamma$-photons and high-energy protons, and, by their position relative to the target, the angle of which the reaction product was ejected. 
+%However, $\gamma$s (and protons) may scatter inside a subdetector and into another one, allowing them to deposite energy in several detectors \cite{simon}. To identify the energy deposited by a single proton or $\gamma$, their energy deposites have to be summed from the different subdetectors. This is done by the addback routine.
+%This is also non-trivial, since the energy deposits may be due to several particles, rather than one, and the time resolution of the detector makes it impossible to tell the difference---or to even determine which subdetector a given particle hit first \cite{simon}. The current addback is described in, for example, section 5.3 of \emph{Across the drip-line and back: examining $^{16}$B} \cite{ronja}. 
+%This could possibly be improved if the simulations contained a model for some of the reactions anticipated to take place at the target---\emph{event generators}. By using realistic \emph{event generators}, simulations may provide a statistical signature for multiple particles resulting from the same reaction, and hence help differentiate them from single particles scattering in the detector.
+
+%With the transition of the LAND experimental setup to the \rtb{} setup, Crystal Ball will be replaced by a new detector intended to fulfill an analogous purpose: the CALIFA detector. For a detailed description of this detector, see \emph{Technical Report for the Design, Construction and Commissioning of The CALIFA Barrel} \cite{califab}. For reference, the barrel part of CALIFA will have 1952 subdetectors, and an inner radius of $30\,\mathrm{cm}$, while Crystal Ball has a mere 162 subdetectors, and an inner radius of $25\,\mathrm{cm}$. Hence the CALIFA addback routine has an unprecedented opportunity to make use of more detailed models for the reactions, and it's thus high time that existing models are incorperated into the simulation infrastructure. (NOT SURE IF THIS IS QUITE TRUE, OR IF XB PROVIDED ENOUGH DETAILS ALREADY?)
+
+\subsection{Project outline}
+This Master's thesis is about the implementation and verification of an \emph{event generator} for two important and related kinds of reactions: projectile fragmentation and $(p,2p)$ scattering at relativistic energies.
+In both processes, the projectile nucleus is modelled as a collection of essentially free nucleons, of which some (the participants) collide with nucleons of the target, and are ejected from the nucleus, while the remainder (the spectators) pass by essentially enchanged. Such collisions are called quasi-elastic, since the binding energy of the ejected nucleons is much smaller than the kinetic energy of the projectile, which motivates modelling the nucleons as essentially being free.
+For a more thorough theoretical description, see \autoref{tqe}.
+
+The project will be based on an existing FORTRAN code for quasi-elastic scattering, which is to be adapted for and implemented within the \textsc{land02} software infrastructure, more specifically as part of \textsc{ggland}'s gun functionality. These codes are presented in more detail in \autoref{s}. In particular, the mentioned FORTRAN code does not contain models for actually generating a distribution of possible final particles, merely momentum distributions for given prefragments and participant nucleons, the latter which are only described with a single total momentum and invariant mass. Thus the code needs to be supplemented with additional code, modelling the abrasion and evaporation stages of the process.
+
+A large part of the project will be to verify the code by performing simulations and comparing the results with actual experimental data. As such, the code should preferably be in a run-able condition by early March. From that point, it will need to be tested and compared with actual experimental data, and possibly updated to reflect the observed distributions. A report will be written alongside these simulations. The project will finish in early June, and as such most simulations should be done by the later half of May, so as to give time for finalizing the report and preparing an oral presentation. The timetable is summerized in \autoref{timetable}.
+
+\begin{table}
+\centering
+\caption{\label{timetable} A preliminary timetable for the project. The horizontal lines correspond to different phases of the project, where the latter phases depend on the earlier.}
+\begin{tabular}{r|c|c}\hline\hline
+& Start & Finish \\\hline
+Implementing the code & 2015-02-01 & 2015-03-01 \\
+Finding relevant experimental data to verify the code on & 2015-02-01 & 2015-03-01 \\\hline
+Running simulations with the code & 2015-03-01 & 2015-05-15 \\
+Writing a report &  2015-02-01 & 2015-06-05 \\\hline
+Preparing an oral presentation  &  2015-06-01 & 2015-06-10 \\\hline\hline
+\end{tabular}
+\end{table}
+
+
+
+\section{Theory}
+\label{t}
+A distribution according to a given parameter $\alpha$, which may be, for example, a momentum, or an angle, is essentially given by (with an appropriate normalization)
+\begin{equation}
+f(\alpha) =\frac{d}{d\alpha} \left(|\me|^2 R_n\right), \cite{phasespace}\label{dist}
+\end{equation}
+where $R_n$ is the $n$-body phase-space factor, and $\me$ is the matrix element describing the interactions. This may be derived from Fermi's Golden Rule, which basically states that the reaction rate (or cross-section), is given by $|\me|^2 R_n$, whereupon a derivation with respect to $\alpha$ gives the distribution in terms of $\alpha$, since (here in the language of scattering)
+\begin{equation}
+\sigma = \int d\alpha \frac{d\sigma}{d\alpha}.
+\end{equation}
+
+For non-interacting particles, $\me=1$, and as such the distribution is given purely by the phase-space factor. This factor merely takes into account conservation of momentum, and the density of states due to momentum, and is thus given by
+\begin{equation}
+R_n = \int  \delta^4(\fvec{P}- \sum \fvec{p}_i) \prod_i\left( \delta(\fvec{p}_i^2 - m_i^2)d^4\fvec{p}_i\right),\label{rn}
+\end{equation}
+where $\fvec{p}_i$ is the 4-momentum of the $i$th particle, and $\fvec{P}$ the total 4-momentum of the system. The product sign with the $d^4\fvec{p}_i$ is merely a formal way to indicate that the integral runs over the $4n$ dimensional momentum-space of our $n$ particles. The Raubold-Lynch method, that \textsc{ggland} implements, solves this integral by using the invariant mass of various $2$-body subsystems. For example, viewing particle $1$ and $2$ as subsystem, we may write
+\begin{equation}
+R_n = \int_0^\infty dM_2 R_{n-1}(\fvec{P};M_2,m_3,\dots,m_n) R_2(\fvec{P}_2,m_1,m_2),
+\end{equation}
+where $P_2$ is the 4-momentum of the $m_1,m_2$ subsystem, which gets fixed to $M_2$ by a $\delta$-function in $R_{n-1}(\fvec{P};M_2,m_3,\dots,m_n)$, which is defined analogously to \eqref{rn}, but with $\fvec{P}_2$ in a $\delta$-function $M_2$, the first argument. $M_2$ is integrated over, since we must allow any invariant mass for the $m_1,m_2$ subsystem, so as to sum over all possible decays.
+By repeating this argument, now with ``particles'' $M_2,m_3,\dots$, this effectively decomposes the $n$ particle phase-space factor into $n-1$ two-particle decays.
+
+While this is a beautiful interpretation of the phase-space factor, it is primarily useful for calculating the distribution \eqref{dist} if \me{} can be expressed in the same variables as $R_n$, that is, as a function of the invariant masses and the total 4-momentum. This may not be the case, and in that case, another implementation may be preferable, although not necesary, if the integral is solved by Monte-Carlo integration \cite{phasespace}. There is also the problem of expressing $R_n$ and \me{} in terms of the $\alpha$ chosen in \eqref{dist}, and possibly orthogonal degrees of freedom, which must then be summed or integrated over \cite{phasespace}.
+
+%MAY NOT BE AS INTERESTING AS INITIALLY ASSUMED, SINCE WE CALCULATE TOTAL CROSS-SEC IN NEXT, NOT PS+ME.
+
+\clearpage
+\subsection{Quasi-elastic scattering reactions}
+\label{tqe} 
+\begin{figure}
+\centering
+\input{qe.pdf_t}
+\caption{\label{qe} An illustration of a quasi-elastic collision, indicating the participant nucleons (P) and the spectator nucleons (S).}
+\end{figure}
+The general spirit of the quasi-elastic approximation is illustrated in \autoref{qe}, in which a projectile collides with a proton in the target. In this picture, the collision is modeled as if taking place between individual nucleons. This is motivated if the kinetic energy of the projectile is much greater than the binding energy of the nucleons, so that they may be treated as essentially free. This is also the reason why the scattering is called \emph{quasi-elastic}, since the relative difference in kinetic energy between the final and initial states will be small.
+The nucleons participating in the collision will scatter, while the spectator nucleons will continue to move forward essentially unaffected by the collision, in the form of a pre-fragment. This pre-fragment, which is often in a highly excited state due to the sudden removal of the participant nucleons, will then decay into the actual fragments, often by ejecting $\gamma$-rays or more nucleons, or even other nuclei. The process stops when it is no longer energetically allowed to eject further particles, and the pre-fragment will then have become the final fragments.
+
+This is all qualititative. A quantitive model would need to address the following:
+\begin{enumerate}
+\item The distribution of participant protons and neutrons.
+\item The state of the pre-fragment.
+\item The process by which the pre-fragment decays.
+\end{enumerate}
+As often is the case in nuclear physics, there is no model that is valid for all nucleons and incident energies \cite{nasa}. 
+
+The first stage, in which the participant nucleons are removed from the fragment, is known as \emph{abrasion}. The abrasion model should, to some level of detail, describe the final state of the participant nucleons, as well as the final state of the pre-fragment. Since diffrent decay models use different variables to describe the pre-fragment, the choice of an abrasion model limits the choice of a decay model. The existing code uses $A,Z$ and the excitation energy of the prefragment, which is what the abrasion-ablation model uses \cite{aa}. We will now describe this model, essentially a summary of \emph{A reexamination of the abrasion-ablation model for the description of the nuclear fragmentation reaction} \cite{aa}.
+
+The probability for a participant nucleon to be a neutron or a proton is simply be given by the ratio of protons and neutrons in the original nucleus. This allows us to relate $A'$ and $Z'$ of the pre-fragment to the probability to just produce a pre-fragment with $A'$ nucleons
+\begin{equation}
+\sigma(A',Z') = \frac{\binom{Z'}{Z-Z'}\binom{N'}{N-N'}}{\binom{A'}{A-A'}}\sigma(A'),
+\end{equation} 
+where $\sigma(A')$ may be taken from experiment, or some model. In the geometrical abrasion model, it is simply taken to be proportional to the overlap volume, which in turn will depend on the impact parameter. Note that the cross-section for a nucleon-nucleon scattering event at the beam momentum is needed, since the above is just a proportionality relation. More realistic nuclear matter distributions can of course be used, rather than assuming a homogenous distribution throughout a nucleus of a fixed size. This gives the composition of the prefragment. For the excitation energy, another model must be used. In the geometrical abrasion model, the excitation energy is taken to be proportional to the surface difference between the original nuclei minus the overlap zone, and a spherical nuclei with $A'$ nucleons. The motivation for this model is that this area difference should be proportional to the number of fractured nucleon-nucleon binding. A different model, more consistent with the idea that the prefragment is mostly unaffected by the collision, takes the excitation energy to be the energy of the holes created by the knocked-out participant nucleons. 
+
+After the abrasion process, we will have an excited prefragment, which will 'evaporate' or undergo fission until that is no longer energetically favorable. %Evaporation is merely a special case of fission, where one of the daughter nuclei is very light, so called asymmetric fission.
+The probability for the prefragment to be in the state $x=\{A,Z,E'\}$ at a time $t$ can in principle be calculated from a master equation
+\begin{equation}
+\frac{dP(x)}{dt} = -P(x)\int\Omega(y) \me_{x\to y} dy +  \int P(y)\Omega(x) \me_{y\to x},
+\end{equation}
+where $\Omega(y)$ is the density of states for the state $y$, $P(x)$ is the probability of being in state $x$ at time $t$, and $\me_{x\to y}$ is the matrix element for a transition from $x$ to $y$.  The equation basically states that change in probability of the prefragment being in state $x$ is minus the probability for the state to leave $x$ to any state $y$, and plus the probability to go from any state $y$ to $x$. Whether these transitions are actually allowed is contained in the matrix element $\me$. (MAYBE MATRIX ELEMENT SQUARED, IF TRANSITION PROBABILITY AS IT USUALLY IS WRITTEN!)
+The matrix element may be calculated by considering the number of possible particle-decays the prefragment can undergo. If we, as an example, say that the fragment can only evaporate protons, we have 
+\begin{equation}
+\me_{x\to y} = \begin{cases} 0 &;\quad A_x\neq A_y+1, Z_x \neq Z_y+1 \\
+f(E_x,E_y) &; \quad A_x = A_y+1, Z_x = Z_y+1,
+\end{cases}
+\end{equation}
+where $f(E_x, E_y)$ is some function of the excitation energy of the states $x$ and $y$. This is of course a very unrealistic case: a realistic model would have to consider all possible single-particle decays (including for example the evaopartion of stable subsystems of nucleus, like $\alpha$ particles). In such cases, since spin is not accounted for in the states, since the various decays should be given relative weight based on the number of ways they can happen, and we have to sum over the possible spin states of the evaporated particles. This is done assuming that the different processes take place on the same time-scale, which again is unrealistic. 
+
+Since we are also interested in the momentum of the outgoing fragments, these models are not quite sufficient, since we need to consider the possible momenta of the evaporated particle and prefragment, as well as the momenta of the nucleons in the participant zone. In the Goldhaber model, the momenta of individual nucleons peak at zero (in the rest frame of the nucleus), with a width related to the Fermi-momentum \cite{gold}. In light of how complicated the evaporation process may be, it may be suitable to look for another code to simulate it---indeed, the existing code does merely calculate the momentum of the prefragment given an excitation energy. We will now look in more detail at this code, to see what else needs to be done.
+
+\clearpage
+
+
+\section{Software}
+\label{s}
+\subsection{quasi\_elastic.for}
+\begin{figure}
+\begin{center}
+\scalebox{0.8}{
+\hspace{-10ex}\input{code.pdf_t}}
+\caption{\label{qep} A flowchart of the existing FORTRAN code. $t$ and $s$ are Mandelstam variables. The output of interest are the momenta of the prefragment and knocked-out cluster, before noise is added.}
+\end{center}
+\end{figure}
+There already exists a code for calculating the momenta of outgoing reaction products. We will now describe \texttt{quasi\_elastic.for}, written by Leonid Chulkov. The general flow of the program is illustrated in \autoref{qep}.
+The input to the program is in the form of the masses of the pre-fragment, fragment and participant system, as well as the kinetic energy of the projectile in the lab frame. The participant system refers to both the target and the participants nucleons in the nucleus: in short, the nucleons directly taking part in the collision.
+This already presents a limitation to the code, as it cannot be used to generate the distribution of reaction products given the beam and target parameters, but rather just the momentum distribution given a final state. The participants in the nucleus are also modelled with just a few parameters, the total mass and momentum, and thus all details will not be captured by the model in the case where more than a single nucleon (or more generally, a cluster, which is the terminology that we will use from now on) takes part in the reaction.
+
+The calculation proceeds as follows: the cluster is assumed to have an additional momentum component relative to the projectile frame, given by the Goldhaber model, which is described in \autoref{t}. The pre-fragment will have the opposite momentum, since we are in the projectile frame, and thus the internal momenta should sum to zero. The results are then boosted to the labframe, assuming the incoming projectile travels purely in the beam direction, $z$ by convention. 
+
+With the incoming momenta in the lab-frame, we are ready to treat the actual scattering, which we model to take place between the cluster and the target.
+The Mandelstam variable $t=(\fvec{p}_\text{cluster} - \fvec{p}_\text{scattered cluster})^2$ is generated, either from an experimental cross-section $\tfrac{d\sigma}{dt}$, or by assuming an isotropic cross-section, which gives a uniform random $t$ (WHY THIS ASSUMPTION?). It is possible to set a lower bound on the square-root of this variable, and if this bound is violated, a new $t$ will be generated.
+$s=(\fvec{p}_\text{projectile}+\fvec{p}_\text{target})^2$ is basically the invariant mass squared, which is calculated from the cluster and target mass. The cluster mass is calculated in terms of the prefragment and projectile masses, and its momentum in the projectile frame, to be consistent with the total mass of the projectile. 
+With $t$, $s$ and the masses given, the momentum of the center of mass frame is calculated, as well as the $\theta$ angle of the outgoing proton and cluster is calculated, the latter in terms of the former, since they are scattered back-to-back in that frame. The $\phi$ angle is taken as a uniform random number over $[0,2\pi]$. The result is then boosted to the lab-frame, and rotated so that the center of mass travels along the beam direction.
+
+Finally, the data is ``spoiled'' by adding specified experimental uncertainties associated with the various momenta. Finally, in the case for $(p,2p)$ scattering, since we have identical particles, the two momenta are exchanged with a probability $0.5$. This data is then analyzed, to determine the angles of the outgoing particles and the  missing mass. %DESCRIBE? NOT VERY INTERESTING FOR OUR PURPOSES, I THINK...
+
+%(CONFIRM CALCULATIONS IN DETAIL. SHOULD BE STRAIGHTFORWARD, OR SOMETHING IS AMISS.)
+
+It should be noted that the code neither models the probability for a given number of protons and neutrons to be in the overlap zone, nor the subsequent deexcitation of the pre-fragment. The former is definitely a limitation, although the latter may be possible to relegate to \textsc{Geant}, as it has models for the deexcitation of excited pre-fragments \cite{gaa}. \textsc{Geant} also has models for the abrasion stage; these could potentially be used, although they'd have to be extracted from the program and implemented separately, as we do not want to simulate a beam hitting the target in \textsc{Geant}, as it would not generate interesting event in an overwhelming amount of the simulations. (IS THIS TRUE? COULD BE A REASON, AT LEAST!) 
+
+\subsection{land02---ggland---gun}
+\textsc{land02} is a package of programs for everything from conversion of raw data from the LAND experiment, to more general simulations. The simulations are done through \textsc{ggland}, a command-line wrapper to \textsc{Geant4}, \emph{a toolkit for simulation of the passage of particles through matter} \cite{ggland}\cite{g4}. Relevant for this project is \textsc{ggland}'s ``gun'' functionality, which is what it uses to generate particles with given initial positions and momenta. These initial values may be generated according to a given distrubition. The gun currently implements a phase-space distribution, according to the Raubold-Lynch method \cite{phasespace}. This method is described in more detail in \autoref{t}.
+
+\begin{thebibliography}{9}
+\bibitem{r3b} The \rtb{} webpage at GSI \url{https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b.htm}
+
+\bibitem{phasespace} F. James (1968) \emph{Monte Carlo Phase Space}
+\url{http://cds.cern.ch/record/275743/files/CERN-68-15.pdf}
+%\bibitem{ronja} R. Theis (2014) \emph{Across the drip-line and back: examining $^16$B}, licentiate thesis. \url{http://publications.lib.chalmers.se/publication/193345-across-the-drip-line-and-back-examining-16b}
+
+%\bibitem{simon} S. Lindberg (2013) \emph{Optimised Use of Detector Systems for Relativistic Radioactive Beams - How to kill a smiley and get away with it!}, Master Thesis. Section 2, Crystal Ball Addback Routines, \url{http://publications.lib.chalmers.se/records/fulltext/173525/173525.pdf} 
+
+%\bibitem{califab} CALIFA Collaboration (2011) \emph{Technical Report for the Design, Construction and Commissioning of The CALIFA Barrel: The \rtb{} CALorimeter for In Flight detection of $\gamma$-rays and high energy charged pArticles}
+
+
+
+
+\bibitem{nasa} F.A. Cucinotta, J.W. Wilson, J.L. Shinn, R.K. Tripathi \emph{Assessment and requirements of nuclear reaction databases for gcr transport in the atmosphere and structures} Adv Space Res. 21 (1998) 1753-1762
+
+
+
+\bibitem{aa} J.J. Gaimard and K.H. Schmidt \emph{A reexamination of the abrasion-ablation model for the description of the nuclear fragmentation reaction} Nuclear Physics A531 (1991) 709-745
+
+\bibitem{gold} A.S. Goldhaber \emph{Statistical models of fragmentation processes} Phys. Lett. B 53 (1974) 306-308
+
+\bibitem{gaa} \emph{De-excitation of the projectile and target nuclear pre-fragments by standard Geant4 de-excitation physics } \url{http://geant4.cern.ch/G4UsersDocuments/UsersGuides/PhysicsReferenceManual/html/node139.html}
+
+\bibitem{ggland} Håkan T. Johansson (2014) \emph{The ggland command-line simulation wrapper. Long write-up — documentation and manual}
+
+\bibitem{g4} \textsc{Geant4}---a simulation toolkit (2003) J. Allison, et. al. Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, Volume 506, Issue 3, Pages 250-303
+
+
+
+%\BIBITEM{G} P.J. MOHR, B.N. TAYLOR, AND D.B. NEWELL (2011), \EMPH{THE 2010 CODATA RECOMMENDED VALUES OF THE FUNDAMENTAL PHYSICAL CONSTANTS} AVAILABLE AT: \URL{HTTP://PHYSICS.NIST.GOV/CGI-BIN/CUU/VALUE?BG|SEARCH_FOR=G} [2014-11-12]. NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY
+
+%\bibitem{phasespace} F. James (1968) \emph{Monte Carlo Phase Space} \url{http://cds.cern.ch/record/275743/files/CERN-68-15.pdf}
+%\bibitem{ggland} Håkan T. Johansson (2014) \emph{The ggland command-line simulation wrapper. Long write-up — documentation and manual}
+%\bibitem{p2p} Y. Mardor et. al. (1998) \emph{Measurement of quasi-elastic 12C(p,2p) scattering at high momentum transfer} Physics Letters B, Volume 437, Issues 3–4, Pages 257–263
+%\bibitem{frag} Y. Kitazoe et. al. (1984) \emph{Primary Projectile Fragmentation Distribution in High Energy Heavy Ion Collisions}  Progress of Theoretical Physics, Volume 71, Issue 6, Pages 1429-1431 
+\end{thebibliography}
+\end{document}

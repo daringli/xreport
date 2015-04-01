@@ -1,0 +1,6 @@
+!/bin/sh
+
+pdflatex reportSimul2013.tex
+makeindex test.nlo -s nomencl.ist -o test.nls
+pdflatex reportSimul2013.tex
+pdflatex reportSimul2013.tex

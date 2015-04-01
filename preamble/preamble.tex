@@ -1,0 +1,199 @@
+\documentclass[11pt, a4paper, twoside, headsepline]{scrreprt}
+\usepackage{scrpage2} 
+%\usepackage{perpage} %make footnotes per page
+%\MakePerPage{footnote}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{fixmath}
+\usepackage{graphicx}
+%\usepackage{xcolor}
+%\usepackage{textcomp}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[small,font=it]{caption}
+\usepackage{amssymb}
+\usepackage{units}
+\usepackage{upgreek}
+\usepackage{icomma}
+%\usepackage{pdfpages}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{units}
+%\usepackage[sc]{titlesec}
+%\usepackage{fancyhdr}
+\usepackage[breakall,fit]{truncate}
+\usepackage[intoc,refpage]{nomencl}
+\usepackage{lettrine}
+\usepackage{geometry}
+\usepackage{eso-pic}
+\usepackage{titling}
+\usepackage{multirow}
+\usepackage{chngcntr}
+\usepackage{amsthm}
+\usepackage{subfig}
+\usepackage{lmodern}
+
+
+\newcommand{\floor}{\mathrm{floor}}
+
+\setkomafont{disposition}{\bfseries}
+
+\renewcommand{\headfont}{\fontsize{12}{12}\selectfont\normalfont\slshape}
+
+    \makeatletter
+    \renewcommand{\@makechapterhead}[1]{%
+    \vspace*{50 pt}%
+    {\setlength{\parindent}{0pt} \raggedright \normalfont
+    \bfseries\Huge\thechapter.\ \, #1
+    \par\nobreak\vspace{40 pt}}}
+    \makeatother
+
+
+
+
+
+
+\usepackage{upref}
+\newcommand{\footnoteindex}[1]{\setcounter{footnote}{#1}\addtocounter{footnote}{-1}\footnotemark}
+\newcommand{\footnoteref}[1]{Footnote #1}
+
+
+
+\newcommand{\backgroundpic}[3]{%
+\put(#1,#2){
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#3}
+			\vfill
+}}}
+
+\newcommand{\mail}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
+%\pagestyle{fancy}
+%\lhead{\truncate{16em}{\fontsize{10}{11}\selectfont\rightmark}}
+%\rhead{\truncate{20em}{\fontsize{10}{11}\selectfont\leftmark}}
+%\lhead{\rightmark}
+%\rhead{\leftmark}
+%\setlength{\headheight}{15pt}
+
+%%% Closed square root
+\usepackage{letltxmacro}
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+\setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+\makeatother
+%%%
+
+%%%
+\newcounter{myfootnote}
+\makeatletter
+\@addtoreset{equation}{myfootnote}
+\makeatother
+\newcounter{myequation}
+\makeatletter
+\@addtoreset{equation}{myequation}
+\makeatother
+% Resetting the equation counter is done by stepping myequation, so use \stepcounter{myequation} instead of \setcounter{equation}{0}
+% Else, hyperref fails
+\newcounter{myfigure}
+\makeatletter
+\@addtoreset{figure}{myfigure}
+\makeatother
+\newcounter{mytable}
+\makeatletter
+\@addtoreset{table}{mytable}
+\makeatother
+%%%
+
+
+%\renewcommand\headheight{14pt}
+
+
+\usepackage[bookmarks, unicode=true, pdftitle={EventGenerators}, pdfauthor={Stefan Buller}, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref} %assumes black text!
+
+\usepackage[all]{hypcap}
+\usepackage[intoc,refpage]{nomencl}
+\renewcommand{\nomname}{Glossary} % rename nomenclature
+\renewcommand{\nomlabel}[1]{\textbf{#1}}
+\makenomenclature
+
+\def\figureautorefname{Figure}
+\def\chapterautorefname{Section}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+
+\newenvironment{myenumerate}{%
+  \edef\backupindent{\the\parindent}%
+  \enumerate%
+  \setlength{\parindent}{\backupindent}%
+}{\endenumerate}
+
+
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+
+\newcommand{\ordo}[1]{{\cal O}\left( #1 \right)}
+\newcommand{\im}{\ensuremath{\mathrm{i}}}
+\newcommand{\e}{\ensuremath{\mathrm{e}}}
+\renewcommand{\d}{\ensuremath{\mathrm{d}}}
+
+\newcommand{\bra}[1]{\langle #1 \mid}
+\newcommand{\ket}[1]{\mid #1 \rangle}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+\newcommand{\chem}[2]{\mathrm{#1}_{#2}}
+\newcommand{\dfn}[2]{\emph{#1}\footnote{#2}}
+\newcommand{\abbrev}[2]{\emph{#1} (#2)}
+\newcommand{\E}[1]{\ensuremath{\mathrm{E}[#1]}}
+
+%\newcommand{\prgname}[1]{\textsc{#1}}
+%to make smallcaps work in \section, etc. normally a problem because no bold sc
+%texorpdfstring to make hyperref give proper side-bar clicky!
+ \usepackage{relsize}
+  \newcommand{\prgname}[1]{\texorpdfstring{\textsmaller{\MakeUppercase{#1}}}{\textsc{#1}}}
+
+
+\newcommand{\pM}{\mathrel{\raise -2.2pt \hbox{\tiny(\,}\!
+                 \raise 2pt \hbox{+}
+                 \settowidth {\dimen03} {+}
+                 \hskip-\dimen03
+                 \raise -3.4pt \hbox {$-$}
+                 \!\raise -2.2pt \hbox{\tiny{\,)}}}}
+
+\newcommand{\codename}{\prgname{Codez}}
+\newcommand{\nucl}[3]{
+\ensuremath{
+\phantom{\ensuremath{^{#1}_{#2}}}
+\llap{\ensuremath{^{#1}}}
+\llap{\ensuremath{_{\rule{0pt}{.75em}#2}}}
+\mbox{#3}
+}
+}
+
+\title{EventGenerators}
+\author{Stefan Buller}
+\date{\today}
+
+
+\begin{document}
+\input{titlepageabstract/titlepageabstract}
+
+\selectlanguage{english}
+
