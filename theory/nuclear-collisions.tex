@@ -1,4 +1,34 @@
 From a macroscopic perspective, nuclei can be viewed as charged particles, and thus collisions (here in a loose sense) between them is essentially governed by the Rutherford scattering formula.
 This is how the nucleus was discovered in the first place. However, this simple picture breaks down at higher energies, when the de Broglie wave-length ($\lambda \sim \vec{p}^{-1}$) becomes sufficiently small to resolve the inner structure of the nuclei. At even higher energies, it becomes feasible to model the collision as not taking place between the two nuclei, but by individual protons and neutrons (nucleons).
 
-This leads us to the \emph{participant-spectator} picture of nuclear collisions, in which the collision is viewed as if taking place between a few \emph{participant} nucleons, while the remaining \emph{spectator} nucleons remain mostly unaffected.
+This leads us to the \emph{participant-spectator} picture of nuclear collisions, in which the collision is viewed as if taking place between a few \emph{participant} nucleons, while the remaining \emph{spectator} nucleons remain mostly unaffected. Such a reaction is known as \emph{quasi-elastic scattering}, since the kinetic energy of the projectile will be much greater than the binding energy of the participants, which further motivates treating them as approximately free particles, and means that the kinetic energy will almost be conserved, hence \emph{quasi-elastic}.
+!!!POSSIBLY DISCUSS LIMITATIONS!!!
+The collision between the participant nucleons takes place at a time scale of about \unit[$10^{-23}$]{s}\cite{gaimard:1991:art}, and is sometimes called a \emph{fireball} or \emph{firestreak}.
+
+However, this is just the first part of the collision. The participant nucleons may have gone unaffected through it, but the resulting system (a so-called pre-fragment) will be highly excited, and will decay to the actual fragment---often by ejecting nucleons, in this context known as evaporating them. The characteristic time-scale for these ejections vary between \unit[$10^{-21}$ -- $10^{-16}$]{s}, depending on the energies and emitted particle\cite{gaimard:1991:art}. 
+
+In this picture, we thus have a two-step process to describe nuclear fragmentation. 
+Various models to describe both steps exist in the literature, which can be combined more or less freely---they do not necesarilly use the same paremeters to describe the nuclues. Models which mainly use parameters like $A$, the number of nucleons, $Z$ the number of protons, the total nuclear-spin $J$ and the excitation energy $E$ of the nucleus are termed \emph{macroscopic}, while models that directly treat the states of individual nucleons are called \emph{microscopic}. Examples of the former are the \emph{abrasion-ablation model}\cite{bowman:1973:book}, while the \emph{intranuclear-cascade model}\cite{metropolis:1991:art} is an example of a microscopic model. As is often the case in nuclear physics, no one model is valid of all range of nucleon number $A$ and incident energies\cite{cucinotta:1998:art}.
+
+Since the focus on this report is to describe an event-generator for a physics experiment, we do not need a state of the art model (see !!!AUTOREF TO SECTION!!! for the arguments). Since the macroscopic properties of nuclei are more easily related to expermental observables, we will restrict our attention to those. 
+
+\subsection{The fast processes}
+To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant nucleons, as well as their invariant mass (when viewed as a system); and the excitation energy of the pre-fragment are both specified by user input. The only mathematical model used is to determine the momentum of the participant system relative to the projectile. The \emph{Goldhaber model} states that the momentum distribution is given by a Guassian with the width determined by the Fermi-momentum\cite{goldhaber:1974:art}, explicitly
+\begin{equation}
+\sigma^2 = \rangle \vec{p}^2 \langle A\frac{A_\text{p}-A}{A_\text{p}-1},
+\end{equation}
+where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-fragment, and $\rangle \vec{p}^2 \langle$ is the expectation value of the momentum of an individual nucleon, given in terms of the Fermi-momentum as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
+
+
+
+          TAA  =  500.0D0*17.d0
+          AMAA =  17.017697565*UNIT
+          AMBBF = 16.011465730*UNIT
+          asterix=0.0    	
+          AMBB    = AMBBF+Asterix
+          AMA  = 1.007825032*UNIT 
+          AM1  = 1.007825032*UNIT
+
+             QQQQ = -(AMAA-AMA-AMBB)
+             SIGMA=DSQRT(2.0D0*QQQQ*AMA*AMBB/(AMA+AMBB))   
+        if(istory.eq.1) print *,' Goldhaber Sigma=', SIGMA 
