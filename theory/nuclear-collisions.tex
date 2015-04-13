@@ -13,22 +13,14 @@ Various models to describe both steps exist in the literature, which can be comb
 Since the focus on this report is to describe an event-generator for a physics experiment, we do not need a state of the art model (see !!!AUTOREF TO SECTION!!! for the arguments). Since the macroscopic properties of nuclei are more easily related to expermental observables, we will restrict our attention to those. 
 
 \subsection{The fast processes}
-To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant nucleons, as well as their invariant mass (when viewed as a system); and the excitation energy of the pre-fragment are both specified by user input. The only mathematical model used is to determine the momentum of the participant system relative to the projectile. The \emph{Goldhaber model} states that the momentum distribution is given by a Guassian with the width determined by the Fermi-momentum\cite{goldhaber:1974:art}, explicitly
+To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant nucleons, as well as their invariant mass (when viewed as a system); and the excitation energy of the pre-fragment are both specified by user input. The only mathematical model used is to determine the momentum of the participant system relative to the projectile. The \emph{Goldhaber model} states that the momentum distribution is given by a Guassian with the width determined by the expectation value of the momentum of an individual nucleon, explicitly
 \begin{equation}
 \sigma^2 = \rangle \vec{p}^2 \langle A\frac{A_\text{p}-A}{A_\text{p}-1},
 \end{equation}
-where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-fragment, and $\rangle \vec{p}^2 \langle$ is the expectation value of the momentum of an individual nucleon, given in terms of the Fermi-momentum as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
-
-
-
-          TAA  =  500.0D0*17.d0
-          AMAA =  17.017697565*UNIT
-          AMBBF = 16.011465730*UNIT
-          asterix=0.0    	
-          AMBB    = AMBBF+Asterix
-          AMA  = 1.007825032*UNIT 
-          AM1  = 1.007825032*UNIT
-
-             QQQQ = -(AMAA-AMA-AMBB)
-             SIGMA=DSQRT(2.0D0*QQQQ*AMA*AMBB/(AMA+AMBB))   
-        if(istory.eq.1) print *,' Goldhaber Sigma=', SIGMA 
+where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-fragment, and $\rangle \vec{p}^2 \langle$ is the expectation value of the momentum of an individual nucleon. For a Fermi-gas, $\rangle \vec{p}^2 \langle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
+!!!THIS IS NOT THE MODEL USED IN LEONID CODE!!!
+LEONID USES
+\begin{equation}
+\sigma^2 = 2 (M + m -M_p) \frac{mM}{m+M} = 2 Q \mu(m,M),
+\end{equation}
+where $m$ is the mass of the participant, $M_p$ the mass of the projectile and $M$ the mass of the pre-fragment. If we take $Q=T = m v^2/2$, we get $\sigma^2 = m^2 v^2$, which could imply that this is just the Fermi-momentum?
