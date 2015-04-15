@@ -1,5 +1,37 @@
 \begin{thebibliography}{1}
 
+\bibitem{gaimard:1991:art}
+J.~J. Gaimard and K.~H. Schmidt.
+\newblock A reexamination of the abrasion-ablation model for the description of
+  the nuclear fragmentation reaction.
+\newblock {\em Nuclear Physics A}, 531(3), 1991.
+
+\bibitem{bowman:1973:book}
+J.~Bowman, W.~Swiatecki, and C.~Tsang.
+\newblock {\em Abrasion and ablation of heavy ions}.
+\newblock Jul 1973.
+\newblock http://www.osti.gov/scitech/servlets/purl/4259977.
+
+\bibitem{metropolis:1991:art}
+N.~Metropolis, R.~Bivins, M.~Storm, et~al.
+\newblock Monte Carlo Calculations on Intranuclear Cascades. I. Low-Energy
+  Studies.
+\newblock {\em Phys. Rev.}, 110:185--203, Apr 1958.
+\newblock http://link.aps.org/doi/10.1103/PhysRev.110.185.
+
+\bibitem{cucinotta:1998:art}
+F.~Cucinotta, J.~Wilson, J.~Shinn, and R.~Tripathi.
+\newblock Assessment and requirements of nuclear reaction databases for \{GCR\}
+  transport in the atmosphere and structures.
+\newblock {\em Advances in Space Research}, 21(12):1753 -- 1762, 1998.
+\newblock http://www.sciencedirect.com/science/article/pii/S0273117798000623.
+
+\bibitem{goldhaber:1974:art}
+A.~Goldhaber.
+\newblock Statistical models of fragmentation processes.
+\newblock {\em Physics Letters B}, 53(4):306 -- 308, 1974.
+\newblock http://www.sciencedirect.com/science/article/pii/0370269374903888.
+
 \bibitem{gollerthan:1988:thesis}
 U.~Gollerthan.
 \newblock Untersuchungen zur Emission geladener Teilchen bei der kalten Fusion

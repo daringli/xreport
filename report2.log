@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  31 MAR 2015 17:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  14 APR 2015 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -856,23 +856,23 @@ Examine \huge starts \@setfontsize size may be \@xxpt.
 Examine \Huge starts \@setfontsize size may be \@xxvpt. ) (./report2.aux)
 \openout1 = `report2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 194.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
+LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 195.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -948,7 +948,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 194.
+Package hyperref Info: Link coloring ON on input line 195.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -957,23 +957,23 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count145
 )
-LaTeX Info: Redefining \ref on input line 194.
-LaTeX Info: Redefining \pageref on input line 194.
-LaTeX Info: Redefining \nameref on input line 194.
+LaTeX Info: Redefining \ref on input line 195.
+LaTeX Info: Redefining \pageref on input line 195.
+LaTeX Info: Redefining \nameref on input line 195.
 
 (./report2.out) (./report2.out)
 \@outlinefile=\write4
 \openout4 = `report2.out'.
 
  (./titlepageabstract/titlepageabstract.tex
-<titlepageabstract/titlefig2.pdf, id=32, 284.50345pt x 284.50345pt>
+<titlepageabstract/titlefig2.pdf, id=48, 284.50345pt x 284.50345pt>
 File: titlepageabstract/titlefig2.pdf Graphic file (type pdf)
 
 <use titlepageabstract/titlefig2.pdf>
 Package pdftex.def Info: titlepageabstract/titlefig2.pdf used on input line 5.
 (pdftex.def)             Requested size: 284.50275pt x 284.50275pt.
 
-<titlepageabstract/frontpage.pdf, id=33, 598.235pt x 845.55902pt>
+<titlepageabstract/frontpage.pdf, id=49, 598.235pt x 845.55902pt>
 File: titlepageabstract/frontpage.pdf Graphic file (type pdf)
 
 <use titlepageabstract/frontpage.pdf>
@@ -1046,7 +1046,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--108
 
 [6
 
-])) (./report2.toc)
+])) (./report2.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 7.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 7.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 7.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
 \tf@toc=\write5
 \openout5 = `report2.toc'.
 
@@ -1063,38 +1093,10 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              `scrreprt' soon .
 
 (./intro/intro.tex)
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 24.
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 24.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 24.
-
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 24.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 24.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 24.
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.24 \chapter
@@ -1103,21 +1105,31 @@ l.24 \chapter
 
 ]
 Chapter 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
+(./theory/nuclear-collisions.texpdfTeX warning (ext4): destination with the sam
+e identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \chapter
-             {The Code} [2
+l.14 
+      [2
 
-]
+])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 \chapter
+             {The Code} [3]
 Chapter 3.
-(./code/code.tex) (./report2.nlspdfTeX warning (ext4): destination with the sam
-e identifier (name{page.3}) has been already used, duplicate ignored
+(./code/code.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 10.
+
+) (./report2.nlspdfTeX warning (ext4): destination with the same identifier (na
+me{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \begin{thenomenclature}
-                            [3
+                            [4
 
 ]
 Underfull \hbox (badness 10000) detected at line 5
@@ -1125,30 +1137,40 @@ Underfull \hbox (badness 10000) detected at line 5
  []
 
 ) (./report2.bblpdfTeX warning (ext4): destination with the same identifier (na
-me{page.4}) has been already used, duplicate ignored
+me{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \begin{thebibliography}{1}
-                               [4
+                               [5
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
+Underfull \hbox (badness 1320) in paragraph at lines 23--28
+[]\T1/lmr/m/n/10.95 F. Cu-cinotta, J. Wil-son, J. Shinn, and R. Tri-pathi.  As-
+sess-ment and re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+[]\T1/lmr/m/n/10.95 A. Gold-haber.  Sta-tis-ti-cal mod-els of frag-men-ta-tion 
+pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+\T1/lmr/m/n/10.95 cesses.  \T1/lmr/m/it/10.95 Physics Let-ters B\T1/lmr/m/n/10.
+95 , 53(4):306 -- 308, 1974.
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \newpage
-              [5
+l.41 \newpage
+              [6
 
 ]
 Appendix A.
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.46 \chapter
-             {Code} [6
+[7
 
 ]
 Appendix B.
@@ -1162,50 +1184,56 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 59.
+(Font)              <9> on input line 61.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 59.
+(Font)              <5> on input line 61.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 71.
- [7
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 73.
+ [8
 
 ]
 Bilaga C.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
-[8
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+[9
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
  (./report2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
 Package rerunfilecheck Info: File `report2.out' has not changed.
-(rerunfilecheck)             Checksum: 720FC3BA13B013EABC6628ED977F4192;695.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
+(rerunfilecheck)             Checksum: 6E1278EF70305E52E68E36D124C8EB60;1587.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 14044 strings out of 493485
- 202595 string characters out of 3143525
- 430608 words of memory out of 3000000
- 17006 multiletter control sequences out of 15000+200000
- 83827 words of font info for 70 fonts, out of 3000000 for 9000
+ 14105 strings out of 493485
+ 203528 string characters out of 3143525
+ 431042 words of memory out of 3000000
+ 17036 multiletter control sequences out of 15000+200000
+ 108704 words of font info for 86 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,13n,58p,288b,1251s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,58p,890b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share
-/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on report2.pdf (15 pages, 2700610 bytes).
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
+9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmsy9.pfb>
+Output written on report2.pdf (16 pages, 2785761 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

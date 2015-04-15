@@ -195,6 +195,8 @@ C----  When X-section is known
 C         T = DSIGMADT(ISEED) 
 C--------- isotropic distribution-----------------------
           T = -1500000.*RNDM(ISEED)
+C	  PRINT *,' T: ',T 
+
 C--------------------------------------------------------
 	 IF(DSQRT(-T).LE.PTR_MIN) GO TO 10  
 	 S = AMAOFF*AMAOFF+AM1*AM1+2.0D0*AM1*EAINL
