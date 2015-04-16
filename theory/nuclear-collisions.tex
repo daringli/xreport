@@ -36,9 +36,28 @@ p_\text{i} + p_\text{t} &= q_\text{i} + q_\text{t}
 \end{align}
 where $p_\text{p}$ is the 4-momenum of the projectile, $p_\text{t}$ the momentum of the target, $p_\text{i}$ the internal momentum of the cluster; $q_\text{pf}$ the final momenum of the pre-fragment $q_\text{i}$ and $q_\text{t}$ the final momentum of the target and cluster, respectively.
 
-Solving the above equation and squaring for $p_\text{i}$ and squaring gives an expression for the invariant mass of the cluster as
+Solving the above equation and squaring for $p_\text{i}$ and squaring gives an expression for the off-shell mass of the cluster as
 \begin{equation}
 p_\text{i}^2 = p_\text{p}^2 +  q_\text{pf}^2 -  p_\text{p}\cdot q_\text{pf}= m_\text{i}^2 =M_\text{p}^2 + M_\text{pf}^2 - M_\text{p}\sqrt{M_\text{pf} + \vec{p}_i^2},
 \end{equation}
 where we have evaluated $p_\text{p}\cdot q_\text{pf}$ in the rest-frame of the pre-fragment.
+
+Since we are interested in constructing an event generator, we next transform the cluster's 4-momentum from the projectile to the laboratory frame (the projectile and target momentum is already known in the laboratory frame, the former being zero practically being a definition of that frame). The relevant gamma factor is
+$\gamma = 1 + T/m_\text{p}$, where $T$ is the kinetic energy of the projectile.
+
+Since the collision between the target and the cluster is easier to do in their zero-momentum (ZM) frame, we also need to transform between the laboratory and that frame. This is readily done by noting
+\begin{equation}
+\bar{\vec{P}} = \vec{p}_i + \vec{p}_t = \gamma(\beta_\text{ZM}) \bar{m} \beta_\text{ZM} = \bar{E}\beta_\text{ZM} \implies \beta_\text{ZM} = (\vec{p}_i + \vec{p}_t)/\bar{E},
+\end{equation}
+where $\bar{E}$ etc. denotes the energy of the system of both particles. Since we want the $\beta$ between the lab and the ZM frame, we evaluate all the quantities in the lab frame
+\begin{equation}
+\beta_\text{ZM} = \frac{\vec{p}_i}{E_\text{c} + m_\text{t}}.
+\end{equation}
+
+The scattering between target and cluster is back-to-back in the ZM frame, and we generate the scattering angle from an isotropic $\tfrac{d\sigma}{dt}$, which in practice means that the Mandelstam variable $t$ is a uniform random number. The ZM energy, momentum and scattering angle can be readily expressed in term of the invariant Mandelstam variables
+\begin{align}
+E_\text{c} &= \frac{s+m_\text{i} - m_\text{t}}{2\sqrt{s}} \\
+|\vec{p}_\text{c}| &= \sqrt{E_\text{c}^2 - m_\text{i}^2} \\
+\cos{\theta} &= \frac{t-m_\text{i}^2-m_\text{c}^2) + 2E_\text{c}^2}{2|\vec{p}_\text{c}|^2}
+\end{align}
 \section{The slow process---decay of a compound nucleus}
