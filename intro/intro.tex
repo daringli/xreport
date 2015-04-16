@@ -1,1 +1,35 @@
-\nomenclature{intro}{an introduction}
+%\nomenclature{intro}{an introduction}
+As a part of the construction of international FAIR (Facility for Antiproton and Ion Research), the LAND experimental setup is succeeded by the \rtb{} (Reactions with Relativistic Radioactive Beams) setup, which includes a score of new detectors. During all stages of this process---from designing and calibrating the new individual detectors and the entire setup, to analyzing the data and extracting the underlying physics---simulations are or will be used. 
+
+The \rtb{} experiment aims to study nuclear physics, in particular the properties of exotic nuclei far from the valley of stability \cite{r3b:online}. The experiments will be performed with radioactive beams, and the aim is to be able to determine the complete kinematics of the reaction. We will here describe a generic experiment of this kind.
+
+The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target---a so called \emph{event}---the reaction products are, ideally, identified by recording where they hit the detector, when they hit the detectors (which allows detector output to be attributed to individual events, which yields the initial and final momentum); how much energy they deposit in the detectors (yielding the charge); and their deflection in a magnetic field, which gives their charge-to-mass ratio, and thus their mass. 
+
+This is of course a simplification: the reaction products may decay in-flight, they may be deflected by interacting with the air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is non-deterministic. 
+
+While simulations are used to determine how a given reaction product propagates throughout the experimental setup, they are not necesarilly needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
+In many cases, this is not a problem: it is enough to simulate particles with specified initial momenta matching the kinematic constraints of the reaction and see how they propagate through the experimental setup---a setup which should be able to identify them even if they are not the result of an actual reaction.
+However, since the setup in practice only should identify actual reactions products, it would be more ideal if the simulations incorporated some of the theory around the reactions to be studied.
+
+\section{Event Generator for \rtb{}}
+As mentioned in the previous section, an experimental event is a reaction between the target and the beam.
+An \emph{event generator}, on the other hand, is in this context a piece of code that mimics certain reactions for the simulation codes. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup. %In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
+
+In principle, one can think of an event generator that exactly simulates the reactions at the target and returns a final state with a probability mimic the experiment. However, there are good reasons to not implement this event generator, not all of them related to how unfeasible that project would be---considering our present knowledge of nuclear physics. In the remainder of this section, I will try to arrive at some design principles for a feasible event generator.
+
+!!!I AM USING 'I' HERE SINCE I BELEIVE THIS TO BE LESS OF AN OBJECTIVE CONCLUSSION. I'M NOT 100\% SURE ABOUT THIS, THOUGH!!!
+
+\subsection{Design of an event generator}
+Before I argue for why a completely realistic event generator may be undesirable, let me first mention a few reasons for why it is unfeasible---it will turn out that one of these reasons is closely related to why a 'sloppy' event generator is useful.
+
+
+
+\begin{itemize}
+\item Computational time
+\item Model dependence
+\item Rare events
+\end{itemize}
+
+Firstly, 
+
+\subsection{}

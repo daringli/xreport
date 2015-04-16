@@ -6,11 +6,11 @@
 \contentsline {chapter}{\numberline {2}Theoretical Background}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Nuclear Collisions}{2}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The fast processes---the Goldhaber model}{3}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}The slow process---decay of a compound nucleus}{3}{section.2.2}
-\contentsline {chapter}{\numberline {3}The Code}{4}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Transition Probabilities}{4}{subsection.3.0.1}
-\contentsline {chapter}{Glossary}{5}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Appendix 1}{7}{appendix.A}
-\contentsline {chapter}{\numberline {B}Code}{8}{appendix.B}
+\contentsline {section}{\numberline {2.2}The slow process---decay of a compound nucleus}{4}{section.2.2}
+\contentsline {chapter}{\numberline {3}The Code}{5}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Transition Probabilities}{5}{subsection.3.0.1}
+\contentsline {chapter}{Glossary}{6}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Appendix 1}{8}{appendix.A}
+\contentsline {chapter}{\numberline {B}Code}{9}{appendix.B}
 \select@language {swedish}
-\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{9}{appendix.C}
+\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{10}{appendix.C}

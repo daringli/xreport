@@ -29,6 +29,7 @@ where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-f
 where $m$ is the mass of the participant, $M_p$ the mass of the projectile and $M$ the mass of the pre-fragment. If we take $Q=T = m v^2/2$, we get $\sigma^2 = m^2 v^2$, which could imply that this is just the Fermi-momentum?
 !!!
 
+!!!POSSIBLY MOVE NEXT TO CODE DOCUMENTATION, SINCE IT IS NOT REALLY GENERAL THEORY!!!
 Momentum conservation implies that
 \begin{align}
 p_\text{p} &= p_\text{i} + q_\text{pf} \\
@@ -51,13 +52,14 @@ Since the collision between the target and the cluster is easier to do in their 
 \end{equation}
 where $\bar{E}$ etc. denotes the energy of the system of both particles. Since we want the $\beta$ between the lab and the ZM frame, we evaluate all the quantities in the lab frame
 \begin{equation}
-\beta_\text{ZM} = \frac{\vec{p}_i}{E_\text{c} + m_\text{t}}.
+\beta_\text{ZM} = \frac{\vec{p}_i}{E_\text{c} + m_\text{t}}. \label{betazm}
 \end{equation}
 
 The scattering between target and cluster is back-to-back in the ZM frame, and we generate the scattering angle from an isotropic $\tfrac{d\sigma}{dt}$, which in practice means that the Mandelstam variable $t$ is a uniform random number. The ZM energy, momentum and scattering angle can be readily expressed in term of the invariant Mandelstam variables
 \begin{align}
 E_\text{c} &= \frac{s+m_\text{i} - m_\text{t}}{2\sqrt{s}} \\
 |\vec{p}_\text{c}| &= \sqrt{E_\text{c}^2 - m_\text{i}^2} \\
-\cos{\theta} &= \frac{t-m_\text{i}^2-m_\text{c}^2) + 2E_\text{c}^2}{2|\vec{p}_\text{c}|^2}
+\cos{\theta} &= \frac{t-m_\text{i}^2-m_\text{c}^2 + 2E_\text{c}^2}{2|\vec{p}_\text{c}|^2}.
 \end{align}
+A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with $|\vec{p}_\text{c}|$, $\theta$ and $E_\text{c}$ fix the ZM 4-momentum of the cluster, and also the target by $\vec{p}_\text{t} = -\vec{p}_\text{c}$. Using \eqref{betazm}, these results are boosted to the lab frame, in which we now have an expression for all the relevant momenta.
 \section{The slow process---decay of a compound nucleus}

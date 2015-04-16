@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  14 APR 2015 17:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  16 APR 2015 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,12 +1112,17 @@ e identifier (name{page.2}) has been already used, duplicate ignored
 l.14 
       [2
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) ha
-s been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.48 
+      [3])pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.29 \chapter
-             {The Code} [3]
+             {The Code} [4]
 Chapter 3.
 (./code/code.tex
 
@@ -1125,11 +1130,11 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 10.
 
 ) (./report2.nlspdfTeX warning (ext4): destination with the same identifier (na
-me{page.4}) has been already used, duplicate ignored
+me{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \begin{thenomenclature}
-                            [4
+                            [5
 
 ]
 Underfull \hbox (badness 10000) detected at line 5
@@ -1137,11 +1142,11 @@ Underfull \hbox (badness 10000) detected at line 5
  []
 
 ) (./report2.bblpdfTeX warning (ext4): destination with the same identifier (na
-me{page.5}) has been already used, duplicate ignored
+me{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \begin{thebibliography}{1}
-                               [5
+                               [6
 
 ]
 Underfull \hbox (badness 1320) in paragraph at lines 23--28
@@ -1161,16 +1166,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--34
 95 , 53(4):306 -- 308, 1974.
  []
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.41 \newpage
-              [6
+) [7
 
 ]
 Appendix A.
-[7
+[8
 
 ]
 Appendix B.
@@ -1189,12 +1189,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 61.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 73.
- [8
+ [9
 
 ]
 Bilaga C.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-[9
+[10
 
 
 ]
@@ -1207,13 +1207,13 @@ Package rerunfilecheck Info: File `report2.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 14105 strings out of 493485
- 203528 string characters out of 3143525
- 431042 words of memory out of 3000000
- 17036 multiletter control sequences out of 15000+200000
+ 14112 strings out of 493485
+ 203613 string characters out of 3143525
+ 431230 words of memory out of 3000000
+ 17037 multiletter control sequences out of 15000+200000
  108704 words of font info for 86 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,13n,58p,890b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,17n,58p,890b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1230,10 +1230,10 @@ i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy9.pfb>
-Output written on report2.pdf (16 pages, 2785761 bytes).
+Output written on report2.pdf (17 pages, 2792968 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
