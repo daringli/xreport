@@ -22,14 +22,17 @@ In principle, one can think of an event generator that exactly simulates the rea
 \subsection{Design of an event generator}
 Before I argue for why a completely realistic event generator may be undesirable, let me first mention a few reasons for why it is unfeasible---it will turn out that one of these reasons is closely related to why a 'sloppy' event generator is useful.
 
+Firstly, the nucleon-nucleon interaction is not well understood from first principle: there is no one model for the atomic nucleus. Even with our best understand of the interaction between individual nuclei, calculations with even moderately sized systems require supercomputer resources. !!!CITE SOMETHING ABOUT LIMITS OF THIS APPROACH WITH CURRENT RESOURCES. DEFINE ``MODERATELY SIZED SYSTEM''!!!
+It is thus clear that another approach is needed for the implementation of an event generator, especially if we add the constraint that it should be possible to run on an ordinary computer.
+
+There exist a number of more-or-less phenomenological models to describe nuclear reactions from a simpler perspective, i.e. one that does not require a super computer. I will describe a few such models in more detail in \autoref{sec:theory:nuc-col}. 
+
+Numerous codes have been written to simulate nuclear reactions. A recent article by Kara et. al.\cite{kara:2015:art} has compared simulation output from three widely used codes, \prgname{Empire}\footnote{\url{http://www.nndc.bnl.gov/empire/}, available as of 2015-04-17.}, \prgname{Talys}\footnote{\url{http://www.talys.eu/home/}, available as of 2015-04-17.}, and \prgname{Alice/ash}\footnote{\url{http://bibliothek.fzk.de/zb/berichte/FZKA7183.pdf}, avaliable as of 2015-04-17 is the best reference I can find right now...} and experimental data: 
 
 
-\begin{itemize}
-\item Computational time
-\item Model dependence
-\item Rare events
-\end{itemize}
+%\begin{itemize}
+%\item Computational time
+%\item Model dependence
+%\item Rare events
+%\end{itemize}
 
-Firstly, 
-
-\subsection{}
