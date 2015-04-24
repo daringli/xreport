@@ -171,9 +171,9 @@ C-------------------------------------------------------------
 C: off-shell mass of a cluster
         rrtt = AMAA*AMAA+AMBB**2-2.0D0*AMAA*
      1	          DSQRT(AMBB*AMBB+PAIN*PAIN)
-        if(rrtt.le.0.0) go to 1
+	if(rrtt.le.0.0) go to 1
 	AMAOFF = DSQRT(AMAA*AMAA+AMBB**2-2.0D0*AMAA*
-     1	          DSQRT(AMBB*AMBB+PAIN*PAIN))   
+     1	          DSQRT(AMBB*AMBB+PAIN*PAIN))
 	EAIN=DSQRT(AMAOFF*AMAOFF+PAIN*PAIN)
 C-------------------------------------------------------------
   	PBXL  = -PAINXL
@@ -291,6 +291,13 @@ C-------------------- Missing Mass
 	    B=(A+2.0d0*AM1*AM1)
 	    QUATER=B+DSQRT(B*B+4.0d0*AM1*AM1*P3F*P3F-A*A)
 	    ARAMISS=DSQRT(QUATER)-AMAA
+
+c---------------------If cluster has numerical problems in mass (No problems!)
+c	    AMAMISS=DSQRT(EAPC**2-PAPC**2)-AMA
+c	    PRINT *,' AMAMISS IN CM',AMAMISS 
+c	    AMAMISS=DSQRT(EAP**2-PAP**2)-AMA
+c	    PRINT *,' AMAMISS IN LAB',AMAMISS 
+
 C-------------------- Missing Mass 
 C	ERES=EAF+EBF
 C	PRES=PAZF+PAZF
@@ -345,6 +352,7 @@ C******* KINEMATICAL FUNCTION
         P1   = DSQRT(CINEMA(X,Y,Z))/2.0D0/SQRS
         P2   = P1
         E1   = (S+Y-Z)/2.0D0/SQRS
+	PRINT *,' CM CLUSTER (P, P-codex): (',P1, DSQRT(E1**2-AM1**2),')'
         E2   = (S+Z-Y)/2.0D0/SQRS
         COA1 = (T-AMA*AMA-AM1*AM1+2.0D0*EA*E1)/(2.0D0*PA*P1)
 	if(DABS(COA1).GE.1.0d0) A2=1975.0d0
@@ -465,7 +473,7 @@ C:------ end of preparation -------------------------
          END
 C------------------------------------------------------------------
 C----         Two consecutive rotations              --------------
-C------ first aroud Z on <phi>, than around new X' on <theta> -----
+C------ first around Z on <phi>, than around new X' on <theta> -----
       SUBROUTINE DREHUNG(PX,PY,PZ,CT,ST,CF,SF,PXP,PYP,PZP)
       IMPLICIT REAL*8(A-H,O-Z)	
 	 PXP = PX*CT*CF-PY*SF+PZ*ST*CF	 
