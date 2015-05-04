@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{r3b:online}
+GSI - R3B, 2014.
+\newblock
+  \newline\url{https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b.htm}.
+\newblock (accessed 2015-04-16).
+
 \bibitem{gaimard:1991:art}
 J.~J. Gaimard and K.~H. Schmidt.
 \newblock A reexamination of the abrasion-ablation model for the description of
@@ -31,6 +37,16 @@ A.~Goldhaber.
 \newblock Statistical models of fragmentation processes.
 \newblock {\em Physics Letters B}, 53(4):306 -- 308, 1974.
 \newblock http://www.sciencedirect.com/science/article/pii/0370269374903888.
+
+\bibitem{schmidt:1991:art}
+K.~H. Schmidt and W.~Morawek.
+\newblock The conditions for the synthesis of heavy nuclei.
+\newblock {\em Reports on Progress in Physics}, 54(7), 1991.
+
+\bibitem{krane:book}
+K.~Krane.
+\newblock {\em Introductory Nuclear Physics}, chapter Nuclear Fission.
+\newblock Wiley, 1987.
 
 \bibitem{gollerthan:1988:thesis}
 U.~Gollerthan.

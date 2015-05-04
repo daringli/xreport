@@ -5,7 +5,7 @@ This leads us to the \emph{participant-spectator} picture of nuclear collisions,
 !!!POSSIBLY DISCUSS LIMITATIONS!!!
 The collision between the participant nucleons takes place at a time scale of about \unit[$10^{-23}$]{s}\cite{gaimard:1991:art}, and is sometimes called a \emph{fireball} or \emph{firestreak}.
 
-However, this is just the first part of the collision. The participant nucleons may have gone unaffected through it, but the resulting system (a so-called pre-fragment) will be highly excited, and will decay to the actual fragment---often by ejecting nucleons, in this context known as evaporating them. The characteristic time-scale for these ejections vary between \unit[$10^{-21}$ -- $10^{-16}$]{s}, depending on the energies and emitted particle\cite{gaimard:1991:art}. 
+However, this is just the first part of the collision. The participant nucleons may have gone unaffected through it, but the resulting system (a so-called pre-fragment) will be highly excited, and will decay to the actual fragment -- often by ejecting nucleons, in this context known as evaporating them. The characteristic time-scale for these ejections vary between \unit[$10^{-21}$ -- $10^{-16}$]{s}, depending on the energies and emitted particle\cite{gaimard:1991:art}. 
 
 In this picture, we thus have a two-step process to describe nuclear fragmentation. 
 Various models to describe both steps exist in the literature, which can be combined more or less freely---they do not necesarilly use the same paremeters to describe the nuclues. Models which mainly use parameters like $A$, the number of nucleons, $Z$ the number of protons, the total nuclear-spin $J$ and the excitation energy $E$ of the nucleus are termed \emph{macroscopic}, while models that directly treat the states of individual nucleons are called \emph{microscopic}. Examples of the former are the \emph{abrasion-ablation model}\cite{bowman:1973:book}, while the \emph{intranuclear-cascade model}\cite{metropolis:1991:art} is an example of a microscopic model. As is often the case in nuclear physics, no one model is valid of all range of nucleon number $A$ and incident energies\cite{cucinotta:1998:art}.
@@ -63,4 +63,49 @@ E_\text{c} &= \frac{s+m_\text{i} - m_\text{t}}{2\sqrt{s}} \\
 \end{align}
 A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with $|\vec{p}_\text{c}|$, $\theta$ and $E_\text{c}$ fix the ZM 4-momentum of the cluster, and also the target by $\vec{p}_\text{t} = -\vec{p}_\text{c}$. Using \eqref{betazm}, these results are boosted to the lab frame, in which we now have an expression for all the relevant momenta.
 
-\section{The slow process---decay of a compound nucleus}
+\section{The slow process -- decay of a compound nucleus}
+There are at least two models for the decay of a compound nucleus popular in the literature, the Hauser-Feshbach and the Ewing-Weisskopf formulas. Both aim to describe how a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$) will decay.
+
+The older Ewing-Weisskopf formula, which this work is based on, gives the probability of decaying by evaporating a particle $\nu$ as
+\begin{equation}
+\frac{d^2 P_\nu}{dE_f dt} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|}\sum_{l=|J_i-S|}^{|J_i+S|} T_l(\epsilon_\nu),\qquad\cite{schmidt:1991:art}\label{eq:ew}
+\end{equation}
+where $P$ is the probability, $E_f$ the final-state energy, $J_f$ the final-state spin, $\rho$ the level densities and $\epsilon_\nu = E_f-E_i-B_\nu$ the kinetic energy of the evaporated particle, $B_\nu$ being its binding energy. 
+$s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of that state with respect to its center of mass. The sums give all the way to couple these while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. $T_l$ is the transition probability.
+By integrating over $E$, we get $\frac{d P_\nu}{dt} = \Gamma_\nu$, which is roughly proportional to the probability to decay through the channel $\nu$, $P_\nu = \Gamma_\nu/\Gamma_{\text{tot}}$. 
+
+Provided that the characteristic life-time of the system is short compared to the time resolution of the experimental setup, we may essentially treat the decay-widths as probabilities, since -- as far as the experiment is concerned -- the decay may as well take place instantenously. Note that the system may undergo multiple decays before it reaches its ground-state, and that time-scale of this entire decay chain must be short by the experimental standards. The time-of-flight resolution of the future \rtb{} setup will be in the picosecond range (\unit[$10^{-12}$]{s})\cite{r3b:online}, which is well above the time-scales of single evaporation given by Gaimard and Schmidt (\unit[$10^{-21}$ -- $10^{-16}$]{s})\cite{gaimard:1991:art}. Hence we will view $\Gamma_x$ as the probability to decay by a given process in an unspecified but short time step.
+
+Since we are interested in simulating a decay chain, we want more information than merely the decay by a given particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
+\begin{equation}
+\frac{d\Gamma_{\nu,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu),\label{eq:ew}
+\end{equation}
+which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
+
+$\nu$ can in principle be any particles. However, the photon must be treated differently as it is massless and thus fully relativistic -- which makes the dististinction between $l$ and the intrinsic spin unnatural -- and removes a polarization state. With this in mind, we get
+\begin{align}
+&\frac{d\Gamma_{\gamma}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{l=|J_f-J_i|}^{|J_f+J_i|} T_l(\epsilon_\gamma) \\
+\implies & \frac{d\Gamma_{\gamma,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} T_l(\epsilon_\gamma),
+\end{align}
+where $l>0$ is an integer.
+
+Although $\nu$ could be any particle, it becomes more appropriate to model the decay as a fission process if $\nu$ becomes sufficiently heavy in relation to the compound nucleus. Fission is usual modeled as a transition first to a \emph{transition state}, beyond which the nucleus will inevitably fission\cite{krane:book}. The present work does not include fission, and we will thus not discuss its details here. Swiateck discussed the possibility of treating particle emission and fission in an essentially symmetric fashion, by using a transition state formalism also for lighter particles\cite{swiatecki:1983:art}. !!MAY BE INTERESTING TO SAY SOMETHING ABOUT THIS. FIND SOURCE ON WHY THIS APPROACH ISN'T USED.!!
+
+We will now describe models for the level density $\rho$ and transition probability $T_l$.
+
+\subsection{Level densities}
+The level density $\rho(E,J)$ enumerates the number of levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. We use the following expression
+\begin{equation}
+\rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.
+\end{equation}
+!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN EXP(-(2J+1)^2\beta/2Theta_Eff) COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!
+
+Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
+\begin{equation}
+U=E_\text{eff} - f(E_\text{eff})\delta S - g(E_\text{eff})\delta P,
+\end{equation}
+where $f$ and $g$ describes the damping of pairing and shell effects with increased energy, and $E_\text{eff} = E*-E_\text{yrast}$. The \emph{yrast energy} is the lowest energy for a given angular momentum, here taken to be
+\begin{equation}
+E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
+\end{equation}
+corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis.

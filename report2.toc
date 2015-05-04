@@ -3,14 +3,17 @@
 \select@language {english}
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Theoretical Background}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Nuclear Collisions}{2}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}The fast processes---the Goldhaber model}{3}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}The slow process---decay of a compound nucleus}{4}{section.2.2}
-\contentsline {chapter}{\numberline {3}The Code}{5}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Transition Probabilities}{5}{subsection.3.0.1}
-\contentsline {chapter}{Glossary}{6}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Appendix 1}{8}{appendix.A}
-\contentsline {chapter}{\numberline {B}Code}{9}{appendix.B}
+\contentsline {section}{\numberline {1.1}Event Generator for \ensuremath {\text {R}^3\text {B}}{}}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Design of an Event Generator}{2}{subsection.1.1.1}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Nuclear Collisions}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}The fast processes---the Goldhaber model}{4}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}The slow process -- decay of a compound nucleus}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Level densities}{7}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {3}The Code}{8}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.2}Transition Probabilities}{8}{subsection.3.0.2}
+\contentsline {chapter}{Glossary}{9}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Appendix 1}{11}{appendix.A}
+\contentsline {chapter}{\numberline {B}Code}{12}{appendix.B}
 \select@language {swedish}
-\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{10}{appendix.C}
+\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{13}{appendix.C}
