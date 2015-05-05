@@ -94,10 +94,12 @@ Although $\nu$ could be any particle, it becomes more appropriate to model the d
 We will now describe models for the level density $\rho$ and transition probability $T_l$.
 
 \subsection{Level densities}
-The level density $\rho(E,J)$ enumerates the number of levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. We use the following expression
+The level density $\rho(E,J)$ enumerates the number of levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, and for energies above the threshold for particle evaporation, it is reasonable to approximate it as a continuous function.
+We use the following expression
 \begin{equation}
-\rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.
+\rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.\label{eq:rho}
 \end{equation}
+
 !!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN EXP(-(2J+1)^2\beta/2Theta_Eff) COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!
 
 Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
@@ -108,4 +110,4 @@ where $f$ and $g$ describes the damping of pairing and shell effects with increa
 \begin{equation}
 E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
-corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis.
+corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis. This yrast energy is not strictly speaking the lowest energy for a given $J$, but the energy of a collective rotational excitation, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. !!CITE. THIS IS REALY JUST A GUESS OF MINE.!!
