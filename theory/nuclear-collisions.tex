@@ -12,13 +12,13 @@ Various models to describe both steps exist in the literature, which can be comb
 
 Since the focus on this report is to describe an event-generator for a physics experiment, we do not need a state of the art model (see !!!AUTOREF TO SECTION!!! for the arguments). Since the macroscopic properties of nuclei are more easily related to expermental observables, we will restrict our attention to those. 
 
-\subsection{The fast processes---the Goldhaber model}
-To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant projectile nucleons---the cluster---as well as its invariant mass, and the excitation energy of the pre-fragment are both specified by user input. The only specific model used is to determine the momentum of the participant system relative to the projectile, everything else is just conservation of momentum, and an isotropic cross-section. 
+\subsection{The fast processes -- the Goldhaber model}
+To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant projectile nucleons -- the cluster -- as well as its invariant mass, and the excitation energy of the pre-fragment are both specified by user input. The only specific model used is to determine the momentum of the participant system relative to the projectile, everything else is just conservation of momentum, and an isotropic cross-section. 
 The \emph{Goldhaber model} states that the momentum distribution is given by a Guassian with the width determined by the expectation value of the momentum of an individual nucleon, explicitly
 \begin{equation}
-\sigma^2 = \rangle \vec{p}^2 \langle A\frac{A_\text{p}-A}{A_\text{p}-1},
+\sigma^2 = \langle \vec{p}^2 \rangle A\frac{A_\text{p}-A}{A_\text{p}-1},
 \end{equation}
-where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-fragment, and $\rangle \vec{p}^2 \langle$ is the expectation value of the momentum of an individual nucleon. For a Fermi-gas, $\rangle \vec{p}^2 \langle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
+where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-fragment, and $\langle \vec{p}^2 \rangle$ is the expectation value of the momentum of an individual nucleon. For a Fermi-gas, $\langle \vec{p}^2 \rangle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
 !!!THIS IS NOT THE MODEL USED IN LEONID CODE!!!
 
 
@@ -29,7 +29,7 @@ where $A_\text{p}$ is the number of nucleons in the projectile, $A$ in the pre-f
 where $m$ is the mass of the participant, $M_p$ the mass of the projectile and $M$ the mass of the pre-fragment. If we take $Q=T = m v^2/2$, we get $\sigma^2 = m^2 v^2$, which could imply that this is just the Fermi-momentum?
 !!!
 
-!!!POSSIBLY MOVE NEXT TO CODE DOCUMENTATION, SINCE IT IS NOT REALLY GENERAL THEORY!!!
+!!!POSSIBLY MOVE NEXT TO CODE DOCUMENTATION, SINCE WHICH FRAME WE USE WHERE IS NOT REALLY GENERAL THEORY!!!
 Momentum conservation implies that
 \begin{align}
 p_\text{p} &= p_\text{i} + q_\text{pf} \\
@@ -80,7 +80,7 @@ Since we are interested in simulating a decay chain, we want more information th
 \begin{equation}
 \frac{d\Gamma_{\nu,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu),\label{eq:ew}
 \end{equation}
-which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
+which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$ and momentum given by conservation of energy.
 
 $\nu$ can in principle be any particles. However, the photon must be treated differently as it is massless and thus fully relativistic -- which makes the dististinction between $l$ and the intrinsic spin unnatural -- and removes a polarization state. With this in mind, we get
 \begin{align}
@@ -100,14 +100,63 @@ We use the following expression
 \rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.\label{eq:rho}
 \end{equation}
 
-!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN EXP(-(2J+1)^2\beta/2Theta_Eff) COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!
+!!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN EXP(-(2J+1)^2\beta/2Theta_Eff) COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!!
 
 Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
 \begin{equation}
-U=E_\text{eff} - f(E_\text{eff})\delta S - g(E_\text{eff})\delta P,
+U=E_\text{eff} + f(E_\text{eff})\delta S + g(E_\text{eff})\delta P,\label{eq:u}
 \end{equation}
-where $f$ and $g$ describes the damping of pairing and shell effects with increased energy, and $E_\text{eff} = E*-E_\text{yrast}$. The \emph{yrast energy} is the lowest energy for a given angular momentum, here taken to be
+where $f$ and $g$ describes the damping of shell and pairing effects with increased energy, and $E_\text{eff} = E*-E_\text{yrast}$. The \emph{yrast energy} is the lowest energy for a given angular momentum, here taken to be
 \begin{equation}
 E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
-corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis. This yrast energy is not strictly speaking the lowest energy for a given $J$, but the energy of a collective rotational excitation, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. !!CITE. THIS IS REALY JUST A GUESS OF MINE.!!
+corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis. This yrast energy is not strictly speaking the lowest energy for a given $J$, but the energy of a collective rotational excitation, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. !!CITE. THIS IS A GUESS OF MINE.!!
+
+The pairing energy $\delta P$ in \eqref{eq:u} can be estimated from the average separation energy for the surrounding nuclei (in an $(N,Z)$ plot, like an isotope chart), which is close to the actual observed shift between odd and even nuclei\cite{ericson:1960}. Neutrons and protons have different pairing energies, which is to be added or subtracted when neutron or proton number, respectively, is odd or even. 
+The shell energy $\delta S$ can either be calculated from a microscopic model, or -- as I have done -- can be be estimated together with the pairing energy by comparing experimental masses with masses predicted by a macroscopic model, and taking the difference, as suggested by Schmidt and Morawek\cite{schmidt:1991:art}. I used the macroscopic part of the 1992 edition of the Finite-Range Droplet Model (FRDM-1992)\cite{moller1995}, which is presented in more detail in \autoref{sec:frdm1995}.
+
+The damping of shell effects with energy can be described by an exponential function
+\begin{equation}
+f(E_\text{eff}) = 1-\exp{-E_\text{eff}/E_\text{d}},
+\end{equation}
+where $E_\text{d}$ is the shell-damping energy 
+\begin{equation}
+E_\text{d} = \frac{0.4}{a} A^{4/3},
+\end{equation}
+where $a$ is the level-density parameter, which for a spherical nuclei can be approximated by
+\begin{equation}
+a=\frac{A}{\unit[14.61]{MeV}}(1+3.114 A^{-1/3} + 5.626 A^{-2/3}).\qquad\cite{schmidt:1991:art}\label{eq:a}
+\end{equation}
+This parameter also enters directly into \eqref{eq:rho}.
+
+Likewise, the damping of pairing effects with energy can also be described by a simple function, in this case
+\begin{equation}
+g(E_\text{eff}) = \begin{cases} 1-(1-E/E_\text{c})^2 & E_\text{eff} < E_\text{c} \\
+ 1 & E_\text{eff} \ge E_\text{c}.\qquad\cite{schmidt:1991:art}
+\end{cases}
+\end{equation}
+The critical energy $E_\text{c}$ is approximately $\unit[10]{MeV}$ and varies with angular momentum, 
+\begin{equation}
+E_\text{c} = \unit[10]{MeV}\sqrt{1-(J/J_\text{c})^2},
+\end{equation}
+where the critical angular momentum $J_\text{c}$ is about $12\hbar$. !!!SOURCE FOR THIS?!!!
+
+Since we have restricted ourselves to spherical nuclei in \eqref{eq:a}, we also have the moments of inertia $\Theta_\perp = \Theta_\parallel$. In particular, for a sphere with constant density, we have
+\begin{equation}
+\Theta = \frac{2}{5} M R_0^2 \approx \frac{2}{5} A^{5/3}*u*r0^2
+\end{equation}
+The approximation is obtained by inserting $R_0 = r_0 A^{1/3}$ and $M=u A$, where $r_0=\unit[1.16]{fm}$ is the nuclear radius constant, with the same value as in the macroscopic model\cite{moller1995}. $u$ is the atomic mass units, $u \approx \unit[931.5]{MeV}$.
+
+Finally, $\beta$ in \eqref{eq:rho} is the reciprocal nuclear temperature $\beta=1/T$. It can be calculated from $\tfrac{a}{\beta}$, which is obtained by solving
+\begin{equation}
+a/\beta=\sqrt{(aU)[1 -exp{-a/\beta}]},\qquad\cite{grossjean1985}\label{eq:abiteration}
+\end{equation}
+which can be done numerically by iterating
+\begin{equation}
+(a/\beta)_{n+1}=\sqrt{aU[1 -exp{-(a/\beta)_n}]}
+\end{equation}
+from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was used here, which solves \eqref{eq:abiteration} for $(a/\beta) \to \infty$ and known to be a good initial guess\cite{grossjean1985}.
+
+\subsubsection{Finite-Range Droplet Model}
+\label{sec:frdm1996}
+The Finite-range droplet model with parameters fitted to nuclear data in 1995\cite{moller1995} was used to determine the macroscopic contributions to mass excesses.
