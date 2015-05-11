@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  4 MAY 2015 19:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  9 MAY 2015 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,14 +969,14 @@ LaTeX Info: Redefining \nameref on input line 198.
 \openout4 = `report2.out'.
 
  (./titlepageabstract/titlepageabstract.tex
-<titlepageabstract/titlefig2.pdf, id=60, 284.50345pt x 284.50345pt>
+<titlepageabstract/titlefig2.pdf, id=52, 284.50345pt x 284.50345pt>
 File: titlepageabstract/titlefig2.pdf Graphic file (type pdf)
 
 <use titlepageabstract/titlefig2.pdf>
 Package pdftex.def Info: titlepageabstract/titlefig2.pdf used on input line 5.
 (pdftex.def)             Requested size: 284.50275pt x 284.50275pt.
 
-<titlepageabstract/frontpage.pdf, id=61, 598.235pt x 845.55902pt>
+<titlepageabstract/frontpage.pdf, id=53, 598.235pt x 845.55902pt>
 File: titlepageabstract/frontpage.pdf Graphic file (type pdf)
 
 <use titlepageabstract/frontpage.pdf>
@@ -1115,6 +1115,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 15.
 
+
+Underfull \vbox (badness 7504) has occurred while \output is active []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 18.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -1129,7 +1132,7 @@ l.18
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 \chapter
+l.25 \chapter
              {Theoretical Background} [2]
 Chapter 2.
 (./theory/nuclear-collisions.texpdfTeX warning (ext4): destination with the sam
@@ -1139,8 +1142,14 @@ e identifier (name{page.3}) has been already used, duplicate ignored
 l.14 
       [3
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
- been already used, duplicate ignored
+]
+Overfull \hbox (8.26855pt too wide) in paragraph at lines 32--34
+[]\T1/lmr/m/n/10.95 !!!POSSIBLY MOVE NEXT TO CODE DOC-U-MEN-TA-TION, SINCE WHIC
+H FRAME
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.48 
@@ -1150,52 +1159,98 @@ l.48
                                                   >\@m \ \else \hskip \@temp...
 l.71 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
                                                   \label{eq:ew}
-? 
+? R
+OK, entering \nonstopmode...
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
 l.71 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
                                                   \label{eq:ew}
-? 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 Missing character: There is no è in font lmex10!
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.76 
-      [5]
-
-LaTeX Warning: Citation `swiatecki:1983:art' on page 6 undefined on input line 
-92.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
+      [5]pdfTeX warning (ext4): destination with the same identifier (name{page
+.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 W
-      e will now describe models for the level density $\rho$ and transition...
-[6])
-! Missing $ inserted.
-<inserted text> 
-                $
-l.29 
-     
-? 
-[7]
+l.93 
+      [6] [7]
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.128 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
+                                                  \label{eq:a}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.128 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
+                                                  \label{eq:a}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.135 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
+                                                  
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.135 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
+                                                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.152 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
+                                                  \label{eq:abiteration}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.152 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
+                                                  \label{eq:abiteration}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+) [8]
 Chapter 3.
-(./code/code.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 10.
-
-) (./report2.nls [8
-
-]
-Underfull \hbox (badness 10000) detected at line 5
-[]\T1/lmr/bx/n/10.95 intro[]
- []
-
-) (./report2.bbl [9
+(./code/code.tex)
+No file report2.nls.
+(./report2.bbl [9
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
@@ -1205,12 +1260,6 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 [][]$\T1/lmtt/m/n/10.95 https : / / www . gsi . de / work / forschung / nustare
 nna / nustarenna _ divisions /
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 29--34
-[]\T1/lmr/m/n/10.95 F. Cu-cinotta, J. Wil-son, J. Shinn, and R. Tri-pathi.  As-
-sess-ment and re-
  []
 
 
@@ -1225,11 +1274,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--40
 95 , 53(4):306 -- 308, 1974.
  []
 
-) [10
 
-]
+Underfull \hbox (badness 3635) in paragraph at lines 68--72
+[]\T1/lmr/m/n/10.95 M. Gross-jean and H. Feld-meier.  Level den-sity of a Fermi
+ gas with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
+\T1/lmr/m/n/10.95 pair-ing in-ter-ac-tions.  \T1/lmr/m/it/10.95 Nu-clear Physic
+s A\T1/lmr/m/n/10.95 , 444(1):113 -- 132, 1985.
+ []
+
+[10
+
+]) [11]
 Appendix A.
-[11
+[12
 
 ]
 Appendix B.
@@ -1243,40 +1304,37 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 62.
+(Font)              <9> on input line 63.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 62.
+(Font)              <5> on input line 63.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 74.
- [12
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 75.
+ [13
 
 ]
 Bilaga C.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
-[13
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
+[14
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
  (./report2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
 Package rerunfilecheck Info: File `report2.out' has not changed.
-(rerunfilecheck)             Checksum: 9EA49ABC038530768D1A6F4A674A629E;2136.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: D5B517A0114CF1ADC54E06478992860B;1884.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 14207 strings out of 493485
- 204951 string characters out of 3143525
- 431693 words of memory out of 3000000
- 17110 multiletter control sequences out of 15000+200000
+ 14223 strings out of 493485
+ 205178 string characters out of 3143525
+ 432041 words of memory out of 3000000
+ 17115 multiletter control sequences out of 15000+200000
  127910 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,17n,58p,1026b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1298,10 +1356,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report2.pdf (20 pages, 2842341 bytes).
+Output written on report2.pdf (21 pages, 2854819 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

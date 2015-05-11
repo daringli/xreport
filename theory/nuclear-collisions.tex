@@ -52,7 +52,7 @@ Since the collision between the target and the cluster is easier to do in their 
 \end{equation}
 where $\bar{E}$ etc. denotes the energy of the system of both particles. Since we want the $\beta$ between the lab and the ZM frame, we evaluate all the quantities in the lab frame
 \begin{equation}
-\beta_\text{ZM} = \frac{\vec{p}_i}{E_\text{c} + m_\text{t}}. \label{betazm}
+\beta_\text{ZM} = \frac{\vec{p}_i}{E_\text{c} + m_\text{t}}. \label{eq:betazm}
 \end{equation}
 
 The scattering between target and cluster is back-to-back in the ZM frame, and we generate the scattering angle from an isotropic $\tfrac{d\sigma}{dt}$, which in practice means that the Mandelstam variable $t$ is a uniform random number. The ZM energy, momentum and scattering angle can be readily expressed in term of the invariant Mandelstam variables
@@ -61,7 +61,7 @@ E_\text{c} &= \frac{s+m_\text{i} - m_\text{t}}{2\sqrt{s}} \\
 |\vec{p}_\text{c}| &= \sqrt{E_\text{c}^2 - m_\text{i}^2} \\
 \cos{\theta} &= \frac{t-m_\text{i}^2-m_\text{c}^2 + 2E_\text{c}^2}{2|\vec{p}_\text{c}|^2}.
 \end{align}
-A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with $|\vec{p}_\text{c}|$, $\theta$ and $E_\text{c}$ fix the ZM 4-momentum of the cluster, and also the target by $\vec{p}_\text{t} = -\vec{p}_\text{c}$. Using \eqref{betazm}, these results are boosted to the lab frame, in which we now have an expression for all the relevant momenta.
+A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with $|\vec{p}_\text{c}|$, $\theta$ and $E_\text{c}$ fix the ZM 4-momentum of the cluster, and also the target by $\vec{p}_\text{t} = -\vec{p}_\text{c}$. Using \eqref{eq:betazm}, these results are boosted to the lab frame, in which we now have an expression for all the relevant momenta.
 
 \section{The slow process -- decay of a compound nucleus}
 There are at least two models for the decay of a compound nucleus popular in the literature, the Hauser-Feshbach and the Ewing-Weisskopf formulas. Both aim to describe how a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$) will decay.
@@ -100,7 +100,7 @@ We use the following expression
 \rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.\label{eq:rho}
 \end{equation}
 
-!!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN EXP(-(2J+1)^2\beta/2Theta_Eff) COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!!
+!!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN $\exp(-(2J+1)^2\beta/2Theta\_Eff)$ COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!!
 
 Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
 \begin{equation}
@@ -158,5 +158,5 @@ which can be done numerically by iterating
 from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was used here, which solves \eqref{eq:abiteration} for $(a/\beta) \to \infty$ and known to be a good initial guess\cite{grossjean1985}.
 
 \subsubsection{Finite-Range Droplet Model}
-\label{sec:frdm1996}
+\label{sec:frdm1995}
 The Finite-range droplet model with parameters fitted to nuclear data in 1995\cite{moller1995} was used to determine the macroscopic contributions to mass excesses.

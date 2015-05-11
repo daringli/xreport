@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{r3b:online}
 GSI - R3B, 2014.
@@ -47,6 +47,28 @@ K.~H. Schmidt and W.~Morawek.
 K.~Krane.
 \newblock {\em Introductory Nuclear Physics}, chapter Nuclear Fission.
 \newblock Wiley, 1987.
+
+\bibitem{swiatecki:1983:art}
+W.~J. Swiatecki.
+\newblock NOTE ON NUCLEAR DISINTEGRATION WIDTHS.
+\newblock {\em Australian Journal of Physics}, 36(5):641--647, 1983.
+
+\bibitem{ericson:1960}
+T.~Ericson.
+\newblock {The statistical model and nuclear level densities}.
+\newblock {\em Adv.Phys.}, 9:425--511, 1960.
+
+\bibitem{moller1995}
+P.~Moller, J.~Nix, W.~Myers, and W.~Swiatecki.
+\newblock Nuclear Ground-State Masses and Deformations.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 59(2):185 -- 381, 1995.
+\newblock http://www.sciencedirect.com/science/article/pii/S0092640X85710029.
+
+\bibitem{grossjean1985}
+M.~Grossjean and H.~Feldmeier.
+\newblock Level density of a Fermi gas with pairing interactions.
+\newblock {\em Nuclear Physics A}, 444(1):113 -- 132, 1985.
+\newblock http://www.sciencedirect.com/science/article/pii/0375947485902945.
 
 \bibitem{gollerthan:1988:thesis}
 U.~Gollerthan.
