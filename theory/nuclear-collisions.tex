@@ -159,4 +159,13 @@ from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was use
 
 \subsubsection{Finite-Range Droplet Model}
 \label{sec:frdm1995}
-The Finite-range droplet model with parameters fitted to nuclear data in 1995\cite{moller1995} was used to determine the macroscopic contributions to mass excesses.
+The Finite-range droplet model with parameters fitted to nuclear data in 1995\cite{moller1995} was used to determine the macroscopic contributions to mass excesses. The macroscopic part of the FRDM is in essence-- like all macroscopic mass formulas-- a refined version of the \emph{semi-empirical mass formula} (SEMF). Just like the SEMF, the FRDM contains volume, surface, Coloumb, asymmetry (in the form of a Wigner term) and pairing terms. It also contains numerous other terms, and as such, we will not write it out here, but refer to the original literature\cite{moller1995}.
+
+Important to note is that our macroscopic energy was obtained for spherical nuclei, while the model parameters of the FRDM was fitted to experimental mass excesses deformations from a previous iteration, where rougher values were used for the constants. As such, our calculated macroscopic mass excesses do not contain deformation energies, and when we calculate the microscopic (pairing and shell energy), we actually calculate
+\begin{equation}
+E_\text{exp} - E_\text{mac}(\text{sphere}) = E_{\text{s}+\text{p}} + E_\text{deformation},
+\end{equation}
+which means that for deformed nuclei, our estimate of shell and pairing effects will include contributions from the deformation energy.
+Since the rest of the code does not take deformations into account, this is not really an additional contraint: the code cannot be expected to work for nuclei that are not close to being spherical. 
+
+The reason for this contraint is that it would be difficult to decide on which deformation parametrization to use, and which values to use for these parameters, given an $N,Z, J$ and excitation energy. For ground states, the deformations are rougly known, as the energy in the FRDM has been minimized with respect to Nilson perturbed-spheroid parameters. 
