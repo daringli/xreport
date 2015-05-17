@@ -143,7 +143,7 @@ where the critical angular momentum $J_\text{c}$ is about $12\hbar$. !!!SOURCE F
 
 Since we have restricted ourselves to spherical nuclei in \eqref{eq:a}, we also have the moments of inertia $\Theta_\perp = \Theta_\parallel$. In particular, for a sphere with constant density, we have
 \begin{equation}
-\Theta = \frac{2}{5} M R_0^2 \approx \frac{2}{5} A^{5/3}*u*r0^2
+\Theta = \frac{2}{5} M R_0^2 \approx \frac{2}{5} A^{5/3}\times u \times r_0^2
 \end{equation}
 The approximation is obtained by inserting $R_0 = r_0 A^{1/3}$ and $M=u A$, where $r_0=\unit[1.16]{fm}$ is the nuclear radius constant, with the same value as in the macroscopic model\cite{moller1995}. $u$ is the atomic mass units, $u \approx \unit[931.5]{MeV}$.
 
@@ -164,12 +164,58 @@ One of the more well-known models of a transition probability by particle decay 
 
 This model is readily generalized to other particle decays: we may just as well imagine a proton being formed inside the mother nucleus $(Z,N)$, and tunneling through the potential from the daughter nucleus $(Z-1,N)$.
 
-In order to make this model quantitative, we need an actual potential. Approximating the charge distribution of the daughter and tunneling particle as spherical, we may model the potential due to electrostatic interaction as a simple Coloumb potential, which gives us
+In order to make this model quantitative, we need an actual potential. Approximating the charge distribution of the daughter and tunneling particle as spherical, we may model the potential due to electrostatic interaction as a simple Coulomb potential, which gives us
 \begin{equation}
-V = V_\text{Col} + \dots =  Z_1 Z_2 \frac{e^2}{4\pi r_{12}} + \dots.
+V = V_\text{Col} + \dots =  Z_1 Z_2 \frac{e^2}{r_{12}} + \dots,
 \end{equation}
+in non-rationalized units.
 If we go ahead and assume that not only the charge distribution, but the potential as a whole is spherically symmetric, we can employ the standard procedure of splitting up the problem into a radial and angular part, where the radial potential is given by
 \begin{equation}
-V_\text{r} = Z_1 Z_2 \frac{e^2}{4\pi r_{12}} + \frac{l(l+1)\hbar^2}{2\mu r^2} + \dots
+V_\text{r} = Z_1 Z_2 \frac{e^2}{r_{12}} + \frac{l(l+1)\hbar^2}{2\mu r^2} + \dots
 \end{equation}
 where we still need additional terms to take into account the effective nucleon-nucleon intraction. The assumption of spherical symmetry also gives us the angular part of the wave function as a spherical harmonic, which gives us the angular distribution of the emitted particle in the center-of-mass frame.
+
+The nuclear part of the potential used by \prgname{Codex} is a proximity potential\cite{gollerthan:1988:thesis}\cite{blocki1977}. 
+
+!!! WRITE SOMETHING GENERAL ABOUT THE MODEL ASSUMPTIONS... I DON'T REALLY SEE HOW THIS APPLIES TO NEUTRONS OR PROTONS, BUT PEOPLE APPLY IT TO ALPHAS, WHICH ISN'T THAT FAR OFF IN TERMS OF NUCLEON NUMBER... !!!
+
+The potential is given by
+\begin{equation}
+V_\text{N} = C \phi(\zeta),\label{eq:vn}
+\end{equation}
+where
+\begin{equation}
+\phi(\zeta)= \begin{cases}-0.5(\zeta-2.54)^2-0.0852(\zeta-2.54)^3 & \zeta < 1.2511 \\
+-3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511.\qquad\cite{blocki1977}
+\end{cases}
+\end{equation}
+$\zeta$ is a dimensionless distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
+\begin{equation}
+\zeta = \frac{r - r_\text{sum}}{b},
+\end{equation}
+where $b$ is the surface diffuseness, and $r_\text{sum}$ is roughly the sum of the radii of the two nuclei, so that $r-r_\text{sum}$ gives the distance between the nuclear surfaces\cite{blocki1977}. The effective sharp nuclear surface may be estimated by the formula
+\begin{equation}
+r_\text{sharp} = 1.28 A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units{fm},\qquad\cite{blocki1977}\label{eq:sharp}
+\end{equation}
+which in \prgname{CODEX} is adjusted by adding a radius correction constant, $r_\text{adj} = \unit[0.9]{fm}$.
+\eqref{eq:sharp} is used to estimate the radii of all nuclei, and as a result $r_\text{sharp}=\unit[1.32]{fm}$ for protons and neutrons -- with the radius correction, this gives an $r_\text{sharp}=\unit[2.22]{fm}$, about three times the experimental charge radius of the proton!
+!!!  THE INPUT FILE SAYS ``VAZ ET. AL.'' NEXT TO RADIUS CORRECTION. WHAT IS THIS? !!!
+In the proximity potential, it is preferable to use the \emph{central radius} $r_\text{c}$ rather than the effective sharp radius\cite{blocki1977}, which is given by 
+\begin{equation}
+r_\text{c} =r_\text{sharp} \left(1-\left(\trfac{b}{r_\text{sharp}}\right)^2\right)\quad.\qquad\cite{myers1973}
+\end{equation}
+Hence, $r_\text{sum} = r_\text{c,1}+r_\text{c,2}$, and the only unknown constant in \autoref{eq:vn} is the proportionality constant $C$, which depends on the shape of the interacting nuclei, 
+\begin{equation}
+C = 4\pi \gamma b \frac{r_{c,1} r_{c,2}}{r_{c,1} + r_{c,2}}
+\end{equation}
+where $\gamma$ is the surface energy coefficient, which can be approximated by
+\begin{equation}
+\gamma= 0.9517 (1.0 - 1.78260 \times I^2),
+\end{equation}
+where $I=(N-Z)/A$ is the neutron excess.
+!!!THIS WILL BE MORE CLEAR ONCE I WRITE SOMETHING GENERAL ABOUT THE MODEL, WHICH REALLY DEALS WITH BULK AND SURFACE ENERGIES OF A THIN-SKINNED SYSTEM.!!!
+
+Given the potential, the transition probability
+
+\paragraph{\gamma-decay}
+The above discription concerned the tunneling of a nucleon or cluster through a potential barrier, and is thus not applicable to gamma decay.

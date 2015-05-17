@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  9 MAY 2015 16:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  17 MAY 2015 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,14 +969,14 @@ LaTeX Info: Redefining \nameref on input line 198.
 \openout4 = `report2.out'.
 
  (./titlepageabstract/titlepageabstract.tex
-<titlepageabstract/titlefig2.pdf, id=52, 284.50345pt x 284.50345pt>
+<titlepageabstract/titlefig2.pdf, id=64, 284.50345pt x 284.50345pt>
 File: titlepageabstract/titlefig2.pdf Graphic file (type pdf)
 
 <use titlepageabstract/titlefig2.pdf>
 Package pdftex.def Info: titlepageabstract/titlefig2.pdf used on input line 5.
 (pdftex.def)             Requested size: 284.50275pt x 284.50275pt.
 
-<titlepageabstract/frontpage.pdf, id=53, 598.235pt x 845.55902pt>
+<titlepageabstract/frontpage.pdf, id=65, 598.235pt x 845.55902pt>
 File: titlepageabstract/frontpage.pdf Graphic file (type pdf)
 
 <use titlepageabstract/frontpage.pdf>
@@ -1181,8 +1181,9 @@ l.76
 .6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 
-      [6] [7]
+l.94 W
+      e will now describe models for the level density $\rho$ and transition...
+[6] [7]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
@@ -1246,17 +1247,105 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-) [8]
+[8]
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.187 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+                                                  
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.187 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+                                                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+[9]
+! Undefined control sequence.
+l.196 ... A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units
+                                                  {fm},\qquad\cite{blocki197...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.196 ...3}\quad\units{fm},\qquad\cite{blocki1977}
+                                                  \label{eq:sharp}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.196 ...3}\quad\units{fm},\qquad\cite{blocki1977}
+                                                  \label{eq:sharp}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+! Undefined control sequence.
+l.203 ...t{c} =r_\text{sharp} \left(1-\left(\trfac
+                                                  {b}{r_\text{sharp}}\right)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.203 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+                                                  
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.203 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+                                                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no è in font lmex10!
+) [10]
 Chapter 3.
-(./code/code.tex)
-No file report2.nls.
-(./report2.bbl [9
+(./code/code.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) [11
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 51.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+) [12])
+No file report2.nls.
+(./report2.bbl [13]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 [][]$\T1/lmtt/m/n/10.95 https : / / www . gsi . de / work / forschung / nustare
 nna / nustarenna _ divisions /
@@ -1286,11 +1375,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--72
 s A\T1/lmr/m/n/10.95 , 444(1):113 -- 132, 1985.
  []
 
-[10
+[14
 
-]) [11]
+]
+
+! Package inputenc Error: Unicode char \u8:Ì§ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 J.~BÅ‚ocki, J.~Randrup, W.~ÅšwiaÌ§
+                                       tecki, and C.~Tsang.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
+[]\T1/lmr/m/n/10.95 J. Bªocki, J. Ran-drup, W. ‘wiate-cki, and C. Tsang.  Prox-
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
+\T1/lmr/m/n/10.95 im-ity forces.  \T1/lmr/m/it/10.95 An-nals of Physics\T1/lmr/
+m/n/10.95 , 105(2):427 -- 462, 1977.
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 86--91
+[]\T1/lmr/m/n/10.95 W. D. My-ers.  Ge-o-met-ric prop-er-ties of lep-to-der-mous
+ dis-tri-bu-tions with
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 86--91
+\T1/lmr/m/n/10.95 ap-pli-ca-tions to nu-clei.  \T1/lmr/m/it/10.95 Nu-clear Phys
+ics A\T1/lmr/m/n/10.95 , 204(3):465 -- 484, 1973.
+ []
+
+) [15]
 Appendix A.
-[12
+[16
 
 ]
 Appendix B.
@@ -1304,40 +1431,40 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 63.
+(Font)              <9> on input line 67.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 63.
+(Font)              <5> on input line 67.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 75.
- [13
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
+ [17
 
 ]
 Bilaga C.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-[14
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
+[18
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
  (./report2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `report2.out' has not changed.
-(rerunfilecheck)             Checksum: D5B517A0114CF1ADC54E06478992860B;1884.
+(rerunfilecheck)             Checksum: 5D780B0C6341FFB8BF1D92F928F46FE2;2454.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 103.
  ) 
 Here is how much of TeX's memory you used:
- 14223 strings out of 493485
- 205178 string characters out of 3143525
- 432041 words of memory out of 3000000
- 17115 multiletter control sequences out of 15000+200000
+ 14362 strings out of 493485
+ 206826 string characters out of 3143525
+ 434544 words of memory out of 3000000
+ 17216 multiletter control sequences out of 15000+200000
  127910 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,17n,58p,1026b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,17n,58p,1026b,1235s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1356,10 +1483,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report2.pdf (21 pages, 2854819 bytes).
+Output written on report2.pdf (25 pages, 2875824 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 328 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 398 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

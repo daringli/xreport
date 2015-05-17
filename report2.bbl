@@ -76,4 +76,17 @@ U.~Gollerthan.
   von $\nucl{90}{}{Zr} + \nucl{89}{}{Y}$.
 \newblock Master's thesis, Technische Hochschule Darmstadt, 1988.
 
+\bibitem{blocki1977}
+J.~Błocki, J.~Randrup, W.~Świa̧tecki, and C.~Tsang.
+\newblock Proximity forces.
+\newblock {\em Annals of Physics}, 105(2):427 -- 462, 1977.
+\newblock http://www.sciencedirect.com/science/article/pii/0003491677902494.
+
+\bibitem{myers1973}
+W.~D. Myers.
+\newblock Geometric properties of leptodermous distributions with applications
+  to nuclei.
+\newblock {\em Nuclear Physics A}, 204(3):465 -- 484, 1973.
+\newblock http://www.sciencedirect.com/science/article/pii/0375947473903886.
+
 \end{thebibliography}

@@ -9,7 +9,7 @@ anyways:
 	pdflatex report2.tex
 	pdflatex report2.tex
 
-report2.pdf:  bibli.bib joelspropack.bst report2.tex titlepageabstract/titlepageabstract.tex preamble/preamble.tex titlepageabstract/acknowledge/acknowledgements.tex titlepageabstract/abstract/sammandrag.tex titlepageabstract/abstract/abstract.tex intro/intro.tex theory/nuclear-collisions.tex
+report2.pdf:  bibli.bib joelspropack.bst report2.tex titlepageabstract/titlepageabstract.tex preamble/preamble.tex titlepageabstract/acknowledge/acknowledgements.tex titlepageabstract/abstract/sammandrag.tex titlepageabstract/abstract/abstract.tex intro/intro.tex theory/nuclear-collisions.tex code/code.tex
 	pdflatex report2.tex
 	bibtex report2.aux
 	makeindex report2.nlo -s nomencl.ist -o report2.nls
@@ -18,7 +18,7 @@ report2.pdf:  bibli.bib joelspropack.bst report2.tex titlepageabstract/titlepage
 
 war: temp
 	rm report2.pdf
-  
+
 temp:
 	rm report2.aux
 	rm report2.bbl
