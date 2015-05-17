@@ -63,7 +63,7 @@ E_\text{c} &= \frac{s+m_\text{i} - m_\text{t}}{2\sqrt{s}} \\
 \end{align}
 A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with $|\vec{p}_\text{c}|$, $\theta$ and $E_\text{c}$ fix the ZM 4-momentum of the cluster, and also the target by $\vec{p}_\text{t} = -\vec{p}_\text{c}$. Using \eqref{eq:betazm}, these results are boosted to the lab frame, in which we now have an expression for all the relevant momenta.
 
-\section{The slow process -- decay of a compound nucleus}
+\subsection{The slow process -- decay of a compound nucleus}
 There are at least two models for the decay of a compound nucleus popular in the literature, the Hauser-Feshbach and the Ewing-Weisskopf formulas. Both aim to describe how a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$) will decay.
 
 The older Ewing-Weisskopf formula, which this work is based on, gives the probability of decaying by evaporating a particle $\nu$ as
@@ -76,7 +76,7 @@ By integrating over $E$, we get $\frac{d P_\nu}{dt} = \Gamma_\nu$, which is roug
 
 Provided that the characteristic life-time of the system is short compared to the time resolution of the experimental setup, we may essentially treat the decay-widths as probabilities, since -- as far as the experiment is concerned -- the decay may as well take place instantenously. Note that the system may undergo multiple decays before it reaches its ground-state, and that time-scale of this entire decay chain must be short by the experimental standards. The time-of-flight resolution of the future \rtb{} setup will be in the picosecond range (\unit[$10^{-12}$]{s})\cite{r3b:online}, which is well above the time-scales of single evaporation given by Gaimard and Schmidt (\unit[$10^{-21}$ -- $10^{-16}$]{s})\cite{gaimard:1991:art}. Hence we will view $\Gamma_x$ as the probability to decay by a given process in an unspecified but short time step.
 
-Since we are interested in simulating a decay chain, we want more information than merely the decay by a given particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
+Since we are interested in simulating a decay chain, we want more information than merely the probability to decay by emitting a specific particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
 \begin{equation}
 \frac{d\Gamma_{\nu,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu),\label{eq:ew}
 \end{equation}
@@ -93,7 +93,7 @@ Although $\nu$ could be any particle, it becomes more appropriate to model the d
 
 We will now describe models for the level density $\rho$ and transition probability $T_l$.
 
-\subsection{Level densities}
+\subsubsection{Level densities}
 The level density $\rho(E,J)$ enumerates the number of levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, and for energies above the threshold for particle evaporation, it is reasonable to approximate it as a continuous function.
 We use the following expression
 \begin{equation}
@@ -157,15 +157,19 @@ which can be done numerically by iterating
 \end{equation}
 from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was used here, which solves \eqref{eq:abiteration} for $(a/\beta) \to \infty$ and known to be a good initial guess\cite{grossjean1985}.
 
-\subsubsection{Finite-Range Droplet Model}
-\label{sec:frdm1995}
-The Finite-range droplet model with parameters fitted to nuclear data in 1995\cite{moller1995} was used to determine the macroscopic contributions to mass excesses. The macroscopic part of the FRDM is in essence-- like all macroscopic mass formulas-- a refined version of the \emph{semi-empirical mass formula} (SEMF). Just like the SEMF, the FRDM contains volume, surface, Coloumb, asymmetry (in the form of a Wigner term) and pairing terms. It also contains numerous other terms, and as such, we will not write it out here, but refer to the original literature\cite{moller1995}.
+\subsubsection{Transition Probabilities}
+The decay width $\Gamma_{\nu,l}$ into a given final energy interval $[E_f,E_f+dE]$ by particle $\nu$ with orbital angular orbital momentum $l$ also depends on the transition probability $T_l(\epsilon_\nu)$.
 
-Important to note is that our macroscopic energy was obtained for spherical nuclei, while the model parameters of the FRDM was fitted to experimental mass excesses deformations from a previous iteration, where rougher values were used for the constants. As such, our calculated macroscopic mass excesses do not contain deformation energies, and when we calculate the microscopic (pairing and shell energy), we actually calculate
+One of the more well-known models of a transition probability by particle decay is the Gamow model for alpha decay, in which the mother nucleus $(Z,N)$ is modeled as essentially being composed of a ready-to-go alpha particle and the daughter nucleus $(Z-2,N-2)$ and the probability to decay is essentially given by the probability for the alpha particle to tunnel through the potential due to the daughter nucleus, with an additional factor depending on how often the alpha particle has a chance to tunnel. 
+
+This model is readily generalized to other particle decays: we may just as well imagine a proton being formed inside the mother nucleus $(Z,N)$, and tunneling through the potential from the daughter nucleus $(Z-1,N)$.
+
+In order to make this model quantitative, we need an actual potential. Approximating the charge distribution of the daughter and tunneling particle as spherical, we may model the potential due to electrostatic interaction as a simple Coloumb potential, which gives us
 \begin{equation}
-E_\text{exp} - E_\text{mac}(\text{sphere}) = E_{\text{s}+\text{p}} + E_\text{deformation},
+V = V_\text{Col} + \dots =  Z_1 Z_2 \frac{e^2}{4\pi r_{12}} + \dots.
 \end{equation}
-which means that for deformed nuclei, our estimate of shell and pairing effects will include contributions from the deformation energy.
-Since the rest of the code does not take deformations into account, this is not really an additional contraint: the code cannot be expected to work for nuclei that are not close to being spherical. 
-
-The reason for this contraint is that it would be difficult to decide on which deformation parametrization to use, and which values to use for these parameters, given an $N,Z, J$ and excitation energy. For ground states, the deformations are rougly known, as the energy in the FRDM has been minimized with respect to Nilson perturbed-spheroid parameters. 
+If we go ahead and assume that not only the charge distribution, but the potential as a whole is spherically symmetric, we can employ the standard procedure of splitting up the problem into a radial and angular part, where the radial potential is given by
+\begin{equation}
+V_\text{r} = Z_1 Z_2 \frac{e^2}{4\pi r_{12}} + \frac{l(l+1)\hbar^2}{2\mu r^2} + \dots
+\end{equation}
+where we still need additional terms to take into account the effective nucleon-nucleon intraction. The assumption of spherical symmetry also gives us the angular part of the wave function as a spherical harmonic, which gives us the angular distribution of the emitted particle in the center-of-mass frame.
