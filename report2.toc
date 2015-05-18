@@ -9,20 +9,21 @@
 \contentsline {section}{\numberline {2.1}Nuclear Collisions}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The fast processes -- the Goldhaber model}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}The slow process -- decay of a compound nucleus}{5}{subsection.2.1.2}
-\contentsline {subsubsection}{Level densities}{7}{section*.5}
-\contentsline {subsubsection}{Transition Probabilities}{9}{section*.6}
-\contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{10}{section.2.2}
-\contentsline {chapter}{\numberline {3}The Code}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Programs}{11}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}List generating programs}{12}{subsection.3.1.1}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{12}{section*.7}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{12}{section*.8}
-\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{12}{subsection.3.1.2}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Spectra}}}{13}{section*.9}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Deexcite}}}{13}{section*.10}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Rho}}}{13}{section*.11}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Pot}}}{13}{section*.12}
-\contentsline {chapter}{\numberline {A}Appendix 1}{16}{appendix.A}
-\contentsline {chapter}{\numberline {B}Code}{17}{appendix.B}
+\contentsline {subsubsection}{\nonumberline Level densities}{7}{section*.5}
+\contentsline {subsubsection}{\nonumberline Transition Probabilities}{9}{section*.6}
+\contentsline {paragraph}{\nonumberline \gamma -decay}{11}{section*.7}
+\contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{11}{section.2.2}
+\contentsline {chapter}{\numberline {3}The Code}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Programs}{13}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}List generating programs}{14}{subsection.3.1.1}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Nuclist}}}{14}{section*.8}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Quasi}}}{14}{section*.9}
+\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{14}{subsection.3.1.2}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Spectra}}}{15}{section*.10}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Deexcite}}}{15}{section*.11}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Rho}}}{15}{section*.12}
+\contentsline {subsubsection}{\nonumberline \textsmaller {\MakeUppercase {Pot}}}{15}{section*.13}
+\contentsline {chapter}{\numberline {A}Appendix 1}{18}{appendix.A}
+\contentsline {chapter}{\numberline {B}Code}{19}{appendix.B}
 \select@language {swedish}
-\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{18}{appendix.C}
+\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{20}{appendix.C}

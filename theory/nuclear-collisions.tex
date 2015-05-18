@@ -85,7 +85,7 @@ which finally gives us the decay probability (per unit energy) from an initial s
 $\nu$ can in principle be any particles. However, the photon must be treated differently as it is massless and thus fully relativistic -- which makes the dististinction between $l$ and the intrinsic spin unnatural -- and removes a polarization state. With this in mind, we get
 \begin{align}
 &\frac{d\Gamma_{\gamma}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{l=|J_f-J_i|}^{|J_f+J_i|} T_l(\epsilon_\gamma) \\
-\implies & \frac{d\Gamma_{\gamma,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} T_l(\epsilon_\gamma),
+\implies & \frac{d\Gamma_{\gamma,l}}{dE_f} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} T_l(\epsilon_\gamma),\label{eq:gammagamma}
 \end{align}
 where $l>0$ is an integer.
 
@@ -215,7 +215,42 @@ where $\gamma$ is the surface energy coefficient, which can be approximated by
 where $I=(N-Z)/A$ is the neutron excess.
 !!!THIS WILL BE MORE CLEAR ONCE I WRITE SOMETHING GENERAL ABOUT THE MODEL, WHICH REALLY DEALS WITH BULK AND SURFACE ENERGIES OF A THIN-SKINNED SYSTEM.!!!
 
-Given the potential, the transition probability
+Given the potential, the transition probability can be calculated in the WKB approximation as 
+\begin{equation}
+T_l(\epsilon_\nu) = \exp{-2G},\qquad\cite{krane:book}
+\end{equation}
+where 
+\begin{equation}
+G=\sqrt{\frac{2\hbar}{\mu}} \int_{r_1}^{r_2} \sqrt{V_l(r)-\epsilon_{\nu}}\,dr.
+\end{equation}
+$r_1$ and $r_2$ are the inner and outer radii for which the kinetic energy is equal to the potential energy. It should be noted that the WKB approximation is not strictly speaking valid for regions where the potential is approximately constant over several wave-lengths $\lambda=\frac{2\pi}{k}$, which will not be valid for a classical turning point, since $\lambda \to \infty$. 
+A somewhat more refined WKB approximation formula is
+\begin{equation}
+T_l(\epsilon_\nu) = \frac{1}{1+\exp{2G}},\qquad
+\end{equation}
+!!! CITE PAPER !!! which still suffers from the same short-comings as the previous formula. Nevertheless, the transition amplitudes calculated with the WKB formula are generally of the right order of magnitude, which should suffice for our purposes\cite{2011arXiv1106.1065N}.
+
+For $\epsilon>V_\text{max}$, we can no longer view the emission as tunneling, as the particle passes ``over'' the barrier. Instead
+\begin{equation}
+T_l = \frac{1}{1+\exp{\frac{2\pi}{\hbar \omega}(E-V_\text{max})}},
+\end{equation}
+where
+\begin{equation}
+\hbar\omega = \hbar\sqrt{\frac{1}{\mu}\left(\frac{d^2V_l}{dr^2}\right)_{r_\text{max}}}.
+\end{equation}
+!!! MAYBE NEED TRANSLATION OF SECTION OF ULLI THESIS. CAN'T FIND SOURCE !!!
 
 \paragraph{\gamma-decay}
 The above discription concerned the tunneling of a nucleon or cluster through a potential barrier, and is thus not applicable to gamma decay.
+
+$\gamma$-ray strength functions $f_{XL}$ can be used to calculate transition probabilities by $\gamma$-ray emission, 
+\begin{equation}
+T_L(E) = E^{2L+1} f_{XL}(E),\label{eq:gammat}
+\end{equation}
+where $f_l$ in principle can depend on whether the transition is electric or magnetic, $X=E$ and $X=M$, respectively. Viewed experimentally, \eqref{eq:gammat} can almost be viewed as a definition of the strength function. For exemple, the definition in the \emph{Gamma-Ray Strength Functions} in the book \emph{Advances in Nuclear Physics}\cite{ainp:1973}, defines the strength function as
+\begin{equation}
+f_{ifXL}^J = \frac{\bar{\Gamma_{ifXL}}}{E^{2L+1}_\gamma}\rho_{J}(E_i),
+\end{equation}
+and if we take $f_{XL}$ to be independent of $J$ and recall the definition of $\Gamma$ \eqref{eq:gammagamma}, we find that the definitions agree up to a factor $\rho_J(E_f)/\hbar$, which is essentially a constant for a fixed final state, as considered above.
+
+The transmission coefficient used by \prgname{CODEX} ... !!!TODO!!!
