@@ -94,19 +94,22 @@ Although $\nu$ could be any particle, it becomes more appropriate to model the d
 We will now describe models for the level density $\rho$ and transition probability $T_l$.
 
 \subsubsection{Level densities}
-The level density $\rho(E,J)$ enumerates the number of levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, and for energies above the threshold for particle evaporation, it is reasonable to approximate it as a continuous function.
+!!!TODO: write something general, describing what it really is, in terms of equidistant spacing model. Distinguish between level density and state density, and possibly mention Euler. Mention Laplace transforms to explain saddle point? !!!
+
+The level density $\rho(E,J)$ enumerates the number of energy levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, and for energies above the threshold for particle evaporation, it is reasonable to approximate it as a continuous function.
 We use the following expression
 \begin{equation}
-\rho(E,J) = \frac{\exp{(\beta U + a/\beta)}(1-\exp{-a/\beta})}{\sqrt{1-\tfrac{1}{2}U\beta\exp{-a/\beta}}} \frac{2J+1}{\sqrt{2}48} \frac{\beta}{U^{3/2}} \frac{1}{\sqrt{\Theta_\perp^2 \Theta_\parallel}}.\label{eq:rho}
+\rho(E,J) = \frac{1}{\sqrt{2}24}
+\frac{1}{\sigma a^{1/4} U^{5/4}} \exp{(2\sqrt{aU})}
+\frac{2J+1}{\Theta_\text{eff}/(\hbar^2\beta)}\ exp{\left(-(J+\tfrac{1}{2})^2/(2\Theta_\text{eff}/(\hbar^2\beta))\right)},\label{eq:rho}
 \end{equation}
-
-!!!I STILL HAVE NO IDEA WHERE THIS EXPRESSION IS FROM. WRONG NORMALIZATION AND LACKS AN $\exp(-(2J+1)^2\beta/2Theta\_Eff)$ COMPARED TO GROSSJEAN-FELDMEIER, WHICH IT COULD BE GIVEN THE VAGUE COMMENT IN CODEX!!!
+which is a version of the widely-used expression for the level density of a \emph{Fermi gas} that takes angular momentum $J$ into account\cite{ripl:2006}.
 
 Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
 \begin{equation}
 U=E_\text{eff} + f(E_\text{eff})\delta S + g(E_\text{eff})\delta P,\label{eq:u}
 \end{equation}
-where $f$ and $g$ describes the damping of shell and pairing effects with increased energy, and $E_\text{eff} = E*-E_\text{yrast}$. The \emph{yrast energy} is the lowest energy for a given angular momentum, here taken to be
+where $f$ and $g$ describes the damping of shell and pairing effects with increased energy, and $E_\text{eff} = E^*-E_\text{yrast}$. The \emph{yrast energy} is the lowest energy for a given angular momentum, here taken to be
 \begin{equation}
 E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
@@ -117,7 +120,7 @@ The shell energy $\delta S$ can either be calculated from a microscopic model, o
 
 The damping of shell effects with energy can be described by an exponential function
 \begin{equation}
-f(E_\text{eff}) = 1-\exp{-E_\text{eff}/E_\text{d}},
+f(E_\text{eff}) = 1-\exp{\left(-E_\text{eff}/E_\text{d}\right)},
 \end{equation}
 where $E_\text{d}$ is the shell-damping energy 
 \begin{equation}
@@ -147,7 +150,7 @@ Since we have restricted ourselves to spherical nuclei in \eqref{eq:a}, we also 
 \end{equation}
 The approximation is obtained by inserting $R_0 = r_0 A^{1/3}$ and $M=u A$, where $r_0=\unit[1.16]{fm}$ is the nuclear radius constant, with the same value as in the macroscopic model\cite{moller1995}. $u$ is the atomic mass units, $u \approx \unit[931.5]{MeV}$.
 
-Finally, $\beta$ in \eqref{eq:rho} is the reciprocal nuclear temperature $\beta=1/T$. It can be calculated from $\tfrac{a}{\beta}$, which is obtained by solving
+Finally, $\beta$ in \eqref{eq:rho} is the reciprocal nuclear temperature $\beta=1/T$\footnote{It really is the reciprocal temperature at the saddle-point, see e.g. Feldmeier\cite{grossjean1985}.}. It can be calculated from $\tfrac{a}{\beta}$, which is obtained by solving
 \begin{equation}
 a/\beta=\sqrt{(aU)[1 -exp{-a/\beta}]},\qquad\cite{grossjean1985}\label{eq:abiteration}
 \end{equation}
@@ -155,7 +158,54 @@ which can be done numerically by iterating
 \begin{equation}
 (a/\beta)_{n+1}=\sqrt{aU[1 -exp{-(a/\beta)_n}]}
 \end{equation}
-from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was used here, which solves \eqref{eq:abiteration} for $(a/\beta) \to \infty$ and known to be a good initial guess\cite{grossjean1985}.
+from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was used here, which solves \eqref{eq:abiteration} for $(a/\beta) \to \infty$ and is known to be a good initial guess\cite{grossjean1985}.
+
+\def\bredd{0.5}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{cc}
+\subfloat[The level densities derived from \eqref{eq:rho}.]{\includegraphics[width=\bredd\textwidth]{figures/rho/Z10N10.pdf}\label{sfig:rhoj:a}}
+&
+\subfloat[Without compensating for the yrast energy.]{\includegraphics[width=\bredd\textwidth]{figures/rho/Z10N10_no-yrast.pdf}\label{sfig:rhoj:b}}
+\end{tabular}
+\caption{\label{fig:rhospin} The energy dependence of the level density of $~^{20}\mathrm{Ne}$ for spin $J=0,\tfrac{1}{2},\dots, 4$. In order to more easily be able to compare level densities for different spin at the same effective energy above the yrast line, the yrast energy has not been subtracted from $E_\text{eff}$ in \ref{sfig:rhoj:b}.}
+\end{center}
+\end{figure}
+
+
+In order to get a picture of how all of this comes together, we have plotted the level density for the $A=10$ isobar for $J=0,\tfrac{1}{2},\dots, 4$. The level density of $~^{20}\mathrm{Ne}$ for different spin with and without subtracting the yrasy-energy is illustrated in \autoref{fig:rhospin}. 
+As can be seen in the figure, the level densities for higher spin start at a lower value for low energies, way lower than $1$ level each $\unit{MeV}$ -- which indicates that the continous view of energy levels fails at these energies. 
+The spins appear to be split up in $2$ groups, one for $J \le 1$ and one for $J>1$.
+The level densities for $4 \ge J> 1$ initially grow rapidly, until they overtake the lower spin level densities and settle at a seemingly proportional relationship with each other. As a result of the $(2J+1)\exp{(J(J+1))}$ dependence on $J$, moderate $J$ values give the largest level density.
+The same general behaviour is seen for the other nuclei at the $A=10$ isobar.
+
+In order to see if this is a general feature of our model, we also investigate $~^{99}\mathrm{Zr}$ -- this nuclei being chosen arbitrarily as something far form the $A=10$ isobar. The corresponding plots of the level densities are seen in \autoref{fig:rhospin2}. We note that the inclusion of the yrast energy is not nearly as significant for the spins under consideration, since the larger value of $\Theta$ reduces the yrast energy of a given $J$. This also explains why $J=4$ has the highest density of states in this case: a higher $\Theta$ means that the $\exp{(J(J+1)/\Theta)}$ factor does not supress the level density as rapidly with increasing spin. 
+We also see that it is only for $J\ge 3$ that we see the hint of a dip for lower energies. This could perhaps indicate that the pronounced spin-dependence seen for the $A=10$ isobar will reveal itself for yet higher spin -- a natural consequence of the higher moment of inertia for heavier nuclei.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{cc}
+\subfloat[The level densities derived from \eqref{eq:rho}.]{\includegraphics[width=\bredd\textwidth]{figures/rho/Z40N59.pdf}\label{sfig:rhoj2:a}}
+&
+\subfloat[Without compensating for the yrast energy.]{\includegraphics[width=\bredd\textwidth]{figures/rho/Z40N59_no-yrast.pdf}\label{sfig:rhoj2:b}}
+\end{tabular}
+\caption{\label{fig:rhospin2} The energy dependence of the level density of $~^{99}\mathrm{Zr}$ for spin $J=0,\tfrac{1}{2},\dots, 4$. In order to more easily be able to compare level densities for different spin at the same effective energy above the yrast line, the yrast energy has not been subtracted from $E_\text{eff}$ in \ref{sfig:rhoj2:b}.}
+\end{center}
+\end{figure}
+
+In any case, this is low-energy behaviour, and both the Fermi gas model\cite{grossjean1985} and the very notion of a continuous level density has problems for low energies. Most notably, the Fermi gas model itself, without compensating for shell and pairing effects, predicts a singularity at $U=0$, which is why we see an increase in the level density for lower energies and spin in both \autoref{fig:rhospin2} and \autoref{fig:rhospin}, which have been truncated at $E=\unit[0.1]{MeV}$ in order to avoid this.
+
+The level density was also investigated for a fixed spin for different nuclei on the $A=10$ isobar, but nothing conclusive was found.
+
+On the other hand, for the isotope $Z=10$, the level density for higher energies generally increases with additional neutrons, which is to be expected, since there are more ways to arrange the nucleons for a give excitation energy, this is illustrated in \autoref{fig:Z10-rho}, where the brighter lines correspond to heavier nuclei.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/rho/Z10_N7-N22.pdf}
+\caption{\label{fig:Z10-rho} The level densities for $~^{17}\mathrm{Mg}$ to $~^{32}\mathrm{Mg}$, where brigther lines correspond to heavier nuclei.}
+\end{center}
+\end{figure}
 
 \subsubsection{Transition Probabilities}
 The decay width $\Gamma_{\nu,l}$ into a given final energy interval $[E_f,E_f+dE]$ by particle $\nu$ with orbital angular orbital momentum $l$ also depends on the transition probability $T_l(\epsilon_\nu)$.
