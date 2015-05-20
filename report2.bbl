@@ -53,6 +53,14 @@ W.~J. Swiatecki.
 \newblock NOTE ON NUCLEAR DISINTEGRATION WIDTHS.
 \newblock {\em Australian Journal of Physics}, 36(5):641--647, 1983.
 
+\bibitem{mathworld}
+{Wolfram Research, Inc. }.
+\newblock Number of partitions of an integer into distinct parts: Introduction
+  to partitions, 2015.
+\newblock
+  http://functions.wolfram.com/IntegerFunctions/PartitionsQ/introductions/Partitions/ShowAll.html.
+\newblock (accessed 2015-05-20).
+
 \bibitem{ripl:2006}
 {International Atomic Energy Agency}.
 \newblock {\em Handbook for calculations of nuclear reaction data, RIPL-2},

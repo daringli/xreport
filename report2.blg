@@ -1,49 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report2.aux
 The style file: joelspropack.bst
 Database file #1: bibli.bib
 Warning--empty publisher in bowman:1973:book
 Warning--empty publisher in ripl:2006
-You've used 18 entries,
+You've used 19 entries,
             2209 wiz_defined-function locations,
-            622 strings with 6706 characters,
-and the built_in function-call counts, 4044 in all, are:
-= -- 386
-> -- 150
+            628 strings with 6942 characters,
+and the built_in function-call counts, 4195 in all, are:
+= -- 400
+> -- 154
 < -- 3
-+ -- 71
-- -- 35
-* -- 248
-:= -- 625
-add.period$ -- 62
-call.type$ -- 18
++ -- 73
+- -- 36
+* -- 249
+:= -- 648
+add.period$ -- 66
+call.type$ -- 19
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 198
-empty$ -- 413
-format.name$ -- 35
-if$ -- 924
+cite$ -- 21
+duplicate$ -- 205
+empty$ -- 433
+format.name$ -- 36
+if$ -- 961
 int.to.chr$ -- 0
-int.to.str$ -- 18
+int.to.str$ -- 19
 missing$ -- 20
-newline$ -- 101
-num.names$ -- 17
-pop$ -- 96
+newline$ -- 107
+num.names$ -- 18
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 79
+skip$ -- 82
 stack$ -- 0
 substring$ -- 239
-swap$ -- 20
+swap$ -- 21
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 28
-width$ -- 20
-write$ -- 212
+while$ -- 29
+width$ -- 21
+write$ -- 224
 (There were 2 warnings)

@@ -13,6 +13,7 @@ Various models to describe both steps exist in the literature, which can be comb
 Since the focus on this report is to describe an event-generator for a physics experiment, we do not need a state of the art model (see !!!AUTOREF TO SECTION!!! for the arguments). Since the macroscopic properties of nuclei are more easily related to expermental observables, we will restrict our attention to those. 
 
 \subsection{The fast processes -- the Goldhaber model}
+!!! SUDDENLY, CODE. INTRODUCE MODEL FIRST? !!!
 To mimic existing code !!!CITE LEONID?!!! and to allow the user to study a reaction of their interest, the outcome of the first stage of the process is largely determined by user input: the participant projectile nucleons -- the cluster -- as well as its invariant mass, and the excitation energy of the pre-fragment are both specified by user input. The only specific model used is to determine the momentum of the participant system relative to the projectile, everything else is just conservation of momentum, and an isotropic cross-section. 
 The \emph{Goldhaber model} states that the momentum distribution is given by a Guassian with the width determined by the expectation value of the momentum of an individual nucleon, explicitly
 \begin{equation}
@@ -94,9 +95,36 @@ Although $\nu$ could be any particle, it becomes more appropriate to model the d
 We will now describe models for the level density $\rho$ and transition probability $T_l$.
 
 \subsubsection{Level densities}
-!!!TODO: write something general, describing what it really is, in terms of equidistant spacing model. Distinguish between level density and state density, and possibly mention Euler. Mention Laplace transforms to explain saddle point? !!!
+The level density $\rho(E,J)$ enumerates the number of energy levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, which suggests that the nuclear levels are not simply built up by exciting single nucleons in a shell-model, since the spacing of these levels do not decrease nearly fast enough.
 
-The level density $\rho(E,J)$ enumerates the number of energy levels of a given nucleus in an energy range $[E,E+dE]$ with a given spin $J$. We have in our notation supressed the dependence on $A$ and $Z$. The nuclear level density increases rapidly with energy, and for energies above the threshold for particle evaporation, it is reasonable to approximate it as a continuous function.
+To see how the rapid increase in level densities may be accounted for by collective excitations, and to introduce some of the terminology, it is illustrative to have a look at a simple example.
+
+\paragraph{The simple example}
+Consider a ``nucleus'' in which we have $A$ identical nucleons, that occupy single particle states with spacing $d$. The situation is illustrated in \autoref{fig:equidist}. The energy of the nuclues is given by 
+\begin{equation}
+E=\sum_i \epsilon_i n_i,
+\end{equation}
+where $\epsilon = id$ is the energy of level $i$, and $n_i$ is the occupation number of that level, which can be $0$ or $1$, since nucleons are fermions.
+If we take the Fermi energy as the reference energy, we get the excitation energy
+\begin{equation}
+E^*=\sum_i \epsilon_i n_i - \sum_i^A \epsilon_i n_i.
+\end{equation}
+The picture is more illustrative than the formulas. We now have one way to excite our system to $E^*=d$, namely by exciting the nucleon just below the Fermi level. For $E^*=2d$ we may proceed from our $E^*=d$ system in two ways, either by further exciting the lone excited nucleon $E^* = 2d$, or by exciting the highest nucleon in the $A-1$ system, $E^*=d+d$. For $E^*=3d$, we have
+\begin{aligned*}
+1d+1d+1d \\
+3d \\
+2d+1d,
+\end{aligned*}
+and at this point, it should be apparent that we are really investigating the number of ways to write a natural number of natural numbers, a problem which engaged Euler as early as 1720\cite{mathworld}. It turns out to be a very rapidly growing function, with the number of ways to partition $100$ being $190 569 292$\cite{mathworld}.
+
+!!!TODO: mention g=1/d,  smearing out producedur by Laplace+saddle-point !!!
+
+\begin{figure}
+\input{figures/rho-theory/equidistant.pdf_t}
+\caption{\label{fig:equidist} Fermions with equidistant single-particle levels.}
+\end{figure}
+
+Since the level density increases very rapidly, it is reasonable to approximate it as a continuous function  for energies above the threshold for particle evaporation.
 We use the following expression
 \begin{equation}
 \rho(E,J) = \frac{1}{\sqrt{2}24}
