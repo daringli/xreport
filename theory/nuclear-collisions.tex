@@ -256,36 +256,24 @@ V_\text{r} = Z_1 Z_2 \frac{e^2}{r_{12}} + \frac{l(l+1)\hbar^2}{2\mu r^2} + \dots
 \end{equation}
 where we still need additional terms to take into account the effective nucleon-nucleon intraction. The assumption of spherical symmetry also gives us the angular part of the wave function as a spherical harmonic, which gives us the angular distribution of the emitted particle in the center-of-mass frame.
 
+\begin{figure}
+\begin{center}
+\input{figures/pot-theory/proximity.pdf_t}
+\caption{\label{fig:prox} A schematic sketch of how the proximity approximation is carried out. Two close surfaces are approximated as a series of parallel surface, which in turn are approximated as infinite parallel surface, for which the potential energy is easier to calculate. This result is then summed up ofr all parallel surfaces.}
+\end{center}
+\end{figure}
+
 The nuclear part of the potential used by \prgname{Codex} is a proximity potential\cite{gollerthan:1988:thesis}\cite{blocki1977}. 
+Proximity potentials may be derived from a more general approximation method, in which two nearby surface are split up into parallel surface, close enough to be approximated as semi-infinite, see \autoref{fig:prox}\cite{fosco:2012}. The contributions from these different set of parallel surfaces are assumed to be additive.
+The potential energy is calculated for these slabs, and factors to correct for the actual geometry are introduced. This approach is widely used in Casimir force calculations between objects of a more arbitrary shape\cite{fosco:2011}. This approximation is also known by ``Derjaguin approximation'' in other fields\cite{fosco:2012}.
 
-!!! WRITE SOMETHING GENERAL ABOUT THE MODEL ASSUMPTIONS... I DON'T REALLY SEE HOW THIS APPLIES TO NEUTRONS OR PROTONS, BUT PEOPLE APPLY IT TO ALPHAS, WHICH ISN'T THAT FAR OFF IN TERMS OF NUCLEON NUMBER... !!!
+In the nuclear case, the situation is somewhat complicated by the fact that the form of the nucleon-nucleon interaction is unknown. As such, there exist several proximity potentials\cite{dutt:2010}. Dutt et. al. showed that 12 common proximity potentials all were able to predict fusion barrier heights with $10\%$ of the experimental values for asymmetric fusion reactions ranging from $~^{12}\mathrm{C} + ~^{17}\mathrm{O}$ to $~^{86}\mathrm{Kr} + ~^{208}\mathrm{Pb}$\cite{dutt:2010}. Proximity-type potentials have also been used to explore alpha and proton decay\cite{proton-alpha-proxy:2005}\cite{proton-proxy:2010}, which is closer to our intended application\footnote{It is not immediately obvious to the author if the assumptions of the proximity potential formalism applies to proton or alpha decay. It does however reproduce experimental half-lives to a reasonable degree, see e.g. Balasubramaniam and Arunachala\cite{proton-alpha-proxy:2005}.}.
 
-The potential is given by
+The proximity potential is given by
 \begin{equation}
 V_\text{N} = C \phi(\zeta),\label{eq:vn}
 \end{equation}
-where
-\begin{equation}
-\phi(\zeta)= \begin{cases}-0.5(\zeta-2.54)^2-0.0852(\zeta-2.54)^3 & \zeta < 1.2511 \\
--3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511.\qquad\cite{blocki1977}
-\end{cases}
-\end{equation}
-$\zeta$ is a dimensionless distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
-\begin{equation}
-\zeta = \frac{r - r_\text{sum}}{b},
-\end{equation}
-where $b$ is the surface diffuseness, and $r_\text{sum}$ is roughly the sum of the radii of the two nuclei, so that $r-r_\text{sum}$ gives the distance between the nuclear surfaces\cite{blocki1977}. The effective sharp nuclear surface may be estimated by the formula
-\begin{equation}
-r_\text{sharp} = 1.28 A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units{fm},\qquad\cite{blocki1977}\label{eq:sharp}
-\end{equation}
-which in \prgname{CODEX} is adjusted by adding a radius correction constant, $r_\text{adj} = \unit[0.9]{fm}$.
-\eqref{eq:sharp} is used to estimate the radii of all nuclei, and as a result $r_\text{sharp}=\unit[1.32]{fm}$ for protons and neutrons -- with the radius correction, this gives an $r_\text{sharp}=\unit[2.22]{fm}$, about three times the experimental charge radius of the proton!
-!!!  THE INPUT FILE SAYS ``VAZ ET. AL.'' NEXT TO RADIUS CORRECTION. WHAT IS THIS? !!!
-In the proximity potential, it is preferable to use the \emph{central radius} $r_\text{c}$ rather than the effective sharp radius\cite{blocki1977}, which is given by 
-\begin{equation}
-r_\text{c} =r_\text{sharp} \left(1-\left(\trfac{b}{r_\text{sharp}}\right)^2\right)\quad.\qquad\cite{myers1973}
-\end{equation}
-Hence, $r_\text{sum} = r_\text{c,1}+r_\text{c,2}$, and the only unknown constant in \autoref{eq:vn} is the proportionality constant $C$, which depends on the shape of the interacting nuclei, 
+where $\phi(\zeta)$ is the so-called \emph{universal function}, which for a given nucleon-nucleon interaction is independent of the geometry of the nuclei in the proximity approximation. $\zeta$ is a unitless distance between the two nuclei, see below. Geometrical factors are contained in the proportionality ``constant'' $C$, which is given by
 \begin{equation}
 C = 4\pi \gamma b \frac{r_{c,1} r_{c,2}}{r_{c,1} + r_{c,2}}
 \end{equation}
@@ -294,14 +282,37 @@ where $\gamma$ is the surface energy coefficient, which can be approximated by
 \gamma= 0.9517 (1.0 - 1.78260 \times I^2),
 \end{equation}
 where $I=(N-Z)/A$ is the neutron excess.
-!!!THIS WILL BE MORE CLEAR ONCE I WRITE SOMETHING GENERAL ABOUT THE MODEL, WHICH REALLY DEALS WITH BULK AND SURFACE ENERGIES OF A THIN-SKINNED SYSTEM.!!!
+
+We use the universal function due to Blocki 1997
+\begin{equation}
+\phi(\zeta)= \begin{cases}-0.5(\zeta-2.54)^2-0.0852(\zeta-2.54)^3 & \zeta < 1.2511 \\
+-3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511.\qquad\cite{blocki1977}
+\end{cases}
+\end{equation}
+$\zeta$ is the distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
+\begin{equation}
+\zeta = \frac{r - r_\text{sum}}{b},
+\end{equation}
+where $b$ is the surface diffuseness, and $r_\text{sum}$ is roughly the sum of the radii of the two nuclei, so that $r-r_\text{sum}$ gives the distance between the nuclear surfaces\cite{blocki1977}. An effective sharp nuclear surface may be estimated by the formula
+\begin{equation}
+r_\text{sharp} = 1.28 A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units{fm}.\qquad\cite{blocki1977}\label{eq:sharp}
+\end{equation}
+%which in \prgname{CODEX} is adjusted by adding a radius correction constant, $r_\text{adj} = \unit[0.9]{fm}$.
+\eqref{eq:sharp} is used to estimate the radii of all nuclei, and as a result $r_\text{sharp}=\unit[1.32]{fm}$ for protons and neutrons, which is slightly different from the value of $r_0$ that is normaly used.
+%!!!  THE INPUT FILE SAYS ``VAZ ET. AL.'' NEXT TO RADIUS CORRECTION. WHAT IS THIS? !!!
+In the proximity potential, it is preferable to use the \emph{central radius} $r_\text{c}$ rather than the effective sharp radius\cite{blocki1977}, which is given by 
+\begin{equation}
+r_\text{c} =r_\text{sharp} \left(1-\left(\trfac{b}{r_\text{sharp}}\right)^2\right)\quad.\qquad\cite{myers1973}
+\end{equation}
+Hence, $r_\text{sum} = r_\text{c,1}+r_\text{c,2}$. 
+
+%!!!THIS WILL BE MORE CLEAR ONCE I WRITE SOMETHING GENERAL ABOUT THE MODEL, WHICH REALLY DEALS WITH BULK AND SURFACE ENERGIES OF A THIN-SKINNED SYSTEM.!!!
 
 Since the proximity model takes the extent of the nuclei into account, we modify the Coloumb-interaction accordingly, from that of a point particle to that of a homogenously charged ball
 \begin{equation}
-V_\text{C} = \begin{cases}\frac{Z_1 Z_2 e^2}{r} &\quad r>r_c \\ \frac{Z_1 Z_2 e^2}{r_c^2}(3-(r/r_c)^2) &\quad r<r_c, \end{cases}
+V_\text{C} = \begin{cases}\frac{Z_1 Z_2 e^2}{r} &\quad r>r_\text{ch} \\ \frac{Z_1 Z_2 e^2}{r_\text{ch}^2}(3-(r/r_\text{ch})^2) &\quad r<r_\text{ch}, \end{cases}
 \end{equation}
-where we here use $r_c = r_0 A^{1/3}$.
-
+where we here use the more common formula for the charge radius, $r_\text{ch} = r_0 A^{1/3}$.
 
 Given the potential, the transition probability can be calculated in the WKB approximation as 
 \begin{equation}

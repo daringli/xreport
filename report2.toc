@@ -12,19 +12,19 @@
 \contentsline {subsubsection}{Level densities}{7}{section*.5}
 \contentsline {paragraph}{The simple example}{7}{section*.6}
 \contentsline {subsubsection}{Transition Probabilities}{15}{section*.11}
-\contentsline {paragraph}{\gamma -decay}{17}{section*.12}
+\contentsline {paragraph}{\gamma -decay}{18}{section*.13}
 \contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{18}{section.2.2}
-\contentsline {chapter}{\numberline {3}The Code}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Programs}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}List generating programs}{20}{subsection.3.1.1}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{20}{section*.13}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{20}{section*.14}
-\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{20}{subsection.3.1.2}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Spectra}}}{21}{section*.15}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Deexcite}}}{21}{section*.16}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Rho}}}{21}{section*.17}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Pot}}}{21}{section*.18}
-\contentsline {chapter}{\numberline {A}Appendix 1}{24}{appendix.A}
-\contentsline {chapter}{\numberline {B}Code}{25}{appendix.B}
+\contentsline {chapter}{\numberline {3}The Code}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Programs}{20}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}List generating programs}{21}{subsection.3.1.1}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{21}{section*.14}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{21}{section*.15}
+\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{21}{subsection.3.1.2}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Spectra}}}{22}{section*.16}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Deexcite}}}{22}{section*.17}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Rho}}}{22}{section*.18}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Pot}}}{22}{section*.19}
+\contentsline {chapter}{\numberline {A}Appendix 1}{25}{appendix.A}
+\contentsline {chapter}{\numberline {B}Code}{26}{appendix.B}
 \select@language {swedish}
-\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{26}{appendix.C}
+\contentsline {chapter}{\numberline {C}Svenska h\IeC {\"a}r}{27}{appendix.C}

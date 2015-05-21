@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  20 MAY 2015 20:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  21 MAY 2015 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1306,10 +1306,45 @@ File: figures/rho/Z10_N7-N22.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/rho/Z10_N7-N22.pdf used on input line 235.
 (pdftex.def)             Requested size: 418.25368pt x 418.28731pt.
  [13] [14 <./figures/rho/Z10_N7-N22.pdf>]
+(./figures/pot-theory/proximity.pdf_t
+<figures/pot-theory/proximity.pdf, id=355, 371.3875pt x 149.55875pt>
+File: figures/pot-theory/proximity.pdf Graphic file (type pdf)
+
+<use figures/pot-theory/proximity.pdf>
+Package pdftex.def Info: figures/pot-theory/proximity.pdf used on input line 2.
+
+(pdftex.def)             Requested size: 371.38658pt x 149.55838pt.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20> on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <13.99994> on input line 14.
+)
+
+LaTeX Warning: Citation `dutt:2010' on page 15 undefined on input line 270.
+
+
+LaTeX Warning: Citation `dutt:2010' on page 15 undefined on input line 270.
+
+
+LaTeX Warning: Citation `proton-alpha-proxy:2005' on page 15 undefined on input
+ line 270.
+
+
+LaTeX Warning: Citation `proton-proxy:2010' on page 15 undefined on input line 
+270.
+
+
+LaTeX Warning: Citation `proton-alpha-proxy:2005' on page 15 undefined on input
+ line 270.
+
+[15
+
+]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.270 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+l.289 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1319,7 +1354,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.270 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+l.289 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1327,12 +1362,10 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-[15
-
-]
+[16 <./figures/pot-theory/proximity.pdf>]
 ! Undefined control sequence.
-l.279 ... A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units
-                                                  {fm},\qquad\cite{blocki197...
+l.298 ... A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units
+                                                  {fm}.\qquad\cite{blocki197...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1342,7 +1375,7 @@ and I'll forget about whatever was undefined.
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.279 ...3}\quad\units{fm},\qquad\cite{blocki1977}
+l.298 ...3}\quad\units{fm}.\qquad\cite{blocki1977}
                                                   \label{eq:sharp}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1352,7 +1385,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.279 ...3}\quad\units{fm},\qquad\cite{blocki1977}
+l.298 ...3}\quad\units{fm}.\qquad\cite{blocki1977}
                                                   \label{eq:sharp}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1361,7 +1394,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
 ! Undefined control sequence.
-l.286 ...t{c} =r_\text{sharp} \left(1-\left(\trfac
+l.305 ...t{c} =r_\text{sharp} \left(1-\left(\trfac
                                                   {b}{r_\text{sharp}}\right)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1372,7 +1405,7 @@ and I'll forget about whatever was undefined.
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.286 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+l.305 ...ght)^2\right)\quad.\qquad\cite{myers1973}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1382,7 +1415,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.286 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+l.305 ...ght)^2\right)\quad.\qquad\cite{myers1973}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1393,7 +1426,7 @@ Missing character: There is no è in font lmex10!
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.308 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
+l.319 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1403,7 +1436,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.308 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
+l.319 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1411,19 +1444,19 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-[16]
+[17]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.332 T
+l.343 T
        he above discription concerned the tunneling of a nucleon or cluster ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-\@svsechd ...12}\Sectionformat {\gamma -decay}{4}}
+\@svsechd ...13}\Sectionformat {\gamma -decay}{4}}
                                                   \expandafter \csname parag...
-l.332 T
+l.343 T
        he above discription concerned the tunneling of a nucleon or cluster ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1434,7 +1467,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.332 T
+l.343 T
        he above discription concerned the tunneling of a nucleon or cluster ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1445,7 +1478,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.332 T
+l.343 T
        he above discription concerned the tunneling of a nucleon or cluster ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1453,22 +1486,22 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-) (./theory/frdm.tex [17]) [18]
+) (./theory/frdm.tex) [18] [19]
 Chapter 3.
 (./code/code.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [19
+) [20
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 51.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [20])
+) [21])
 No file report2.nls.
-(./report2.bbl [21]
+(./report2.bbl [22]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 [][]$\T1/lmtt/m/n/10.95 https : / / www . gsi . de / work / forschung / nustare
 nna / nustarenna _ divisions /
@@ -1504,7 +1537,7 @@ Overfull \hbox (87.87776pt too wide) in paragraph at lines 57--63
 roductions/Partitions/ShowAll.html.
  []
 
-[22
+[23
 
 ]
 Underfull \hbox (badness 3635) in paragraph at lines 82--86
@@ -1544,20 +1577,20 @@ m/n/10.95 , 105(2):427 -- 462, 1977.
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 100--105
+Underfull \hbox (badness 2837) in paragraph at lines 111--116
 []\T1/lmr/m/n/10.95 W. D. My-ers.  Ge-o-met-ric prop-er-ties of lep-to-der-mous
  dis-tri-bu-tions with
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 100--105
+Underfull \hbox (badness 6268) in paragraph at lines 111--116
 \T1/lmr/m/n/10.95 ap-pli-ca-tions to nu-clei.  \T1/lmr/m/it/10.95 Nu-clear Phys
 ics A\T1/lmr/m/n/10.95 , 204(3):465 -- 484, 1973.
  []
 
-) [23]
+) [24]
 Appendix A.
-[24
+[25
 
 ]
 Appendix B.
@@ -1572,12 +1605,12 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 77.
- [25
+ [26
 
 ]
 Bilaga C.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[26
+[27
 
 
 ]
@@ -1589,18 +1622,21 @@ Package rerunfilecheck Info: File `report2.out' has not changed.
 (rerunfilecheck)             Checksum: 5D780B0C6341FFB8BF1D92F928F46FE2;2454.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 14470 strings out of 493485
- 208920 string characters out of 3143525
- 436749 words of memory out of 3000000
- 17273 multiletter control sequences out of 15000+200000
- 136442 words of font info for 109 fonts, out of 3000000 for 9000
+ 14509 strings out of 493485
+ 209704 string characters out of 3143525
+ 437287 words of memory out of 3000000
+ 17302 multiletter control sequences out of 15000+200000
+ 148072 words of font info for 122 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,17n,58p,1026b,1217s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,17n,58p,1032b,1217s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1621,10 +1657,10 @@ share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report2.pdf (33 pages, 3031882 bytes).
+Output written on report2.pdf (34 pages, 3039895 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 161 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 633 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
