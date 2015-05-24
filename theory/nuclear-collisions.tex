@@ -71,7 +71,11 @@ The older Ewing-Weisskopf formula, which this work is based on, gives the probab
 \begin{equation}
 \frac{d^2 P_\nu}{dE_f dt} = \frac{1}{\hbar} \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|}\sum_{l=|J_i-S|}^{|J_i+S|} T_l(\epsilon_\nu),\qquad\cite{schmidt:1991:art}\label{eq:ew}
 \end{equation}
-where $P$ is the probability, $E_f$ the final-state energy, $J_f$ the final-state spin, $\rho$ the level densities and $\epsilon_\nu = E_f-E_i-B_\nu$ the kinetic energy of the evaporated particle, $B_\nu$ being its binding energy. 
+where $P$ is the probability, $E_f$ the final-state energy, $J_f$ the final-state spin, $\rho$ the level densities and 
+\begin{equation}
+\epsilon_\nu \approx E_f-E_i-S_\nu\label{eq:kine}
+\end{equation}
+the kinetic energy of the evaporated particle, $S_\nu$ being its separation energy $S_\nu = M_f + m_\nu - M_i$\footnote{The approximation is due to neglecting the kinetic energy of the daughter nucleus, which should be a good approximation when the evaporated particle $\nu$ is light. This is not a necesary approximation, though, and a more exact formula is presented in !!!autoref!!!. The separation energy does not enter as a cost of removing the particle $\nu$, but rather to relate the two excitation energies $E_f$ and $E_i$ to an absolute scale.} . 
 $s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of that state with respect to its center of mass. The sums give all the way to couple these while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. $T_l$ is the transition probability.
 By integrating over $E$, we get $\frac{d P_\nu}{dt} = \Gamma_\nu$, which is roughly proportional to the probability to decay through the channel $\nu$, $P_\nu = \Gamma_\nu/\Gamma_{\text{tot}}$. 
 
@@ -119,7 +123,7 @@ The picture is more illustrative than the formulas. We now have one way to excit
 \end{equation}
 and at this point, it should be apparent that we are really investigating the number of ways to write a natural number as a sum of natural numbers, a problem which engaged Euler as early as 1720\cite{mathworld}. It turns out to be a very rapidly growing function, with the number of ways to partition $100$ being $190 569 292$\cite{mathworld}.
 
-!!!TODO: mention g=1/d,  smearing out producedur by Laplace+saddle-point !!!
+!!!TODO: mention g=1/d and its relation to a.  Smearing out producedur by Laplace+saddle-point. Mention level vs density of states. !!!
 
 \begin{figure}
 \input{figures/rho-theory/equidistant.pdf_t}
@@ -143,7 +147,7 @@ where $f$ and $g$ describes the damping of shell and pairing effects with increa
 \begin{equation}
 E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
-corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis. This yrast energy is not strictly speaking the lowest energy for a given $J$, but the energy of a collective rotational excitation, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. !!CITE. THIS IS A GUESS OF MINE.!!
+corresponding to a quantum-mechanical axi-symmetric rotor rotating around its symmetry axis. This yrast energy is not strictly speaking the lowest energy for a given $J$, but the energy of a collective rotational excitation, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. !!CITE. THIS IS A GUESS OF MINE. ALSO NOTE THAT THIS IS NOT AN ADDITIONAL ROTATIONAL DOF, SEE NUCLEAR STRUCTURE II BY BOHR + MOTTELSON.!!
 
 The pairing energy $\delta P$ in \eqref{eq:u} can be estimated from the average separation energy for the surrounding nuclei (in an $(N,Z)$ plot, like an isotope chart), which is close to the actual observed shift between odd and even nuclei\cite{ericson:1960}. Neutrons and protons have different pairing energies, which is to be added or subtracted when neutron or proton number, respectively, is odd or even. 
 The shell energy $\delta S$ can either be calculated from a microscopic model, or -- as I have done -- can be be estimated together with the pairing energy by comparing experimental masses with masses predicted by a macroscopic model, and taking the difference, as suggested by Schmidt and Morawek\cite{schmidt:1991:art}. I used the macroscopic part of the 1992 edition of the Finite-Range Droplet Model (FRDM-1992)\cite{moller1995}, which is presented in more detail in \autoref{sec:frdm1995}.
@@ -259,7 +263,7 @@ where we still need additional terms to take into account the effective nucleon-
 \begin{figure}
 \begin{center}
 \input{figures/pot-theory/proximity.pdf_t}
-\caption{\label{fig:prox} A schematic sketch of how the proximity approximation is carried out. Two close surfaces are approximated as a series of parallel surface, which in turn are approximated as infinite parallel surface, for which the potential energy is easier to calculate. This result is then summed up ofr all parallel surfaces.}
+\caption{\label{fig:prox} A schematic sketch of how the proximity approximation is carried out. Two close surfaces are approximated as a series of parallel surface, which in turn are approximated as infinite parallel surface, for which the potential energy is easier to calculate. This result is then summed up for all parallel surfaces.}
 \end{center}
 \end{figure}
 
@@ -267,7 +271,7 @@ The nuclear part of the potential used by \prgname{Codex} is a proximity potenti
 Proximity potentials may be derived from a more general approximation method, in which two nearby surface are split up into parallel surface, close enough to be approximated as semi-infinite, see \autoref{fig:prox}\cite{fosco:2012}. The contributions from these different set of parallel surfaces are assumed to be additive.
 The potential energy is calculated for these slabs, and factors to correct for the actual geometry are introduced. This approach is widely used in Casimir force calculations between objects of a more arbitrary shape\cite{fosco:2011}. This approximation is also known by ``Derjaguin approximation'' in other fields\cite{fosco:2012}.
 
-In the nuclear case, the situation is somewhat complicated by the fact that the form of the nucleon-nucleon interaction is unknown. As such, there exist several proximity potentials\cite{dutt:2010}. Dutt et. al. showed that 12 common proximity potentials all were able to predict fusion barrier heights with $10\%$ of the experimental values for asymmetric fusion reactions ranging from $~^{12}\mathrm{C} + ~^{17}\mathrm{O}$ to $~^{86}\mathrm{Kr} + ~^{208}\mathrm{Pb}$\cite{dutt:2010}. Proximity-type potentials have also been used to explore alpha and proton decay\cite{proton-alpha-proxy:2005}\cite{proton-proxy:2010}, which is closer to our intended application\footnote{It is not immediately obvious to the author if the assumptions of the proximity potential formalism applies to proton or alpha decay. It does however reproduce experimental half-lives to a reasonable degree, see e.g. Balasubramaniam and Arunachala\cite{proton-alpha-proxy:2005}.}.
+In the nuclear case, the situation is somewhat complicated by the fact that the form of the nucleon-nucleon interaction is unknown. As such, there exist several proximity potentials\cite{dutt:2010}. Dutt et. al. showed that 12 common proximity potentials all were able to predict fusion barrier heights with $10\%$ of the experimental values for asymmetric fusion reactions ranging from $~^{12}\mathrm{C} + ~^{17}\mathrm{O}$ to $~^{86}\mathrm{Kr} + ~^{208}\mathrm{Pb}$\cite{dutt:2010}. Proximity-type potentials have also been used to explore alpha and proton decay\cite{proton-alpha-proxy:2005}\cite{proton-proxy:2010}, which is closer to our intended application\footnote{It is not immediately obvious to the author if the assumptions of the proximity potential formalism applies to proton or alpha decay. It does however reproduce experimental half-lives to a reasonable degree, see e.g. Balasubramaniam and Arunachala\cite{proton-alpha-proxy:2005} -- this is for emission from heavier nuclei, though.}.
 
 The proximity potential is given by
 \begin{equation}
@@ -287,7 +291,7 @@ We use the universal function due to Blocki 1997
 \begin{equation}
 \phi(\zeta)= \begin{cases}-0.5(\zeta-2.54)^2-0.0852(\zeta-2.54)^3 & \zeta < 1.2511 \\
 -3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511.\qquad\cite{blocki1977}
-\end{cases}
+\end{cases}\label{eq:prox}
 \end{equation}
 $\zeta$ is the distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
 \begin{equation}
@@ -308,11 +312,25 @@ Hence, $r_\text{sum} = r_\text{c,1}+r_\text{c,2}$.
 
 %!!!THIS WILL BE MORE CLEAR ONCE I WRITE SOMETHING GENERAL ABOUT THE MODEL, WHICH REALLY DEALS WITH BULK AND SURFACE ENERGIES OF A THIN-SKINNED SYSTEM.!!!
 
-Since the proximity model takes the extent of the nuclei into account, we modify the Coloumb-interaction accordingly, from that of a point particle to that of a homogenously charged ball
+Since the proximity model takes the spartial extent of the nuclei into account, we modify the Coloumb-interaction accordingly, from that of a point particle to that of a homogenously charged ball
 \begin{equation}
 V_\text{C} = \begin{cases}\frac{Z_1 Z_2 e^2}{r} &\quad r>r_\text{ch} \\ \frac{Z_1 Z_2 e^2}{r_\text{ch}^2}(3-(r/r_\text{ch})^2) &\quad r<r_\text{ch}, \end{cases}
 \end{equation}
 where we here use the more common formula for the charge radius, $r_\text{ch} = r_0 A^{1/3}$.
+
+ In \autoref{fig:np-Z10N10}, we illustrate the total potential from $~^{20}\mathrm{Ne}$ for tunneling of protons and neutrons. The individual contributions to the total potential may be discerned by looking at the potential for the emission of $l=0$ neutrons (which are only affected by the proximity potential) and $l=0$ protons (which have to tunnel through the sum of the Coulomb and proximity potential). %Since these potentials are only used for tunneling calculations, their shape below $E=0$ is not significant, since the particles cannot escape if their energy is less than $0$, and we will hence not display the $V<0$ parts in subsequent figures, in order to focus on the relevant details.
+On this energy scale, the barrier protons have to tunnel through is merely \unit[2]{MeV} high, but since the proton separation energy for $~^{20}\mathrm{Ne}$ \unit[12]{MeV}, it will only happen for excitation above \unit[12]{MeV}, as the proton will not have a positive energy otherwise. Neutrons with a positive energy and $l=0$ will not have to tunnel at all, and instead will exist as resonances above the potential barrier. The tunneling formalism will not apply in this case, and we instead apply \eqref{eq:tlabove}, which we will touch upon later.
+
+We also see that the centrifugal part quickly dominates, essentially a result of protons and neutrons being relatively light particles: for $\alpha$-decay, the centrifugal part is about a fourth of the values displayed above, and the $l$ dependence of the tunneling probability is not very significant\cite{weisskopf:1979}.  
+This strong $l$ dependence makes proton radioactivity a sensitive probe to the orbital angular momentum of valence protons for proton emitting nuclei\cite{proton-alpha-proxy:2005}, but -- in this case -- it also poses a problem, since it removes the Coulomb+proximity barrier for high $l$-values. Even for moderate $l$ values, it makes particles with low energy classically forbidden inside the barrier, which appears inconsistent with the picture of a particle tunneling through a barrier.
+The solution adopted in this work is to assign probability zero to tunnel for particles that are classically forbidden within the nucleus. This will supress decay for higher $l$, since the bottom of the potential well rises as $l$ does. For a higher $l$, the potential well disappears entirely\footnote{Another solution, attractive since we do not use the potential to estimate separation energies, is to model the strong interaction as an infinitely deep potential that cancels the centrifugal part, so that bound particles can always exist in the nucleus. The common $V=-\infty$ for $r<r_\text{nucleus}$ potential achieves this. Another solutions found in the literature is to have other, finite potentials below certain radii, but -- in non-relativistic quantum mechanics -- this goes against the assumption of spherical symmetry unless the effective nucleon-nucleon interaction depends on $l$ so to exactly cancel the centrifugal part.}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{figures/pot/np-potZ10N10.pdf}
+\caption{\label{fig:np-Z10N10} The potential used for tunneling of neutrons and protons with $l=0,1,2$ from $~^{20}\mathrm{Ne}$. The potential for $l=0$ neutrons is exactly the proximity potential \eqref{eq:prox}, while the $l=0$ proton's potential show the sum of the proximity and Coulomb potential. }
+\end{center}
+\end{figure}
 
 Given the potential, the transition probability can be calculated in the WKB approximation as 
 \begin{equation}
@@ -329,9 +347,9 @@ T_l(\epsilon_\nu) = \frac{1}{1+\exp{2G}},\qquad
 \end{equation}
 !!! CITE PAPER !!! which still suffers from the same short-comings as the previous formula. Nevertheless, the transition amplitudes calculated with the WKB formula are generally of the right order of magnitude, which should suffice for our purposes\cite{2011arXiv1106.1065N}.
 
-For $\epsilon>V_\text{max}$, we can no longer view the emission as tunneling, as the particle passes ``over'' the barrier. Instead
+For $\epsilon>V_\text{max}$, we can no longer view the emission as tunneling, as the particle passes ``over'' the barrier. Instead, we use
 \begin{equation}
-T_l = \frac{1}{1+\exp{\frac{2\pi}{\hbar \omega}(E-V_\text{max})}},
+T_l = \frac{1}{1+\exp{\frac{2\pi}{\hbar \omega}(E-V_\text{max})}},\label{eq:tlabove}
 \end{equation}
 where
 \begin{equation}
