@@ -6,6 +6,29 @@ GSI - R3B, 2014.
   \newline\url{https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b.htm}.
 \newblock (accessed 2015-04-16).
 
+\bibitem{allison:2006:art}
+J.~Allison, K.~Amako, J.~Apostolakis, et~al.
+\newblock Geant4 developments and applications.
+\newblock {\em IEEE Transactions on Nuclear Science}, 53(1):270 --278, Feb.
+  2006.
+
+\bibitem{johansson:2013:online}
+H.~Johansson.
+\newblock ggland - command-line simulation wrapper, Apr 2013.
+\newblock \newline\url{http://fy.chalmers.se/~f96hajo/ggland/}.
+
+\bibitem{gollerthan:1988:thesis}
+U.~Gollerthan.
+\newblock Untersuchungen zur Emission geladener Teilchen bei der kalten Fusion
+  von $\nucl{90}{}{Zr} + \nucl{89}{}{Y}$.
+\newblock Master's thesis, Technische Hochschule Darmstadt, 1988.
+
+\bibitem{talys:2015}
+M.~D. Arjan~Koning, St\'{e}phane~Hilaire.
+\newblock TALYS -- A nuclear reaction program.
+\newblock \newline\url{http://www.talys.eu/home/}.
+\newblock (accessed 31 May 2015).
+
 \bibitem{gaimard:1991:art}
 J.~J. Gaimard and K.~H. Schmidt.
 \newblock A reexamination of the abrasion-ablation model for the description of
@@ -38,6 +61,12 @@ A.~Goldhaber.
 \newblock {\em Physics Letters B}, 53(4):306 -- 308, 1974.
 \newblock http://www.sciencedirect.com/science/article/pii/0370269374903888.
 
+\bibitem{moniz:1971}
+E.~J. Moniz, I.~Sick, R.~R. Whitney, et~al.
+\newblock Nuclear Fermi Momenta from Quasielastic Electron Scattering.
+\newblock {\em Phys. Rev. Lett.}, 26:445--448, Feb 1971.
+\newblock http://link.aps.org/doi/10.1103/PhysRevLett.26.445.
+
 \bibitem{schmidt:1991:art}
 K.~H. Schmidt and W.~Morawek.
 \newblock The conditions for the synthesis of heavy nuclei.
@@ -61,6 +90,18 @@ W.~J. Swiatecki.
   http://functions.wolfram.com/IntegerFunctions/PartitionsQ/introductions/Partitions/ShowAll.html.
 \newblock (accessed 2015-05-20).
 
+\bibitem{grossjean1985}
+M.~Grossjean and H.~Feldmeier.
+\newblock Level density of a Fermi gas with pairing interactions.
+\newblock {\em Nuclear Physics A}, 444(1):113 -- 132, 1985.
+\newblock http://www.sciencedirect.com/science/article/pii/0375947485902945.
+
+\bibitem{saddle1999}
+C.~Goutis and G.~Casella.
+\newblock Explaining the Saddlepoint Approximation.
+\newblock {\em The American Statistician}, 53(3):pp. 216--224, 1999.
+\newblock http://www.jstor.org/stable/2686100.
+
 \bibitem{ripl:2006}
 {International Atomic Energy Agency}.
 \newblock {\em Handbook for calculations of nuclear reaction data, RIPL-2},
@@ -78,20 +119,8 @@ P.~Moller, J.~Nix, W.~Myers, and W.~Swiatecki.
 \newblock {\em Atomic Data and Nuclear Data Tables}, 59(2):185 -- 381, 1995.
 \newblock http://www.sciencedirect.com/science/article/pii/S0092640X85710029.
 
-\bibitem{grossjean1985}
-M.~Grossjean and H.~Feldmeier.
-\newblock Level density of a Fermi gas with pairing interactions.
-\newblock {\em Nuclear Physics A}, 444(1):113 -- 132, 1985.
-\newblock http://www.sciencedirect.com/science/article/pii/0375947485902945.
-
-\bibitem{gollerthan:1988:thesis}
-U.~Gollerthan.
-\newblock Untersuchungen zur Emission geladener Teilchen bei der kalten Fusion
-  von $\nucl{90}{}{Zr} + \nucl{89}{}{Y}$.
-\newblock Master's thesis, Technische Hochschule Darmstadt, 1988.
-
 \bibitem{blocki1977}
-J.~Błocki, J.~Randrup, W.~Świa̧tecki, and C.~Tsang.
+J.~Blocki, J.~Randrup, W.~Swiatecki, and C.~Tsang.
 \newblock Proximity forces.
 \newblock {\em Annals of Physics}, 105(2):427 -- 462, 1977.
 \newblock http://www.sciencedirect.com/science/article/pii/0003491677902494.
@@ -134,17 +163,48 @@ W.~D. Myers.
 \newblock http://www.sciencedirect.com/science/article/pii/0375947473903886.
 
 \bibitem{weisskopf:1979}
-
+J.~M. Blatt and V.~F. Weisskopf.
+\newblock {\em Theoretical Nuclear Physics}.
+\newblock Springer New York, New York, NY, 1979.
 
 \bibitem{2011arXiv1106.1065N}
 C.-S. {Ng}.
 \newblock {WKB - Not So Bad After All}.
 \newblock {\em ArXiv e-prints}, June 2011.
 
-\bibitem{ainp:1973}
-M.~Baranger and E.~Vogt.
-\newblock {\em Advances in Nuclear Physics: Volume 7}, chapter Gamma-Ray
-  Strength Functions.
-\newblock Springer US, Boston, MA, 1973.
+\bibitem{welldepth}
+R.~K. Adair.
+\newblock Nuclear Potential Well Depth.
+\newblock {\em Phys. Rev.}, 94:737--738, May 1954.
+\newblock \newline\url{http://link.aps.org/doi/10.1103/PhysRev.94.737}.
+
+\bibitem{Chomaz:1997}
+P.~Chomaz.
+\newblock {Collective excitations in nuclei}.
+\newblock 1997.
+
+\bibitem{PhysRevLett.34.748}
+J.~M. Moss, C.~M. Rozsa, D.~H. Youngblood, J.~D. Bronson, and A.~D. Bacher.
+\newblock Isoscalar Giant Resonance in Light Nuclei ($A<40$).
+\newblock {\em Phys. Rev. Lett.}, 34:748--751, Mar 1975.
+\newblock http://link.aps.org/doi/10.1103/PhysRevLett.34.748.
+
+\bibitem{speth1991electric}
+J.~Speth.
+\newblock {\em Electric and Magnetic Giant Resonances in Nuclei}.
+\newblock International Review of Nuclear Physics Series. World Scientific
+  Publishing Company Incorporated, 1991.
+\newblock https://books.google.se/books?id=o4423vnEoz8C.
+
+\bibitem{audi:1995}
+G.~Audi.
+\newblock Experimental Chart of Nuclides 2000.
+\newblock \newline\url{ie.lbl.gov/systematics/chart_qsp.pdf}.
+\newblock (accessed 31 May 2015).
+
+\bibitem{simon:2013:thesis}
+S.~Lindberg.
+\newblock Optimised Use of Detector Systems for Relativistic Radioactive Beams.
+\newblock Master's thesis, Chalmers University of Technology, 2013.
 
 \end{thebibliography}

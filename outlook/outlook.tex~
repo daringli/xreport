@@ -1,0 +1,2 @@
+As of today, 2015-06-02, the \codename{} code is complete in the sense that it has models for all the quantities needed in a statistical decay code.
+However, there is a reason that the original, \prgname{Codex} code had something close to seven models for everything: the could would be more accurate with suitable models.

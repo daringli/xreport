@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  24 MAY 2015 14:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  2 JUN 2015 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,18 +969,59 @@ LaTeX Info: Redefining \nameref on input line 198.
 \openout4 = `report2.out'.
 
  (./titlepageabstract/titlepageabstract.tex
-<titlepageabstract/titlefig2.pdf, id=64, 284.50345pt x 284.50345pt>
+<titlepageabstract/titlefig2.pdf, id=84, 3468.96pt x 2312.64pt>
 File: titlepageabstract/titlefig2.pdf Graphic file (type pdf)
 
 <use titlepageabstract/titlefig2.pdf>
-Package pdftex.def Info: titlepageabstract/titlefig2.pdf used on input line 5.
-(pdftex.def)             Requested size: 284.50275pt x 284.50275pt.
+Package pdftex.def Info: titlepageabstract/titlefig2.pdf used on input line 6.
+(pdftex.def)             Requested size: 3468.95158pt x 2312.63438pt.
 
-<titlepageabstract/frontpage.pdf, id=65, 598.235pt x 845.55902pt>
+Overfull \hbox (11.32478pt too wide) in paragraph at lines 4--7
+[][] [] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 12.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 12.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 12.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 12.
+
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 12.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+<titlepageabstract/frontpage.pdf, id=85, 598.235pt x 845.55902pt>
 File: titlepageabstract/frontpage.pdf Graphic file (type pdf)
 
 <use titlepageabstract/frontpage.pdf>
-Package pdftex.def Info: titlepageabstract/frontpage.pdf used on input line 23.
+Package pdftex.def Info: titlepageabstract/frontpage.pdf used on input line 24.
 
 (pdftex.def)             Requested size: 597.5489pt x 844.5893pt.
  [1
@@ -988,98 +1029,69 @@ Package pdftex.def Info: titlepageabstract/frontpage.pdf used on input line 23.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./titlepageabstract/frontp
-age.pdf> <./titlepageabstract/titlefig2.pdf
+age.pdf> <./titlepageabstract/titlefig2.pdf>] [2
 
-pdfTeX warning: pdflatex (file ./titlepageabstract/titlefig2.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->] [2
-
-] [3
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 38.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 38.
+ [3
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 64.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 63.
-
-
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 63.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 64.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
 [4
 
-] (./titlepageabstract/abstract/abstract.tex)
-(./titlepageabstract/abstract/sammandrag.tex) [5
+] (./titlepageabstract/abstract/abstract.tex) [5
 
 ]
 (./titlepageabstract/acknowledge/acknowledgements.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 2--108
+Underfull \hbox (badness 10000) in paragraph at lines 10--95
 
  []
 
 [6
 
 ])) (./report2.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 6.
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 6.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 6.
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+(Font)              <6> on input line 5.
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
 \tf@toc=\write5
 \openout5 = `report2.toc'.
 
@@ -1097,34 +1109,25 @@ Class scrreprt Warning: \float@addtolists detected!
 
 (./intro/intro.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 15.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 15.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 15.
+(Font)              <7> on input line 16.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 16.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 15.
+(hyperref)                removing `superscript' on input line 16.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 16.
 
-
-Underfull \vbox (badness 7504) has occurred while \output is active []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 18.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 
+l.19 
       [1
 
 
@@ -1132,39 +1135,55 @@ l.18
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 \chapter
-             {Theoretical Background} [2]
-Chapter 2.
-(./theory/nuclear-collisions.texpdfTeX warning (ext4): destination with the sam
-e identifier (name{page.3}) has been already used, duplicate ignored
+l.25 
+      [2]pdfTeX warning (ext4): destination with the same identifier (name{page
+.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.14 
-      [3
+l.26 \chapter
+             {Theoretical Background} [3]
+Chapter 2.
+(./theory/nuclear-collisions.texpdfTeX warning (ext4): destination with the sam
+e identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 
+      [4
 
-]
-Overfull \hbox (8.26855pt too wide) in paragraph at lines 33--35
-[]\T1/lmr/m/n/10.95 !!!POSSIBLY MOVE NEXT TO CODE DOC-U-MEN-TA-TION, SINCE WHIC
-H FRAME
- []
+] (./figures/fast-theory/fast.pdf_t
+<figures/fast-theory/fast.pdf, id=200, 265.99374pt x 183.68625pt>
+File: figures/fast-theory/fast.pdf Graphic file (type pdf)
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+<use figures/fast-theory/fast.pdf>
+Package pdftex.def Info: figures/fast-theory/fast.pdf used on input line 2.
+(pdftex.def)             Requested size: 265.99309pt x 183.68578pt.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \end{equation}
+                    [5 <./figures/fast-theory/fast.pdf>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 63.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 63.
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 
-      [4]
+l.78 \end{align}
+                 [6]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.72 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
+l.96 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
                                                   \label{eq:ew}
 ? R
 OK, entering \nonstopmode...
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.72 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
+l.96 ...epsilon_\nu),\qquad\cite{schmidt:1991:art}
                                                   \label{eq:ew}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1172,40 +1191,19 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 78.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 78.
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.81 
-      [5]pdfTeX warning (ext4): destination with the same identifier (name{page
-.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.97 A
-      lthough $\nu$ could be any particle, it becomes more appropriate to mo...
-[6] [7]
-Overfull \hbox (28.03809pt too wide) in paragraph at lines 126--127
-[]\T1/lmr/m/n/10.95 !!!TODO: men-tion g=1/d and its re-la-tion to a. Smear-ing 
-out pro-duce-dur by Laplace+saddle-
- []
-
-(./figures/rho-theory/equidistant.pdf_t
-<figures/rho-theory/equidistant.pdf, id=222, 331.2375pt x 278.03876pt>
+[7] [8] (./figures/rho-theory/equidistant.pdf_t
+<figures/rho-theory/equidistant.pdf, id=270, 331.2375pt x 278.03876pt>
 File: figures/rho-theory/equidistant.pdf Graphic file (type pdf)
 
 <use figures/rho-theory/equidistant.pdf>
 Package pdftex.def Info: figures/rho-theory/equidistant.pdf used on input line 
 2.
 (pdftex.def)             Requested size: 331.23668pt x 278.03807pt.
-) [8 <./figures/rho-theory/equidistant.pdf>]
+) [9 <./figures/rho-theory/equidistant.pdf>] [10] [11]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.165 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
+l.230 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
                                                   \label{eq:a}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1215,7 +1213,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.165 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
+l.230 ...6 A^{-2/3}).\qquad\cite{schmidt:1991:art}
                                                   \label{eq:a}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1226,7 +1224,7 @@ Missing character: There is no è in font lmex10!
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.172 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
+l.237 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1236,7 +1234,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.172 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
+l.237 ... E_\text{c}.\qquad\cite{schmidt:1991:art}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1244,11 +1242,11 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-[9]
+[12]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.189 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
+l.254 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
                                                   \label{eq:abiteration}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1258,7 +1256,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.189 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
+l.254 ...xp{-a/\beta}]},\qquad\cite{grossjean1985}
                                                   \label{eq:abiteration}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1266,55 +1264,55 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-<figures/rho/Z10N10.pdf, id=265, 239.89626pt x 239.89626pt>
+<figures/rho/Z10N10.pdf, id=354, 239.89626pt x 239.89626pt>
 File: figures/rho/Z10N10.pdf Graphic file (type pdf)
 
 <use figures/rho/Z10N10.pdf>
-Package pdftex.def Info: figures/rho/Z10N10.pdf used on input line 202.
+Package pdftex.def Info: figures/rho/Z10N10.pdf used on input line 267.
 (pdftex.def)             Requested size: 209.12683pt x 209.129pt.
 
-<figures/rho/Z10N10_no-yrast.pdf, id=268, 239.89626pt x 239.89626pt>
+<figures/rho/Z10N10_no-yrast.pdf, id=357, 239.89626pt x 239.89626pt>
 File: figures/rho/Z10N10_no-yrast.pdf Graphic file (type pdf)
 
 <use figures/rho/Z10N10_no-yrast.pdf>
-Package pdftex.def Info: figures/rho/Z10N10_no-yrast.pdf used on input line 204
+Package pdftex.def Info: figures/rho/Z10N10_no-yrast.pdf used on input line 269
 .
 (pdftex.def)             Requested size: 209.12683pt x 209.129pt.
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 201--206
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 266--271
  [] 
  []
 
-<figures/rho/Z40N59.pdf, id=273, 239.89626pt x 239.89626pt>
+[13] [14 <./figures/rho/Z10N10.pdf> <./figures/rho/Z10N10_no-yrast.pdf>]
+<figures/rho/Z40N59.pdf, id=397, 239.89626pt x 239.89626pt>
 File: figures/rho/Z40N59.pdf Graphic file (type pdf)
 
 <use figures/rho/Z40N59.pdf>
-Package pdftex.def Info: figures/rho/Z40N59.pdf used on input line 223.
+Package pdftex.def Info: figures/rho/Z40N59.pdf used on input line 287.
 (pdftex.def)             Requested size: 209.12683pt x 209.129pt.
 
-<figures/rho/Z40N59_no-yrast.pdf, id=276, 239.89626pt x 239.89626pt>
+<figures/rho/Z40N59_no-yrast.pdf, id=400, 239.89626pt x 239.89626pt>
 File: figures/rho/Z40N59_no-yrast.pdf Graphic file (type pdf)
 
 <use figures/rho/Z40N59_no-yrast.pdf>
-Package pdftex.def Info: figures/rho/Z40N59_no-yrast.pdf used on input line 225
+Package pdftex.def Info: figures/rho/Z40N59_no-yrast.pdf used on input line 289
 .
 (pdftex.def)             Requested size: 209.12683pt x 209.129pt.
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 222--227
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 286--291
  [] 
  []
 
-[10] [11 <./figures/rho/Z10N10.pdf> <./figures/rho/Z10N10_no-yrast.pdf>]
-[12 <./figures/rho/Z40N59.pdf> <./figures/rho/Z40N59_no-yrast.pdf>]
-<figures/rho/Z10_N7-N22.pdf, id=341, 239.89626pt x 239.89626pt>
+<figures/rho/Z10_N7-N22.pdf, id=407, 239.89626pt x 239.89626pt>
 File: figures/rho/Z10_N7-N22.pdf Graphic file (type pdf)
 
 <use figures/rho/Z10_N7-N22.pdf>
-Package pdftex.def Info: figures/rho/Z10_N7-N22.pdf used on input line 239.
-(pdftex.def)             Requested size: 418.25368pt x 418.28731pt.
- [13] [14 <./figures/rho/Z10_N7-N22.pdf>]
+Package pdftex.def Info: figures/rho/Z10_N7-N22.pdf used on input line 303.
+(pdftex.def)             Requested size: 250.95476pt x 250.95773pt.
+ [15 <./figures/rho/Z40N59.pdf> <./figures/rho/Z40N59_no-yrast.pdf>] [16 <./fig
+ures/rho/Z10_N7-N22.pdf>]
 (./figures/pot-theory/proximity.pdf_t
-<figures/pot-theory/proximity.pdf, id=359, 371.3875pt x 149.55875pt>
+<figures/pot-theory/proximity.pdf, id=444, 371.3875pt x 149.55875pt>
 File: figures/pot-theory/proximity.pdf Graphic file (type pdf)
 
 <use figures/pot-theory/proximity.pdf>
@@ -1326,13 +1324,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20> on input line 14.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <13.99994> on input line 14.
-) [15
+) [17
 
 ]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.293 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+l.357 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1342,7 +1340,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.293 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
+l.357 ... & \zeta > 1.2511.\qquad\cite{blocki1977}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1350,20 +1348,11 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-[16 <./figures/pot-theory/proximity.pdf>]
-! Undefined control sequence.
-l.302 ... A^{1/3} - 0.76 + 0.8 A^{-1/3}\quad\units
-                                                  {fm}.\qquad\cite{blocki197...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+[18 <./figures/pot-theory/proximity.pdf>]
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.302 ...3}\quad\units{fm}.\qquad\cite{blocki1977}
+l.366 .../3}\quad\unit{fm}.\qquad\cite{blocki1977}
                                                   \label{eq:sharp}
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1373,7 +1362,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.302 ...3}\quad\units{fm}.\qquad\cite{blocki1977}
+l.366 .../3}\quad\unit{fm}.\qquad\cite{blocki1977}
                                                   \label{eq:sharp}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1381,19 +1370,10 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-! Undefined control sequence.
-l.309 ...t{c} =r_\text{sharp} \left(1-\left(\trfac
-                                                  {b}{r_\text{sharp}}\right)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.309 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+l.373 ...ght)^2\right)\quad.\qquad\cite{myers1973}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1403,7 +1383,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.309 ...ght)^2\right)\quad.\qquad\cite{myers1973}
+l.373 ...ght)^2\right)\quad.\qquad\cite{myers1973}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1411,17 +1391,17 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-<figures/pot/np-potZ10N10.pdf, id=408, 239.89626pt x 239.89626pt>
+[19] <figures/pot/np-potZ10N10.pdf, id=508, 239.89626pt x 239.89626pt>
 File: figures/pot/np-potZ10N10.pdf Graphic file (type pdf)
 
 <use figures/pot/np-potZ10N10.pdf>
-Package pdftex.def Info: figures/pot/np-potZ10N10.pdf used on input line 330.
+Package pdftex.def Info: figures/pot/np-potZ10N10.pdf used on input line 394.
 (pdftex.def)             Requested size: 239.89566pt x 239.89566pt.
 
 ! Improper \spacefactor.
 \cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
                                                   >\@m \ \else \hskip \@temp...
-l.337 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
+l.401 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
                                                   
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1431,7 +1411,7 @@ I'm forgetting what you said and using zero instead.
 ! You can't use `\spacefactor' in math mode.
 \@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
                                                   \@m }\citeright \@restore@...
-l.337 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
+l.401 ...nu) = \exp{(-2G)},\qquad\cite{krane:book}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1439,233 +1419,487 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no è in font lmex10!
-[17] [18 <./figures/pot/np-potZ10N10.pdf>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.361 T
-       he above discription concerned the tunneling of a nucleon or cluster ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[20 <./figures/pot/np-potZ10N10.pdf>]
+! Improper \spacefactor.
+\cite@adjust ...ctor 1001 \fi \ifnum \spacefactor 
+                                                  >\@m \ \else \hskip \@temp...
+l.420 ...ax}}}.\qquad\cite{gollerthan:1988:thesis}
+                                                  
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
 
-! Extra }, or forgotten $.
-\@svsechd ...14}\Sectionformat {\gamma -decay}{4}}
-                                                  \expandafter \csname parag...
-l.361 T
-       he above discription concerned the tunneling of a nucleon or cluster ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+! You can't use `\spacefactor' in math mode.
+\@cite ...ivesfalse \citemid {#2}\fi \spacefactor 
+                                                  \@m }\citeright \@restore@...
+l.420 ...ax}}}.\qquad\cite{gollerthan:1988:thesis}
+                                                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.361 T
-       he above discription concerned the tunneling of a nucleon or cluster ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Missing character: There is no è in font lmex10!
+<figures/pot/np-transZ10N10.pdf, id=531, 239.89626pt x 239.89626pt>
+File: figures/pot/np-transZ10N10.pdf Graphic file (type pdf)
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.361 T
-       he above discription concerned the tunneling of a nucleon or cluster ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+<use figures/pot/np-transZ10N10.pdf>
+Package pdftex.def Info: figures/pot/np-transZ10N10.pdf used on input line 433.
 
-) [19] (./theory/frdm.tex) [20]
+(pdftex.def)             Requested size: 239.89566pt x 239.89566pt.
+ [21]
+Underfull \vbox (badness 3735) has occurred while \output is active []
+
+ [22 <./figures/pot/np-transZ10N10.pdf>]) (./theory/frdm.tex) [23]
 Chapter 3.
 (./code/code.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [21
+) [24
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 51.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [22])
+) [25]) [26]
+Chapter 4.
+(./results/pdc.tex
+<figures/spectra/5-spectra.pdf, id=606, 3468.96pt x 2312.64pt>
+File: figures/spectra/5-spectra.pdf Graphic file (type pdf)
+
+<use figures/spectra/5-spectra.pdf>
+Package pdftex.def Info: figures/spectra/5-spectra.pdf used on input line 15.
+(pdftex.def)             Requested size: 418.25368pt x 278.81049pt.
+
+<figures/spectra/10-spectra.pdf, id=607, 3468.96pt x 2312.64pt>
+File: figures/spectra/10-spectra.pdf Graphic file (type pdf)
+
+<use figures/spectra/10-spectra.pdf>
+Package pdftex.def Info: figures/spectra/10-spectra.pdf used on input line 17.
+(pdftex.def)             Requested size: 418.25368pt x 278.81049pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 14--19
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 93.49078pt on input line 21.
+
+<figures/spectra/15-spectra.pdf, id=608, 3468.96pt x 2312.64pt>
+File: figures/spectra/15-spectra.pdf Graphic file (type pdf)
+
+<use figures/spectra/15-spectra.pdf>
+Package pdftex.def Info: figures/spectra/15-spectra.pdf used on input line 26.
+(pdftex.def)             Requested size: 418.25368pt x 278.81049pt.
+
+<figures/spectra/20-spectra.pdf, id=609, 3468.96pt x 2312.64pt>
+File: figures/spectra/20-spectra.pdf Graphic file (type pdf)
+
+<use figures/spectra/20-spectra.pdf>
+Package pdftex.def Info: figures/spectra/20-spectra.pdf used on input line 28.
+(pdftex.def)             Requested size: 418.25368pt x 278.81049pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 25--30
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 93.49078pt on input line 32.
+
+
+Underfull \vbox (badness 3965) has occurred while \output is active []
+
+ [27
+
+]
+[28 <./figures/spectra/5-spectra.pdf> <./figures/spectra/10-spectra.pdf>]
+[29 <./figures/spectra/15-spectra.pdf> <./figures/spectra/20-spectra.pdf>]
+<figures/spectra/talys-20-spectra.pdf, id=655, 3468.96pt x 2312.64pt>
+File: figures/spectra/talys-20-spectra.pdf Graphic file (type pdf)
+
+<use figures/spectra/talys-20-spectra.pdf>
+Package pdftex.def Info: figures/spectra/talys-20-spectra.pdf used on input lin
+e 40.
+(pdftex.def)             Requested size: 418.25368pt x 278.81049pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./figures/spectra/talys-20-spectra.pdf>]
+<figures/bars/1-spectra.pdf, id=673, 578.16pt x 433.62pt>
+File: figures/bars/1-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/1-spectra.pdf>
+Package pdftex.def Info: figures/bars/1-spectra.pdf used on input line 51.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/3-spectra.pdf, id=674, 578.16pt x 433.62pt>
+File: figures/bars/3-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/3-spectra.pdf>
+Package pdftex.def Info: figures/bars/3-spectra.pdf used on input line 53.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/5-spectra.pdf, id=675, 578.16pt x 433.62pt>
+File: figures/bars/5-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/5-spectra.pdf>
+Package pdftex.def Info: figures/bars/5-spectra.pdf used on input line 55.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/10-spectra.pdf, id=676, 578.16pt x 433.62pt>
+File: figures/bars/10-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/10-spectra.pdf>
+Package pdftex.def Info: figures/bars/10-spectra.pdf used on input line 57.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 50--59
+ [] 
+ []
+
+<figures/bars/12-spectra.pdf, id=677, 578.16pt x 433.62pt>
+File: figures/bars/12-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/12-spectra.pdf>
+Package pdftex.def Info: figures/bars/12-spectra.pdf used on input line 83.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/13-spectra.pdf, id=678, 578.16pt x 433.62pt>
+File: figures/bars/13-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/13-spectra.pdf>
+Package pdftex.def Info: figures/bars/13-spectra.pdf used on input line 85.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/14-spectra.pdf, id=679, 578.16pt x 433.62pt>
+File: figures/bars/14-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/14-spectra.pdf>
+Package pdftex.def Info: figures/bars/14-spectra.pdf used on input line 87.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/15-spectra.pdf, id=680, 578.16pt x 433.62pt>
+File: figures/bars/15-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/15-spectra.pdf>
+Package pdftex.def Info: figures/bars/15-spectra.pdf used on input line 89.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 82--91
+ [] 
+ []
+
+<figures/bars/16-spectra.pdf, id=681, 578.16pt x 433.62pt>
+File: figures/bars/16-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/16-spectra.pdf>
+Package pdftex.def Info: figures/bars/16-spectra.pdf used on input line 98.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/18-spectra.pdf, id=682, 578.16pt x 433.62pt>
+File: figures/bars/18-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/18-spectra.pdf>
+Package pdftex.def Info: figures/bars/18-spectra.pdf used on input line 100.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/19-spectra.pdf, id=683, 578.16pt x 433.62pt>
+File: figures/bars/19-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/19-spectra.pdf>
+Package pdftex.def Info: figures/bars/19-spectra.pdf used on input line 102.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+<figures/bars/20-spectra.pdf, id=684, 578.16pt x 433.62pt>
+File: figures/bars/20-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/20-spectra.pdf>
+Package pdftex.def Info: figures/bars/20-spectra.pdf used on input line 104.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 97--106
+ [] 
+ []
+
+<figures/bars/20-t-spectra.pdf, id=685, 578.16pt x 433.62pt>
+File: figures/bars/20-t-spectra.pdf Graphic file (type pdf)
+
+<use figures/bars/20-t-spectra.pdf>
+Package pdftex.def Info: figures/bars/20-t-spectra.pdf used on input line 112.
+(pdftex.def)             Requested size: 209.12683pt x 156.84413pt.
+ [31] [32 <./figures/bars/1-spectra.pdf> <./figures/bars/3-spectra.pdf> <./figu
+res/bars/5-spectra.pdf> <./figures/bars/10-spectra.pdf>] [33 <./figures/bars/12
+-spectra.pdf> <./figures/bars/13-spectra.pdf> <./figures/bars/14-spectra.pdf> <
+./figures/bars/15-spectra.pdf>] [34 <./figures/bars/16-spectra.pdf> <./figures/
+bars/18-spectra.pdf> <./figures/bars/19-spectra.pdf> <./figures/bars/20-spectra
+.pdf>] (./figures/fullspec/Mg28-p.pdf_t
+<figures/fullspec/Mg28-p.pdf, id=800, 570.13pt x 386.44376pt>
+File: figures/fullspec/Mg28-p.pdf Graphic file (type pdf)
+
+<use figures/fullspec/Mg28-p.pdf>
+Package pdftex.def Info: figures/fullspec/Mg28-p.pdf used on input line 2.
+(pdftex.def)             Requested size: 570.12862pt x 386.44281pt.
+) (./figures/fullspec/Mg28-n.pdf_t
+<figures/fullspec/Mg28-n.pdf, id=801, 570.13pt x 386.44376pt>
+File: figures/fullspec/Mg28-n.pdf Graphic file (type pdf)
+
+<use figures/fullspec/Mg28-n.pdf>
+Package pdftex.def Info: figures/fullspec/Mg28-n.pdf used on input line 2.
+(pdftex.def)             Requested size: 570.12862pt x 386.44281pt.
+)
+
+LaTeX Warning: Float too large for page by 35.53949pt on input line 133.
+
+(./figures/fullspec/Mg28-a.pdf_t
+<figures/fullspec/Mg28-a.pdf, id=802, 570.13pt x 386.44376pt>
+File: figures/fullspec/Mg28-a.pdf Graphic file (type pdf)
+
+<use figures/fullspec/Mg28-a.pdf>
+Package pdftex.def Info: figures/fullspec/Mg28-a.pdf used on input line 2.
+(pdftex.def)             Requested size: 570.12862pt x 386.44281pt.
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.25 }}}}
+         
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.25 }}}}
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)) (./results/gamma-mult.tex [35 <./figures/bars/20-t-spectra.pdf>] [36 <./figu
+res/fullspec/Mg28-p.pdf> <./figures/fullspec/Mg28-n.pdf>] [37 <./figures/fullsp
+ec/Mg28-a.pdf>] [38]pdfTeX warning (ext4): destination with the same identifier
+ (name{subfigure.4.10.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.34 \subfloat
+              [The identified $\gamma$ energy.]{\includegraphics[width=\bred...
+<figures/gamma-mult/Eex-Eaddback.pdf, id=852, 569.12625pt x 385.44pt>
+File: figures/gamma-mult/Eex-Eaddback.pdf Graphic file (type pdf)
+
+<use figures/gamma-mult/Eex-Eaddback.pdf>
+Package pdftex.def Info: figures/gamma-mult/Eex-Eaddback.pdf used on input line
+ 34.
+(pdftex.def)             Requested size: 209.12683pt x 141.63426pt.
+
+<figures/gamma-mult/Eex-Eg.pdf, id=853, 569.12625pt x 385.44pt>
+File: figures/gamma-mult/Eex-Eg.pdf Graphic file (type pdf)
+
+<use figures/gamma-mult/Eex-Eg.pdf>
+Package pdftex.def Info: figures/gamma-mult/Eex-Eg.pdf used on input line 35.
+(pdftex.def)             Requested size: 209.12683pt x 141.63426pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 33--37
+ [] 
+ []
+
+<figures/gamma-mult/Ex-ig.pdf, id=856, 569.12625pt x 385.44pt>
+File: figures/gamma-mult/Ex-ig.pdf Graphic file (type pdf)
+
+<use figures/gamma-mult/Ex-ig.pdf>
+Package pdftex.def Info: figures/gamma-mult/Ex-ig.pdf used on input line 52.
+(pdftex.def)             Requested size: 209.12683pt x 141.63426pt.
+
+<figures/gamma-mult/Ex-fg.pdf, id=857, 569.12625pt x 385.44pt>
+File: figures/gamma-mult/Ex-fg.pdf Graphic file (type pdf)
+
+<use figures/gamma-mult/Ex-fg.pdf>
+Package pdftex.def Info: figures/gamma-mult/Ex-fg.pdf used on input line 53.
+(pdftex.def)             Requested size: 209.12683pt x 141.63426pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 51--55
+ [] 
+ []
+
+) [39 <./figures/gamma-mult/Eex-Eaddback.pdf, page is rotated 90 degrees> <./fi
+gures/gamma-mult/Eex-Eg.pdf, page is rotated 90 degrees>] [40 <./figures/gamma-
+mult/Ex-ig.pdf, page is rotated 90 degrees> <./figures/gamma-mult/Ex-fg.pdf, pa
+ge is rotated 90 degrees>]
+Chapter 5.
+(./outlook/outlook.tex) [41
+
+]
 No file report2.nls.
-(./report2.bbl [23]
+(./report2.bbl [42]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 [][]$\T1/lmtt/m/n/10.95 https : / / www . gsi . de / work / forschung / nustare
 nna / nustarenna _ divisions /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 []\T1/lmr/m/n/10.95 A. Gold-haber.  Sta-tis-ti-cal mod-els of frag-men-ta-tion 
 pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 \T1/lmr/m/n/10.95 cesses.  \T1/lmr/m/it/10.95 Physics Let-ters B\T1/lmr/m/n/10.
 95 , 53(4):306 -- 308, 1974.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--63
+Underfull \hbox (badness 1442) in paragraph at lines 65--69
+\T1/lmr/m/n/10.95 Quasielas-tic Elec-tron Scat-ter-ing.  \T1/lmr/m/it/10.95 Phy
+s. Rev. Lett.\T1/lmr/m/n/10.95 , 26:445--448, Feb 1971.
+ []
+
+[43
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 []\T1/lmr/m/n/10.95 Wolfram Re-search, Inc. .  Num-ber of par-ti-tions of an in
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--63
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 \T1/lmr/m/n/10.95 te-ger into dis-tinct parts: In-tro-duc-tion to par-ti-tions,
  2015.
  []
 
 
-Overfull \hbox (87.87776pt too wide) in paragraph at lines 57--63
+Overfull \hbox (87.87776pt too wide) in paragraph at lines 86--92
 \T1/lmr/m/n/10.95 http://functions.wolfram.com/IntegerFunctions/PartitionsQ/int
 roductions/Partitions/ShowAll.html.
  []
 
-[24
 
-]
-Underfull \hbox (badness 3635) in paragraph at lines 82--86
+Underfull \hbox (badness 3635) in paragraph at lines 94--98
 []\T1/lmr/m/n/10.95 M. Gross-jean and H. Feld-meier.  Level den-sity of a Fermi
  gas with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--86
+Underfull \hbox (badness 10000) in paragraph at lines 94--98
 \T1/lmr/m/n/10.95 pair-ing in-ter-ac-tions.  \T1/lmr/m/it/10.95 Nu-clear Physic
 s A\T1/lmr/m/n/10.95 , 444(1):113 -- 132, 1985.
  []
 
 
-! Package inputenc Error: Unicode char \u8:Ì§ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94 J.~BÅ‚ocki, J.~Randrup, W.~ÅšwiaÌ§
-                                       tecki, and C.~Tsang.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
-[]\T1/lmr/m/n/10.95 J. Bªocki, J. Ran-drup, W. ‘wiate-cki, and C. Tsang.  Prox-
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
+[]\T1/lmr/m/n/10.95 J. Blocki, J. Ran-drup, W. Swiate-cki, and C. Tsang.  Prox-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
 \T1/lmr/m/n/10.95 im-ity forces.  \T1/lmr/m/it/10.95 An-nals of Physics\T1/lmr/
 m/n/10.95 , 105(2):427 -- 462, 1977.
  []
 
 
-Underfull \hbox (badness 3158) in paragraph at lines 117--122
+Underfull \hbox (badness 3158) in paragraph at lines 146--151
 []\T1/lmr/m/n/10.95 M. Bal-a-sub-ra-ma-niam and N. Arunacha-lam.  Pro-ton and $
 \OML/lmm/m/it/10.95 $\T1/lmr/m/n/10.95 -radioactivity
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 117--122
+Underfull \hbox (badness 7869) in paragraph at lines 146--151
 \T1/lmr/m/n/10.95 of spher-i-cal pro-ton emit-ters.  \T1/lmr/m/it/10.95 Phys. R
 ev. C\T1/lmr/m/n/10.95 , 71:014603, Jan 2005.
  []
 
-
-Underfull \hbox (badness 2837) in paragraph at lines 130--135
+[44]
+Underfull \hbox (badness 2837) in paragraph at lines 159--164
 []\T1/lmr/m/n/10.95 W. D. My-ers.  Ge-o-met-ric prop-er-ties of lep-to-der-mous
  dis-tri-bu-tions with
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 130--135
+Underfull \hbox (badness 6268) in paragraph at lines 159--164
 \T1/lmr/m/n/10.95 ap-pli-ca-tions to nu-clei.  \T1/lmr/m/it/10.95 Nu-clear Phys
 ics A\T1/lmr/m/n/10.95 , 204(3):465 -- 484, 1973.
  []
 
-) [25]
+) [45]
 Appendix A.
-[26
+[46
 
 ]
 Appendix B.
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 77.
- [27
+! Too many }'s.
+l.71 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+[47
 
 ]
-Bilaga C.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[28
-
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
  (./report2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `report2.out' has not changed.
-(rerunfilecheck)             Checksum: 5D780B0C6341FFB8BF1D92F928F46FE2;2454.
+(rerunfilecheck)             Checksum: 849FB0081D895F43678F9619ED55EC93;3752.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
  ) 
 Here is how much of TeX's memory you used:
- 14527 strings out of 493485
- 210045 string characters out of 3143525
- 437893 words of memory out of 3000000
- 17310 multiletter control sequences out of 15000+200000
- 148072 words of font info for 122 fonts, out of 3000000 for 9000
+ 14692 strings out of 493485
+ 214874 string characters out of 3143525
+ 353655 words of memory out of 3000000
+ 17365 multiletter control sequences out of 15000+200000
+ 166938 words of font info for 137 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,17n,58p,1084b,1217s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+ 42i,19n,51p,1419b,1123s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
 9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on report2.pdf (35 pages, 3064432 bytes).
+pe1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+sy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+Output written on report2.pdf (54 pages, 1669599 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 174 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1239 PDF objects out of 1440 (max. 8388607)
+ 951 compressed objects within 10 object streams
+ 244 named destinations out of 1000 (max. 500000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 
