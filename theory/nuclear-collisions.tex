@@ -3,13 +3,12 @@ This is how the nucleus was discovered in the first place. However, this simple 
 At yet higher energies, when the de Broglie wave-length ($\lambda \sim \vec{p}^{-1}$) becomes sufficiently small to resolve the inner structure of the nuclei, it becomes feasible to model the collision as not taking place between the two nuclei, but by individual protons and neutrons (nucleons).
 
 This leads us to the \emph{participant-spectator} picture of nuclear collisions, in which the collision is viewed as if taking place between a few \emph{participant} nucleons, while the remaining \emph{spectator} nucleons remain mostly unaffected. Such a reaction is known as \emph{quasi-elastic scattering}, since the kinetic energy of the projectile is much greater than the binding energy of the participants, which further motivates treating them as approximately free particles. This also means that the kinetic energy will almost be conserved, hence \emph{quasi-elastic}.
-
 The collision between the participant nucleons takes place at a time scale of about \unit[$10^{-23}$]{s}\cite{gaimard:1991:art}, and is sometimes called a \emph{fireball} or \emph{firestreak}.
 
 However, this is just the first part of the collision. The spectator nucleons may have gone unaffected through it, but the resulting system (a so-called pre-fragment) will be highly excited, and will decay to the final fragment -- often by ejecting nucleons, in this context known as evaporating them. The characteristic time-scale for these ejections varies between \unit[$10^{-21}$ -- $10^{-16}$]{s}, depending on the energies and emitted particle\cite{gaimard:1991:art}. 
 
 In this picture, a two-step process can be used to describe nuclear fragmentation. 
-Various models to describe both steps exist in the literature, which can be combined more or less freely -- they do not necesarilly use the same parameters. Models which mainly use parameters like $A$, the number of nucleons, $Z$ the number of protons, the total nuclear-spin $J$ and the excitation energy $E$ of the nucleus are termed \emph{macroscopic}, while models that directly treat the states of individual nucleons are called \emph{microscopic}. Examples of the former are the \emph{abrasion-ablation model}\cite{bowman:1973:book}, while the \emph{intranuclear-cascade model}\cite{metropolis:1991:art} is an example of a microscopic model. As it is often the case in nuclear physics, no one model is valid for the whole range of nucleon numbers $A$ and incident energies\cite{cucinotta:1998:art}.
+Various models to describe both steps exist in the literature, and these can be combined more or less freely -- restrictions arise since they do not necesarilly use the same parameters. Models which mainly use parameters like $A$, the number of nucleons, $Z$ the number of protons, the total nuclear-spin $J$ and the excitation energy $E$ of the nucleus are termed \emph{macroscopic}, while models that directly treat the states of individual nucleons are called \emph{microscopic}. Examples of the former are the \emph{abrasion-ablation model}\cite{bowman:1973:book}, while the \emph{intranuclear-cascade model}\cite{metropolis:1991:art} is an example of a microscopic model. As it is often the case in nuclear physics, no one model is valid for the whole range of nucleon numbers $A$ and incident energies\cite{cucinotta:1998:art}.
 
 Since the focus of this report is to describe an event-generator for a physics experiment, we can afford to use less detailed models if this reduces computation time. In addition, since the macroscopic properties of nuclei are more easily related to expermental observables, we will restrict our attention to those. 
 
@@ -41,7 +40,7 @@ However, \rtb{} experiments are not necesarilly about heavy (and non-exotic) nuc
 \begin{equation}
 \sigma^2 = 2 (M_{A'} + M_\text{C} -M_A) \frac{M_\text{C}M_{A'}}{M_\text{C}+M_{A'}} = -2 Q \mu(M_\text{C},M_{A'}),
 \end{equation}
-where $M_\text{C}$ is the mass of the participant cluster, $M_A$ the mass of the projectile and $M_{A'}$ the mass of the prefragment. If we take $-Q=T = \mu v^2/2$, we get $\sigma^2 = \mu^2 v^2$, which is the initial kinetic energy of the cluster, provided that we can neglect the kinetic energy of $A'$. This model is suitable for lighter particles, since it requires that $M_{A'} + M_\text{C} -M_A = -Q >0$, or $\sigma^2$ becomes negative. This is the model used in this work.
+where $M_\text{C}$ is the mass of the participant cluster, $M_A$ the mass of the projectile and $M_{A'}$ the mass of the prefragment. If we take $-Q=T = \mu v^2/2$, we get $\sigma^2 = \mu^2 v^2$, which is the initial squared momentum of the cluster, provided that we can neglect the kinetic energy of $A'$. This model is suitable for lighter particles, since it requires that $M_{A'} + M_\text{C} -M_A = -Q >0$, or $\sigma^2$ becomes negative. This is the model used in this work.
 
 Momentum conservation implies that
 \begin{align}
@@ -62,7 +61,7 @@ $\gamma = 1 + T/M_A$, where $T$ is the kinetic energy of the projectile.
 
 Since the collision between the target and the cluster is easier to do in their center-of-mass (CM) frame\footnote{Strictly speaking, their zero momentum frame, or center-of-momentum frame.}, we also need to transform between the laboratory and that frame. This is readily done by noting
 \begin{equation}
-\bar{\vec{P}} \equiv \vec{p}_\text{C} + \vec{p}_\text{T} = \gamma(\beta_\text{ZM}) \bar{m} \vec{\beta}_\text{CM} = \bar{E}\beta_\text{CM} \implies \beta_\text{CM} = (\vec{p}_\text{C} + \vec{p}_\text{T})/\bar{E},
+\bar{\vec{P}} \equiv \vec{p}_\text{C} + \vec{p}_\text{T} = \gamma(\beta_\text{ZM}) \bar{m} \vec{\beta}_\text{CM} = \bar{E}\vec{\beta}_\text{CM} \implies \vec{\beta}_\text{CM} = (\vec{p}_\text{C} + \vec{p}_\text{T})/\bar{E},
 \end{equation}
 where the barred quantities are of the system of both particles. Since we want the $\beta$ between the laboratory and the CM frame, we evaluate all the quantities in the laboratory frame
 \begin{equation}
@@ -89,7 +88,7 @@ A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with
 %Hence, we expect the transition probability to depend on the type of particle emitted, $\nu$, the kinetic energy of this particle, $\epsilon_\nu$, and the angular momentum carried away by it.
 %We will restrict ourselves to the case where this transition probability only depends on the type of particle
 %There are at least two models for the decay of a compound nucleus popular in the literature, the Hauser-Feshbach and the Ewing-Weisskopf formulas. Both aim to describe how a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$) will decay.
-To describe the decay of a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$), we need the probabilities to go from this state to any other macro-state. Since the only way an isolated nuclei can lose energy, angular momentum, or nucleons is by emitting particles, it is natural to view the transition probability as in terms of quantities related to particle emission.
+To describe the decay of a compound nucleus in a given macro-state ($E^*$, $J$, $Z$, $A$), we need the probabilities to go from this state to any other macro-state. Since the only way an isolated nuclei can lose energy, angular momentum, or nucleons is by emitting particles, it is natural to view the transition probability as in terms of quantities related to particle emission.
 
 The formula used to describe this gives the probability of decaying by evaporating a particle $\nu$ as
 \begin{equation}
@@ -138,18 +137,18 @@ To see how the rapid increase in level densities may be accounted for by collect
 \paragraph{The simple example}
 Consider a ``nucleus'' in which we have $A$ identical nucleons, that occupy single particle states with spacing $d$. The situation is illustrated in \autoref{fig:equidist}. The energy of the nuclues is given by 
 \begin{equation}
-E=\sum_i^A \epsilon_i n_i,
+E=\sum_i^\infty \epsilon_i n_i,
 \end{equation}
 where $\epsilon = id$ is the energy of level $i$, and $n_i$ is the occupation number of that level, which can be $0$ or $1$, since nucleons are fermions.
 If we take the Fermi energy as the reference energy, we get the excitation energy
 \begin{equation}
-E^*=\sum_i^A \epsilon_i n_i - \sum_i^A \epsilon_i.
+E^*=\sum_i^\infty \epsilon_i n_i - \sum_i^A \epsilon_i.
 \end{equation}
 The picture is more illustrative than the formulas. We now have one way to excite our system to $E^*=d$, namely by exciting the nucleon just below the Fermi level. For $E^*=2d$ we may proceed from our $E^*=d$ system in two ways, either by further exciting the lone excited nucleon $E^* = 2d$, or by exciting the highest nucleon in the $A-1$ system, $E^*=d+d$. For $E^*=3d$, we have
 \begin{equation}
 \begin{aligned}
 1d+1d+1d \\
-2d+1 \\
+2d+1d \\
 3d,
 \end{aligned}
 \end{equation}
@@ -157,29 +156,29 @@ and at this point, it may be apparent that we are really investigating the numbe
 
 A few things to note:
 Firstly, there is a distinction between the level density, discussed above, and the \emph{density of states}. In our example above, we may imagine that each configuration of nuclei corresponds to a state with a given spin $J$, which would give us $(2J-1)$ different spin projections for each state. The density of states takes this degeneracy into account, while the level density does not. The density of states is thus greater than the level density.
-Of course, we do not know the $J$ of our states, either, but there is a general argument for the $J$ dependence of the level density.
-Following the derivation by Grossjean and Feldmeier\cite{grossjean1985} we assume that the states are build up from single-particle states with a random spin-orientation. More precisely, let the single-particle states spin projection $m$ be a random number. Time-reversal symmetry demands that the expectation value of $m$ is $0$, and that their distribution is symmetric around zero. Now, if our state is formed by exciting a large number of nucleons, the central limit theorem gives the probability of the total spin-projection $M$ as
+Of course, we do not know the $J$ of our states but there is a general argument for the $J$ dependence of the level density.
+Following the derivation by Grossjean and Feldmeier\cite{grossjean1985} we assume that the states are build up from single-particle states with a random spin orientation. More precisely, let the single-particle states spin projection $m$ be a random number. Time-reversal symmetry demands that the expectation value of $m$ is zero, and that their distribution is symmetric. Now, if we assume that our state is formed by exciting a large number of nucleons, the central limit theorem gives the probability of the total spin projection $M$ as
 \begin{equation}
 P(M) = \frac{1}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)},
 \end{equation}
 and hence the density of states $\omega$ with spin-projection $M$ specified becomes
 \begin{equation}
-\omega(E*)_M =  \frac{\omega(E*)}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)}.
+\omega(E^*)_M =  \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)}.
 \end{equation}
-Finally, using the fact that for each $J$, there is only one state of each $M \in [-J,\dots,J]$, we may subtract contributions from all higher $J$\footnote{states with $J'<J$ do not contribute, since they do not contain a $M=J$ state.}:
+Finally, using the fact that for each fixed $J$, say $J'$, there is only one state of each $M \in [-J',\dots,J']$, we may subtract contributions from all states with higher\footnote{states with lower $J$, $J<J'$, do not contribute, since they do not contain a $M=J'$ state.} $J$ by:
 \begin{equation}
-\rho_J(E*) \equiv \omega(E*)_{M=J, J} = \omega(E*)_{M=J}  -\omega(E*)_{M=J+1},
+\rho_{J'}(E^*) \equiv \omega(E^*)_{M=J', J=J'} = \omega(E^*)_{M=J'}  -\omega(E^*)_{M=J'+1},
 \end{equation}
-where the equivalence is due to the fact that $\rho_J(E*) = \omega(E*)_{M, J}$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
+where the equivalence is due to the fact that $\rho_J(E^*) = \omega(E^*)_{M, J}$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
 \begin{equation}
-\rho_J(E*) \approx - \frac{d}{dM} \left( \omega(E*)_{M}\right)_{M=J+1/2},
+\rho_J(E^*) \approx - \frac{d}{dM} \left( \omega(E^*)_{M}\right)_{M=J+1/2},
 \end{equation}
 which gives the $J$ dependence as
 \begin{equation}
-\rho_J(E*) \approx \frac{\omega(E*)}{\sqrt{2\langle M^2\rangle}} \frac{2J+1}{2} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)}.\label{eq:rhoj}
+\rho_J(E^*) \approx \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \frac{2J+1}{2} \exp{\left(-\frac{M^2}{2\langle (J+1/2)^2\rangle}\right)}.\label{eq:rhoj}
 \end{equation}
 
-Secondly, for higher excitation energy, it makes sense to smear out the discrete levels in order to get a continous function -- and get it on a closed form! The usual way this is done is by observing that the grand partition function 
+Secondly, for higher excitation energy, it makes sense to smear out the discrete levels in order to get a continous function -- and get it on a closed form. The usual way this is done is by observing that the grand partition function 
 \begin{equation}
 Z(\alpha,\beta) = \sum_{i,A} \rho(E,A) \exp{(\alpha A - \beta E_i(A))}
 \end{equation}
@@ -201,19 +200,19 @@ Here, $U$ is an effective excitation energy above the \emph{yrast line}, correct
 \begin{equation}
 U=E_\text{eff} + f(E_\text{eff})\delta S + g(E_\text{eff})\delta P,\label{eq:u}
 \end{equation}
-where $f$ and $g$ describe the damping of shell and pairing effects with increasing energy, and $E_\text{eff} = E^*-E_\text{yrast}$. The \emph{yrast energy}, $E_\text{yrast}$, is the lowest energy for a given angular momentum, here taken to be
+where $f$ and $g$ describe the damping of shell and pairing effects with increasing energy, and $E_\text{eff} = E^*-E_\text{yrast}$. The \emph{yrast energy}\footnote{From the Swedish word ``yrast'', which in this context means ``whirliest''\cite{yrast}.}, $E_\text{yrast}$, is the lowest energy for a given angular momentum, here taken to be
 \begin{equation}
-E_\text{yrast} = \frac{(2J+1)\hbar^2}{2\Theta_\perp},
+E_\text{yrast} = \frac{J(J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
-which is the energy corresponding to a quantum-mechanical axial-symmetric rotor rotating around a symmetry axis perpendicular to its elongation. This yrast energy is not, strictly speaking, the lowest energy for a given $J$, but the energy of a collective rotational excitation\cite{ericson:1960}, which is a reasonable picture when we have many states with a given $J$ in our energy interval $[E,E+dE]$, which is needed for \eqref{eq:rho} to be valid. 
+which is the energy corresponding to a quantum-mechanical axial-symmetric rotor rotating around a symmetry axis perpendicular to its elongation. This yrast energy is not, strictly speaking, the lowest energy for a given $J$, but the energy of a collective rotational excitation\cite{ericson:1960}.
 As may be interfered by comparing \eqref{eq:rhoj} with \eqref{eq:rho}, the expectation value $\langle M^2 \rangle$ is closely connected to the moment of inertia $\Theta$.
-Ericson\cite{ericson:1960} provides a simple, not strictly valid, explanation for this:
-If we assume that a nucleus of spin $J$ has some of its energy in a rotational excitation of the form expected of a classical rotor, $\frac{\hbar^2J^2}{2\Theta}$, then it will not have this energy available for intrinsic excitations\footnote{The $\hbar$ being there to compensate for the fact that $J$ is dimensionless in our notation.}. Hence, we adjust the energy according to $E^* \to E^* - \frac{\hbar^2J^2}{2\Theta}$, as we have done above in the level density. Furthermore, if we approximate the rapidly growing $\rho(E^*)$ as an exponential, we can write
+Ericson\cite{ericson:1960} provides a simple, although not especially rigirous, explanation for this:
+If we assume that a nucleus of spin $J$ has some of its energy in a rotational excitation of the form expected of a classical rotor, $\frac{\hbar^2J^2}{2\Theta}$, then it will not have this energy available for intrinsic excitations\footnote{The $\hbar$ being there to compensate for the fact that $J$ is dimensionless in our notation.}. Hence, we adjust the energy according to $E^* \to E^* - \frac{\hbar^2J^2}{2\Theta}$, as we have done above in the effective excitation energy \eqref{eq:u}. Furthermore, if we approximate the rapidly growing $\rho(E^*)$ as an exponential, we can write
 \begin{equation}
 \rho(E^* - \frac{\hbar^2J^2}{2\Theta}) = \rho(E^*) \exp{(\frac{\hbar^2J^2}{2\Theta})},
 \end{equation}
 and comparing this equation with \eqref{eq:rhoj} gives a direct relation between $\Theta$ and $\langle M^2 \rangle$. We now return to \autoref{eq:u}.
-
+\paragraph{Shell and pairing energy}
 The pairing energy $\delta P$ can be estimated from the average separation energy for the surrounding nuclei (in an $(N,Z)$ plot, like an isotope chart), which is close to the actual observed shift between odd and even nuclei\cite{ericson:1960}. Neutrons and protons have different pairing energies, which is to be added or subtracted when neutron or proton number, respectively, is odd or even. 
 The shell energy $\delta S$ can either be calculated from a microscopic model, or -- as I have done -- can be be estimated together with the pairing energy by comparing experimental masses with masses predicted by a macroscopic model, and taking the difference, as suggested by Schmidt and Morawek\cite{schmidt:1991:art}. I used the macroscopic part of the 1992 edition of the Finite-Range Droplet Model (FRDM-1992)\cite{moller1995}, which is presented in more detail in \autoref{sec:frdm1995}.
 
@@ -229,7 +228,7 @@ where $a$ is the level-density parameter, which for a spherical nuclei can be ap
 \begin{equation}
 a=\frac{A}{\unit[14.61]{MeV}}(1+3.114 A^{-1/3} + 5.626 A^{-2/3}).\qquad\cite{schmidt:1991:art}\label{eq:a}
 \end{equation}
-This parameter also enters directly into \eqref{eq:rho}.
+This parameter also enters directly into \eqref{eq:rho}, and is directly related to the inverse level spacing at the Fermi level, $a=\tfrac{\pi^2}{3} \tfrac{1}{d}$.
 
 Likewise, the damping of pairing effects with energy can also be described by a simple function, in this case
 \begin{equation}
@@ -242,13 +241,13 @@ The critical energy $E_\text{c}$ is approximately $\unit[10]{MeV}$ and is taken 
 E_\text{c} = \unit[10]{MeV}\sqrt{1-(J/J_\text{c})^2},
 \end{equation}
 where the critical angular momentum $J_\text{c}$ has been set to $12\hbar$\footnote{The value of the critical angular momentum and the momentum dependence in general is from the \prgname{CODEX} code. I have not been able to find any other source.}. 
-
+\paragraph{Moment of inertia}
 Since we have restricted ourselves to spherical nuclei in \eqref{eq:a}, we also have the moments of inertia $\Theta_\perp = \Theta_\parallel$. In particular, for a sphere with constant density, we have
 \begin{equation}
 \Theta = \frac{2}{5} M R_0^2 \approx \frac{2}{5} A^{5/3}\times u \times r_0^2
 \end{equation}
 The approximation is obtained by inserting $R_0 = r_0 A^{1/3}$ and $M=u A$, where $r_0=\unit[1.16]{fm}$ is the nuclear radius constant, with the same value as in the macroscopic model\cite{moller1995}. $u$ is the atomic mass units, $u \approx \unit[931.5]{MeV}$.
-
+\paragraph{Reciprocal tempeture $\beta$}
 Finally, $\beta$ in \eqref{eq:rho} is the reciprocal nuclear temperature\footnote{It really is the reciprocal temperature at the saddle-point, see e.g. Feldmeier\cite{grossjean1985}.} $\beta=1/T$. It can be calculated from $\tfrac{a}{\beta}$, which is obtained by solving
 \begin{equation}
 a/\beta=\sqrt{(aU)[1 -exp{-a/\beta}]},\qquad\cite{grossjean1985}\label{eq:abiteration}
@@ -272,14 +271,15 @@ from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was use
 \end{center}
 \end{figure}
 
-In order to get a picture of how all of this comes together, we plot the level density for the $A=10$ isobar for $J=0,\tfrac{1}{2},\dots, 4$. The level density of $~^{20}\mathrm{Ne}$ for different spin with and without subtracting the yrast-energy is illustrated in \autoref{fig:rhospin}. 
-As can be seen in the figure, the level densities for higher spin start at a lower value for low energies, way lower than one level for each $\unit{MeV}$ -- which indicates that the continous view of energy levels fails at these energies. 
+%In order to get a picture of how all of this comes together, we plot the level density for the $A=10$ isobar for $J=0, \tfrac{1}{2}, \dots, 4$. 
+The level density of $~^{20}\mathrm{Ne}$ for different spin with and without subtracting the yrast-energy is illustrated in \autoref{fig:rhospin}. 
+As can be seen in the figure, the level densities for higher spin start at a lower value for low energies, way lower than $\unit[1]{level/MeV}$, which indicates that the continous view of energy levels fails at these energies. 
 The spins appear to be split up in $2$ groups, one for $J \le 1$ and one for $J>1$.
-The level densities for $4 \ge J> 1$ initially grow rapidly, until they overtake the lower spin level densities and settle at a seemingly proportional relationship with each other. As a result of the $(2J+1)\exp{(J(J+1))}$ dependence on $J$, moderate $J$ values give the largest level density.
-The same general behaviour is seen for the other nuclei at the $A=10$ isobar.
+The level densities for $4 \ge J> 1$ initially grow rapidly, until they overtake the lower spin level densities and settle at a seemingly proportional relationship with each other. As a result of the $(2J+1)\exp{(-(J+1/2)^2)}$ dependence on $J$, moderate $J$ values give the largest level density.
+The same general behaviour is seen for the other nuclei at the $A=20$ isobar.
 
-In order to see if this is a general feature of our model, we also investigate $~^{99}\mathrm{Zr}$ -- this nucleus is being chosen arbitrarily as an example of a non-fissile nucleus far form the $A=10$ isobar. The corresponding plots of the level densities are seen in \autoref{fig:rhospin2}. We note that the inclusion of the yrast energy is not nearly as significant for the spins under consideration, since the larger value of $\Theta$ reduces the yrast energy of a given $J$. This also explains why $J=4$ has the highest density of states in this case: a higher $\Theta$ means that the $\exp{(J(J+1)/\Theta)}$ factor does not supress the level density as rapidly with increasing spin. 
-We also see that it is only for $J\ge 3$ that we see the hint of a dip for lower energies. This could perhaps indicate that the pronounced spin-dependence seen for the $A=10$ isobar will reveal itself for yet higher spin -- a natural consequence of the higher moment of inertia for heavier nuclei.
+In order to see if this is a general feature of our model, we also investigate $~^{99}\mathrm{Zr}$ -- this nucleus is being chosen arbitrarily as an example of a non-fissile nucleus far form the $A=20$ isobar. The corresponding plots of the level densities are seen in \autoref{fig:rhospin2}. We note that the inclusion of the yrast energy is not nearly as significant for the spins under consideration, since the larger value of $\Theta$ reduces the yrast energy of a given $J$. This also explains why $J=4$ has the highest density of states in this case: a higher $\Theta$ means that the $\exp{(-(J+1/2)^2/\Theta)}$ factor does not supress the level density as rapidly with increasing spin. 
+We also see that it is only for $J\ge 3$ that we see the hint of a dip for lower energies. This could perhaps indicate that the pronounced spin-dependence seen for the $A=20$ isobar will reveal itself for yet higher spin -- a natural consequence of the higher moment of inertia for heavier nuclei.
 
 \begin{figure}
 \begin{center}
@@ -294,7 +294,7 @@ We also see that it is only for $J\ge 3$ that we see the hint of a dip for lower
 
 In any case, this is low-energy behaviour, and both the Fermi gas model\cite{grossjean1985} and the very notion of a continuous level density has problems for low energies. Most notably, the Fermi gas model itself, without compensating for shell and pairing effects, predicts a singularity at $U=0$, which is why we see an increase in the level density for lower energies and spin in both \autoref{fig:rhospin2} and in \autoref{fig:rhospin}, which have been truncated at $E=\unit[0.1]{MeV}$ in order to avoid this.
 
-The level density was also investigated for a fixed spin for different isotopes of the $A=10$ isobar, but no conclusive trends were found.
+The level density was also investigated for a fixed spin for different isotopes of the $A=20$ isobar, but no conclusive trends were found.
 
 On the other hand, for the isotope $Z=10$, the level density for higher energies generally increases with additional neutrons, which is to be expected, since there are more ways to arrange the nucleons for a given excitation energy, this is illustrated in \autoref{fig:Z10-rho}, where the brighter lines correspond to heavier nuclei.
 
@@ -322,7 +322,7 @@ If we go ahead and assume that not only the charge distribution, but the potenti
 \begin{equation}
 V_\text{r} = Z_1 Z_2 \frac{e^2}{r_{12}} + \frac{l(l+1)\hbar^2}{2\mu r^2} + \dots\quad .
 \end{equation}
-Here we still need additional terms to take the effective nucleon-nucleon intraction into account. The assumption of spherical symmetry also gives us the angular part of the wave function as a spherical harmonic,  determing the angular distribution of the emitted particle in the center-of-mass frame.
+Here we still need additional terms to take the effective nucleon-nucleon intraction into account. The assumption of spherical symmetry also gives us the angular part of the wave function as a spherical harmonic, determing the angular distribution of the emitted particle in the center-of-mass frame.
 
 \begin{figure}
 \begin{center}
@@ -335,7 +335,7 @@ The nuclear part of the potential used by \prgname{Codex} is a proximity potenti
 Proximity potentials may be derived from a more general approximation method, in which two nearby surfaces are divided into several parallel surfaces, close enough to be approximated as semi-infinite, see \autoref{fig:prox}\cite{fosco:2012}. The contributions from the different sets of parallel surfaces are assumed to be additive.
 The potential energy is calculated for these slabs, and factors to correct for the actual geometry are introduced. This approach is widely used in Casimir force calculations between objects of a more arbitrary shape\cite{fosco:2011}. This approximation is also known by ``Derjaguin approximation'' in other fields\cite{fosco:2012}.
 
-In the nuclear case, the situation is somewhat complicated by the fact that the form of the nucleon-nucleon interaction is unknown. As such, there exist several proximity potentials\cite{dutt:2010}. Dutt et. al. showed that 12 common proximity potentials were able to predict fusion barrier heights within $10\%$ of the experimental values for asymmetric fusion reactions ranging from $~^{12}\mathrm{C} + ~^{17}\mathrm{O}$ to $~^{86}\mathrm{Kr} + ~^{208}\mathrm{Pb}$\cite{dutt:2010}. Proximity-type potentials have also been used to study alpha and proton decay\cite{proton-alpha-proxy:2005}\cite{proton-proxy:2010}, which is closer to our intended application\footnote{It is not immediately obvious to the author if the assumptions of the proximity potential formalism applies to proton or alpha decay. It does however reproduce experimental half-lives to a reasonable degree, see e.g. Balasubramaniam and Arunachala\cite{proton-alpha-proxy:2005} -- this is for emission from heavier nuclei, though.}.
+In the nuclear case, the situation is somewhat complicated by the fact that the form of the nucleon-nucleon interaction is unknown. As such, there exist several proximity potentials\cite{dutt:2010}. Dutt et. al. showed that 12 common proximity potentials were able to predict fusion barrier heights within $10\%$ of the experimental values for asymmetric fusion reactions ranging from $~^{12}\mathrm{C} + ~^{17}\mathrm{O}$ to $~^{86}\mathrm{Kr} + ~^{208}\mathrm{Pb}$\cite{dutt:2010}. Proximity-type potentials have also been used to study alpha and proton decay\cite{proton-alpha-proxy:2005}\cite{proton-proxy:2010}, which is closer to our intended application\footnote{It is not immediately obvious to the author if the assumptions of the proximity potential formalism applies to proton or alpha decay. It does however reproduce experimental half-lives to a reasonable degree, see e.g. Balasubramaniam and Arunachala\cite{proton-alpha-proxy:2005}, this is for emission from heavier nuclei, though.}.
 
 The proximity potential is given by
 \begin{equation}
@@ -354,10 +354,10 @@ where $I=(N-Z)/A$ is the neutron excess.
 We use the universal function by Blocki, 1997,
 \begin{equation}
 \phi(\zeta)= \begin{cases}-0.5(\zeta-2.54)^2-0.0852(\zeta-2.54)^3 & \zeta < 1.2511 \\
--3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511.\qquad\cite{blocki1977}
+-3.437\exp{(-\zeta/0.75)} & \zeta > 1.2511,\qquad\cite{blocki1977}
 \end{cases}\label{eq:prox}
 \end{equation}
-$\zeta$ is the distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness $b$ of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
+where $\zeta$ is the distance between the two nuclear surfaces, normalized with respect to the typical surface diffuseness $b$ of the nuclei, here taken to be $\unit[1]{fm}$\cite{blocki1977}. More explicitly, we have
 \begin{equation}
 \zeta = \frac{r - r_\text{sum}}{b},
 \end{equation}
@@ -383,10 +383,10 @@ V_\text{C} = \begin{cases}\frac{Z_1 Z_2 e^2}{r} &\quad r>r_\text{ch} \\ \frac{Z_
 where we here use the more common formula for the charge radius, $r_\text{ch} = r_0 A^{1/3}$.
 
  In \autoref{fig:np-Z10N10}, we illustrate the total potential of $~^{20}\mathrm{Ne}$ for tunneling of protons and neutrons. The individual contributions to the total potential may be discerned by looking at the potential for the emission of $l=0$ neutrons (which are only affected by the proximity potential) and $l=0$ protons (which have to tunnel through the sum of the Coulomb and the proximity potential). %Since these potentials are only used for tunneling calculations, their shape below $E=0$ is not significant, since the particles cannot escape if their energy is less than $0$, and we will hence not display the $V<0$ parts in subsequent figures, in order to focus on the relevant details.
-On this energy scale, the barrier the protons have to tunnel through is merely \unit[2]{MeV} high, but since the proton separation energy for $~^{20}\mathrm{Ne}$ is \unit[12]{MeV}, it will only happen for excitation above \unit[12]{MeV}, as the proton does not have a positive energy otherwise. Neutrons with a positive energy and $l=0$ do not have to tunnel at all, and exist as resonances above the potential barrier. The tunneling formalism does not apply in this case, and we apply instead \eqref{eq:tlabove}, which we discuss later.
+On this energy scale, the barrier the protons have to tunnel through is merely \unit[2]{MeV} high, but since the proton separation energy for $~^{20}\mathrm{Ne}$ is \unit[12]{MeV}, it will only happen for excitation above \unit[12]{MeV}, as the proton does not have a positive energy otherwise. Neutrons with a positive energy and $l=0$ do not have to tunnel at all, and exist as resonances above the potential barrier. The tunneling formalism does not apply in this case, and we instead use \eqref{eq:t0n}, which we discuss later.
 
-We also see that the centrifugal part quickly dominates, essentially a result of protons and neutrons being relatively light particles: for $\alpha$-decay, the centrifugal part is about a fourth of the values displayed above, and the $l$-dependence of the tunneling probability is not very significant\cite{weisskopf:1979}.  
-This strong $l$-dependence makes proton radioactivity a sensitive probe for the orbital angular momentum of valence protons for proton emitting nuclei\cite{proton-alpha-proxy:2005}, but -- in this case -- it also poses a problem, since it removes the Coulomb+proximity barrier for high $l$-values. Even for moderate $l$ values, it makes particles with low energy classically forbidden within the the radius of barrier (see \autoref{fig:np-Z10N10}), which appears inconsistent with the picture of a particle tunneling through a barrier.
+We also see that the centrifugal part quickly dominates, essentially a result of protons and neutrons being relatively light particles: for $\alpha$-decay, the centrifugal part is about a fourth of the values displayed above, and the $l$-dependence of the tunneling probability is not very significant for low $l$\cite{weisskopf:1979}.  
+This strong $l$-dependence makes proton radioactivity a sensitive probe for the orbital angular momentum of valence protons for proton emitting nuclei\cite{proton-alpha-proxy:2005}. However, in this case, it also poses a problem, since, for high $l$-values, it removes the potential well created by the Coulomb and proximity potential. Even for moderate $l$ values, it makes particles with low energy classically forbidden within the the radius of barrier (see \autoref{fig:np-Z10N10}), which appears inconsistent with the picture of a preformed particle tunneling through said barrier.
 The solution adopted in this work is to assign probability zero to tunnel for particles that are classically forbidden within the nucleus. This will supress decay for higher $l$, since the bottom of the potential well rises as $l$ does. For a higher $l$, the potential well disappears entirely\footnote{Another solution, attractive since we do not use the potential to estimate separation energies, is to model the strong interaction as an infinitely deep potential that cancels the centrifugal part, so that bound particles can always exist in the nucleus. The common $V=-\infty$ for $r<r_\text{nucleus}$ potential achieves this. Another solutions found in the literature is to have other, finite potentials below certain radii, but -- in non-relativistic quantum mechanics -- this goes against the assumption of spherical symmetry unless the effective nucleon-nucleon interaction depends on $l$ so to exactly cancel the centrifugal part.}.
 
 \begin{figure}
@@ -407,9 +407,9 @@ G=\sqrt{\frac{2\hbar}{\mu}} \int_{r_1}^{r_2} \sqrt{V_l(r)-\epsilon_{\nu}}\,dr.
 The classical turning points, $r_1$ and $r_2$, are the inner and outer radii for which the kinetic energy is equal to the potential energy. It should be noted that the WKB approximation is not, strictly speaking, valid for regions where the potential is approximately constant over several wave-lengths $\lambda=\frac{2\pi}{k}$, which will not be valid for at the turning points, since $\lambda \to \infty$. 
 A somewhat more refined WKB approximation formula is
 \begin{equation}
-T_l(\epsilon_\nu) = \frac{1}{1+\exp{2G}},
+T_l(\epsilon_\nu) = \frac{1}{1+\exp{2G}},\qquad\cite{kemble}
 \end{equation}
-!!! CITE PAPER !!! which still suffers from the same short-comings as the previous formula. Nevertheless, the transition amplitudes calculated with the WKB formula are generally of the right order of magnitude, which should suffice for our purposes\cite{2011arXiv1106.1065N}.
+ which still suffers from the same short-comings as the previous formula. Nevertheless, the transition amplitudes calculated with the WKB formula are generally of the right order of magnitude, which should suffice for our purposes\cite{2011arXiv1106.1065N}.
 
 For $\epsilon>V_\text{max}$, we can no longer view the emission as tunneling, because the particle passes ``over'' the barrier. Instead, we use
 \begin{equation}
@@ -419,8 +419,7 @@ where
 \begin{equation}
 \hbar\omega = \hbar\sqrt{\frac{1}{\mu}\left(\frac{d^2V_l}{dr^2}\right)_{r_\text{max}}}.\qquad\cite{gollerthan:1988:thesis}
 \end{equation}
-!!! CAN'T FIND REAL SOURCE FOR ARGUMENTS, BUT NOT PRIORITY !!!
-We use yet another formula for $l=0$ neutrons, which do not have a barrier to tunnel through, and for which \autoref{eq:tlabove} cannot be applied, since no maximum exists. Instead, we use the transmission coefficient for transmission from a step 
+We use yet another formula for $l=0$ neutrons, which do not have a barrier to tunnel through, and for which \autoref{eq:tlabove} cannot be applied, since no maximum exists. Instead, we use the transmission coefficient for transmission over a step 
 \begin{equation}
 T_{0,\text{n}} = \frac{4\sqrt{E}\sqrt{E+V_0}}{(\sqrt{E}+\sqrt{E+V_0})^2},\label{eq:t0n}
 \end{equation}

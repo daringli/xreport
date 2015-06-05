@@ -43,7 +43,7 @@ We see that the spectra are in qualitative agreement, and that the oddities of t
 \end{figure}
 
 \subsection{A more detailed spectra of the $A=28$ isobar.}
-In order to investigate how the region of proton and neutron instability evolves with higher excitation energies, we look at the particle spectra of the $A=28$ isobar. This isobar was chosen since it displays some of the anomalous behavior discussed above, and since we eventually want to focus on lighter nuclei when we later apply the code. The behaviour for lower energies is illustrated in \autoref{fig:bars1}. $~^{28}F$ is neutron unstable, while the other nuclei start to decay dominantly by neutron and proton emission almost as soon as they pass over the separation energies, which are presented in \autoref{tab:sep}. At yet higher energies, as presented in \autoref{fig:bars2}, alpha evaporation starts to become energetically possible, and also -- apparently -- triton evaporation, although that has a low probability of occuring. At yet higher energies, \autoref{fig:bars3}, the probabilty for alpha decay starts to decrease again -- possibly due to higher $l$-evaporation becoming possible for the lighter particles. For comparison, the output spectra from \prgname{Talys} at $E^*=\unit[20]{MeV}$ is presented in \autoref{fig:barst}. Notably, the $\alpha$-branching ratio is significantly lower for $~^{28}\mathrm{Si}$.
+In order to investigate how the region of proton and neutron instability evolves with higher excitation energies, we look at the particle spectra of the $A=28$ isobar. This isobar was chosen since it displays some of the anomalous behavior discussed above, and since we eventually want to focus on lighter nuclei when we later apply the code. The behaviour for lower energies is illustrated in \autoref{fig:bars1}. $~^{28}F$ is neutron unbound, while the other nuclei start to decay dominantly by neutron and proton emission almost as soon as they pass over the separation energies, which is presented in \autoref{tab:sep}. At even higher energies, as presented in \autoref{fig:bars2}, alpha evaporation starts to become energetically possible, and also -- apparently -- tritium evaporation, although that has a low probability of occuring. At yet higher energies, \autoref{fig:bars3}, the probabilty for alpha decay starts to decrease again -- possibly due to evaporation of partilces in higher $l$-states becoming possible for the lighter particles. For comparison, the output spectra from \prgname{Talys} at $E^*=\unit[20]{MeV}$ is presented in \autoref{fig:barst}. Notably, the $\alpha$-branching ratio is significantly lower for $~^{28}\mathrm{Si}$.
 
 \begin{figure}
 \begin{center}
@@ -110,33 +110,33 @@ $~^{28}\mathrm{S}$ & 2.50 & 21.5 & 9.10 \\\hline
 \begin{figure}
 \begin{center}
 \includegraphics[width=\bredd\textwidth]{figures/bars/20-t-spectra.pdf}
-\caption{\label{fig:barst} The branching ratios for various decay modes at $E^*=\unit[20]{MeV}$ for nuclei in the $A=28$ isobar, according to \prgname{Talys}. The colors signify the different decay modes: blue=neutron, red=proton, green=gamma, black=deuteron}
+\caption{\label{fig:barst} The branching ratios for various decay modes at $E^*=\unit[20]{MeV}$ for nuclei in the $A=28$ isobar, according to \prgname{Talys}. The colors signify the different decay modes: blue=neutron, red=proton, green=gamma, black=deuteron. The spin has been determined by \prgname{Talys}, which populates discrete levels close to $\unit[20]{MeV}$. Plotted is the decay modes from the highest such level.}
 \end{center}
 \end{figure}
 
 To investigate how the individual decay modes vary with energy, we finally take a look at the full, energy dependent emission spectrum of a single nucleus.
-To see how the $\alpha$-decay mode manages to compete with the proton and neutron, we have plotted the likelihood of $~^{28}\mathrm{Mg}$ emitting protons, alphas and neutrons, for various $l$; see \autoref{fig:fullspec1} and \autoref{fig:fullspec2}. As we see in these figures, which shows the energy cost off emitting the particles\footnote{We plot $E_i^*-E_f^*$ rather than the kinetic energy of the emitted particle, $E_i^*-E_f^*-S$, in order to shift the graphs so that the probabilities become non-zero at $\Delta E = S$, which makes it easier relate the likelihoods of emission to the excitation energy of the mother nucleus. Note however that the relative emission probabilities are unrelated to the excitation energy of the initial state provided that it has enough energy to emit the most likely particle: the $\rho(E_i^*,J_i)$ cancel each other.}, $E_i^*-E_f^*$, each particle has a most likely excitation energy to be emitted at. This is due to the fact that highly excited particles ``saturate'' their transmission coefficients, one $l$ at a time, but because the lowest energy to tunnel through the centrifugal barrier (in our model) goes like $l(l+1)$, the particles are only able to saturate a relatively low number of $T_l$'s until they carry away so much energy that $\rho(E_f^*)$ becomes negligable in comparison to its value at higher $E_f^*$. 
+To see how the $\alpha$-decay mode manages to compete with proton and neutron evaporation, we have plotted the likelihood of $~^{28}\mathrm{Mg}$ emitting protons, alphas and neutrons, for various $l$; see \autoref{fig:fullspec1} and \autoref{fig:fullspec2}. As we see in these figures, which shows the energy cost off emitting the particles\footnote{We plot $E_i^*-E_f^*$ rather than the kinetic energy of the emitted particle, $E_i^*-E_f^*-S$, in order to shift the graphs so that the probabilities become non-zero at $\Delta E = S$, which makes it easier relate the likelihoods of emission to the excitation energy of the mother nucleus. Note however that the relative emission probabilities are unrelated to the excitation energy of the initial state provided that it has enough energy to emit the most likely particle: the $\rho(E_i^*,J_i)$ cancel each other.}, $E_i^*-E_f^*$, each particle has a most likely excitation energy to be emitted at. This is due to the fact that highly excited particles ``saturate'' their transmission coefficients, one $l$ at a time, but because the lowest energy to tunnel through the centrifugal barrier (in our model) goes like $l(l+1)$, the particles are only able to saturate a relatively low number of $T_l$'s until they carry away so much energy that $\rho(E_f^*)$ becomes negligable in comparison to its value at higher $E_f^*$. 
 Alpha particles, which have a lower centrifugal barrier, are able to saturate five $l$-values, while protons and neutrons only saturate two, which is reasonably given that $4(4+1)/(2(2+1)) = \frac{10}{3} \approx 4$, which is the ratio relating the nucleon and alpha centrifugal barrier. 
 We also see that each $l$ for neutron and proton emission has two curves, related to the fact that there are two ways to couple the spin of the nucleons (the initial state has $J=0$). The alpha particle, being a spin zero particle, only has one curve for each $l$.
 
-In short: a particle carrying away a lot of energy will easily tunnel, but the level density of the final state is much, much higher if the particle carries away just a small amount of energy, and thus high energy emission is effectively supressed, and we get a peaks in emission probabilities for the respective particles. Once our excitation energy is above these peaks, they may be emitted by the most likely way, and hence that probability gets saturated. That being said, the branching ratios can of course benefit from less likely ways to emit, and excitation energies beyond the peak makes the tail of the distribution available for the decays, but we do not expect to see dramatic swings like in the alpha spectrum for $~^{28}\mathrm{Mg}$ between $\unit[14]{MeV}$ and $\unit[15]{MeV}$ in \autoref{fig:bars2}, which coincides rather nicely with the peak in \autoref{sfig:fulla}.
+In short: a particle carrying away a lot of energy will easily tunnel, but the level density of the final state is much, much higher if the particle carries away just a small amount of energy, and thus high energy emission is effectively supressed, and we get a peak in the emission probabilities for the respective particles. Once our excitation energy is above these peaks, they may be emitted by the most likely way, and hence that probability gets saturated. That being said, the branching ratios can of course benefit from less likely ways to emit, and excitation energies beyond the peak makes the tail of the distribution available for the decays, but we do not expect to see dramatic swings like in the alpha spectrum for $~^{28}\mathrm{Mg}$ between $\unit[14]{MeV}$ and $\unit[15]{MeV}$ in \autoref{fig:bars2}, which coincides rather nicely with the peak in \autoref{sfig:fulla}.
 
 \begin{figure}
 \begin{center}
-\caption{\label{fig:fullspec1} The simulated probability that $~^{28}\mathrm{Mg}$ decays by...}
+\caption{\label{fig:fullspec1} The simulated probability that $~^{28}\mathrm{Mg}$ decays by proton emission (\ref{sfig:fullp}) and neutron emission (\ref{sfig:full1n}), respectively.}
 \begin{tabular}{c}
-\subfloat[... proton emission]{\scalebox{0.7}{\input{figures/fullspec/Mg28-p.pdf_t}\label{sfig:fullp}}}
+\subfloat{\scalebox{0.7}{\input{figures/fullspec/Mg28-p.pdf_t}\label{sfig:fullp}}}
 \\
-\subfloat[... neutron emission]{\scalebox{0.7}{\input{figures/fullspec/Mg28-n.pdf_t}\label{sfig:full1n}}}
+\subfloat{\scalebox{0.7}{\input{figures/fullspec/Mg28-n.pdf_t}\label{sfig:full1n}}}
 \end{tabular}
 \end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
-\caption{\label{fig:fullspec2} The simulated probability that $~^{28}\mathrm{Mg}$ decays by...}
+\caption{\label{fig:fullspec2} The simulated probability that $~^{28}\mathrm{Mg}$ decays by alpha emission.}
 \begin{tabular}{c}
-\subfloat[... alpha emission]{\scalebox{0.7}{\input{figures/fullspec/Mg28-a.pdf_t}\label{sfig:fulla}}}
+{\scalebox{0.7}{\input{figures/fullspec/Mg28-a.pdf_t}\label{sfig:fulla}}}
 \end{tabular}
 \end{center}
 \end{figure}

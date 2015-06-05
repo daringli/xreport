@@ -3,30 +3,31 @@ As a part of the construction of the international FAIR (Facility for Antiproton
 
 The \rtb{} experiment aims to study nuclear physics, in particular the properties of exotic nuclei far from the valley of stability \cite{r3b:online}. The experiments will be performed with radioactive beams, and the aim is to be able to determine the complete kinematics of the reaction. We will here describe a generic experiment of this kind.
 
-The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target -- a so called \emph{event} -- the reaction products are, ideally, identified by recording where they hit the detector, when they hit the detectors (which allows detector output to be attributed to individual events, which yields the initial and final momentum); how much energy they deposit in the detectors (yielding the charge); and their deflection in a magnetic field, which gives their charge-to-mass ratio, and thus their mass. 
+The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target -- a so called \emph{event} -- the reaction products are to be indeitifed by the experimental setup. 
+This is done by recording where they hit the detector, when they hit the detectors (which allows detector output to be attributed to individual events, which yields the initial and final momentum); how much energy they deposit in the detectors (yielding the charge); and their deflection in a magnetic field, which gives their charge-to-mass ratio, and thus their mass. 
 
-This is of course a simplification: the reaction products may decay in-flight, they may be deflected by interactions with air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is non-deterministic. 
+That being said, the identification procedure outlined above is a simplification. Complications arise from several factors: the reaction products may decay in-flight, they may be deflected by interactions with air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is non-deterministic. 
 
 While simulations are used to study how a given reaction product propagates throughout the experimental setup, they are not necesarilly needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
 In many cases, it is enough to simulate particles with specified initial momenta -- matching the kinematic constraints of the reaction -- and see how they propagate through the experimental setup, which should be able to identify them even if they are not the result of an actual reaction.
-However, since the setup should in practice identify only actual reactions products, it would be more ideal if the simulations incorporated some of the theory on the reactions to be studied. 
+However, since the setup should in practice identify only actual reactions products, it would be more efficient if the simulations incorporated some of the theory on the reactions to be studied. 
 
 Having complete knowledge of the outgoing particle in the simulation may also tempt the user to overestimate the detector efficiency, since they will more easily be able to identify their particle when they know what they are looking for, given that no other processes are involved.
 
 \section{Event Generator for \rtb{}}
-As mentioned in the previous section, an experimental event is the result of a reaction between the target and a projectile.
-An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup. %In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
+As briefly mentioned in the previous section, an experimental event is the result of a reaction between the target and a projectile.
+An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup by another code. %In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
 
-In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicing the experiment. However, there are good reasons not to implement this event generator, not all of them related to how unfeasible that project would be -- considering our present knowledge of nuclear physics. This will be discussed in the following section.
+In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicing the experiment. However, there are good reasons not to implement this event generator, not all of them related to how unfeasible that project would be, considering our present knowledge of nuclear physics. This will be discussed in the following section.
 
 %!!!I AM USING 'I' HERE SINCE I BELEIVE THIS TO BE LESS OF AN OBJECTIVE CONCLUSSION. I'M NOT 100\% SURE ABOUT THIS USAGE, THOUGH!!!
 
 \subsection{Design of an Event Generator}
 An event generator for \rtb{} needs to have certain features:
-firstly, it does not need to reproduce every feature of the experimental spectra, as long as it reproduces the general features. The actual experiment will determine the details.
+Firstly, it does not need to reproduce every feature of the experimental spectra, as long as it reproduces the general features. The actual experiment will determine the details.
 On the other hand, it needs to be easy to change the underlying model and see how this influences the resulting spectra, since quantities in the model -- nuclear level densities, transition rates, etc. -- are influenced by the presence of phenomena the experimenters are actually interested in finding -- such as giant resonances or halo structures -- which are not directly observable in the experimental data.
  
-It should also be possible to steer the event generator to generate certain reactions, that are experimentally distinguishable, so that the event generator could be used to evaluate the detector efficiency for such reactions.
+It is also desirable to be able to steer the event generator to generate specific kinds of events, so that the efficiency of the experimental setup can evaluated for specific reactions.
 
 The software also needs to be suitable for use with other programs in use in the \rtb{} collaboration. These programs are presented in the next section.
 %Before I argue for why a completely realistic event generator may be undesirable, let me first mention a few reasons for why it is unfeasible---it will turn out that one of these reasons is closely related to why a 'sloppy' event generator is useful.
@@ -48,7 +49,7 @@ The software also needs to be suitable for use with other programs in use in the
 \section{Already existing software}
 The event generator is intended to be used together with \prgname{Geant4}, which is a widely used toolkit for simulating the interaction of particles in matter\cite{allison:2006:art}. It takes advantage of the wrapper program \prgname{ggland}\cite{johansson:2013:online} -- which is designed to make it easy to run the simulations needed for the analysis of the LAND/\rtb{} experiments -- to tell with \prgname{Geant4} which particles to simulate and how the experiment is set up.
 
-In addition to the software the event generator is intended to work with, there are a few codes which have been helpful during the development process.
+In addition to the software the event generator is intended to work with, there are a few codes which have been helpful during the development process:
 
 The code is largely based upon \prgname{CODEX}\cite{gollerthan:1988:thesis}, which simulates fusion and the subsequent decay of a compound nucleus. The choice of models in this work is largely based on a setting in \prgname{CODEX}.
 The quasi-elastic scattering part of the code (described in \autoref{sec:fast}) has been adapted from the \prgname{quasi\_elastic} code, written by Leonid Chulkov.
