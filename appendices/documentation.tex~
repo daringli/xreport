@@ -1,0 +1,12 @@
+\lstset{language=C++ ,basicstyle=\footnotesize, breaklines=true, %backgroundcolor=\color[rgb]{0.8,0.8,0.8},
+%xleftmargin=11pt, xrightmargin=11pt
+}
+
+\section{codex\_particle\_model}
+
+\begin{lstlisting}
+void Codex_particle_model::Rsum(Nucleus n, int jmax,int lmax,std::vector<std::pair<double,Decay> > & Rsum_decay,  int & counter) const
+\end{lstlisting}
+This function sums up $R=\frac{d^2 P}{dt dE_f^*}$ for the decay modes accounted for in \texttt{codex\_particle\_model}.
+It first sums $l$ from zero to $l_\text{max}$, than $S=|J_i-l|,\dots , |J_i+l|$ and finally $J_f =|S-s|,\dots , |S+s|$. The only calculation performed in the two inner loops is counting the number of times specific $J_f$ values occur, which gives the number of ways to couple the relevant angular momenta to end up in $J=J_f$.
+A second loop nested in the $l$-loop goes from $E_f^*=0$ to $E_f^* = E_f^* - S_\nu$ with an increment of $dE$ during each loop. In this loop, $T_l(E)$ is calculated once, and all the found $J_f$ values are looped over in order to calculate $\rho(E_f^*,J_f)$ exactly once. 

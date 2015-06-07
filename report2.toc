@@ -11,19 +11,22 @@
 \contentsline {subsection}{\numberline {2.1.2}The slow process -- decay of a compound nucleus}{7}{subsection.2.1.2}
 \contentsline {subsubsection}{Level densities}{9}{section*.5}
 \contentsline {paragraph}{The simple example}{9}{section*.7}
-\contentsline {subsubsection}{Transition Probabilities}{17}{section*.11}
-\contentsline {paragraph}{$\gamma $-decay}{21}{section*.15}
+\contentsline {paragraph}{Shell and pairing energy}{12}{section*.8}
+\contentsline {paragraph}{Moment of inertia}{13}{section*.9}
+\contentsline {paragraph}{Reciprocal tempeture $\beta $}{13}{section*.10}
+\contentsline {subsubsection}{Transition Probabilities}{17}{section*.14}
+\contentsline {paragraph}{$\gamma $-decay}{21}{section*.18}
 \contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{23}{section.2.2}
 \contentsline {chapter}{\numberline {3}The Code}{24}{chapter.3}
 \contentsline {section}{\numberline {3.1}Programs}{24}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}List generating programs}{25}{subsection.3.1.1}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{25}{section*.16}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{25}{section*.17}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{25}{section*.19}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{25}{section*.20}
 \contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{25}{subsection.3.1.2}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Spectra}}}{26}{section*.18}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Deexcite}}}{26}{section*.19}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Rho}}}{26}{section*.20}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Pot}}}{26}{section*.21}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Spectra}}}{26}{section*.21}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Deexcite}}}{26}{section*.22}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Rho}}}{26}{section*.23}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Pot}}}{26}{section*.24}
 \contentsline {chapter}{\numberline {4}Results}{27}{chapter.4}
 \contentsline {section}{\numberline {4.1}Prefered Decay Channels}{27}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}A more detailed spectra of the $A=28$ isobar.}{31}{subsection.4.1.1}

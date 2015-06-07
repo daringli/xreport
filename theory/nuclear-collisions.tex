@@ -109,7 +109,10 @@ The time-of-flight resolution of the future \rtb{} setup will be in the picoseco
 
 Since we are interested in simulating a decay chain, we want more information than merely the probability to decay by emitting a specific particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
 \begin{equation}
-\frac{d\Gamma_{\nu,l}}{dE_f} = \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu),\label{eq:ew}
+\begin{aligned}
+\frac{d\Gamma_{\nu,l}}{dE_f} = \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu), & \quad l \in \{|J_i - S|,...,|J_i+S|\}
+\end{aligned}
+\label{eq:ew}
 \end{equation}
 which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
 

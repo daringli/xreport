@@ -108,6 +108,13 @@ C.~Goutis and G.~Casella.
   chapter Nuclear Level Densities.
 \newblock 2006.
 
+\bibitem{yrast}
+J.~R. Grover.
+\newblock Shell-Model Calculations of the Lowest-Energy Nuclear Excited States
+  of Very High Angular Momentum.
+\newblock {\em Phys. Rev.}, 157:832--847, May 1967.
+\newblock http://link.aps.org/doi/10.1103/PhysRev.157.832.
+
 \bibitem{ericson:1960}
 T.~Ericson.
 \newblock {The statistical model and nuclear level densities}.
@@ -166,6 +173,12 @@ W.~D. Myers.
 J.~M. Blatt and V.~F. Weisskopf.
 \newblock {\em Theoretical Nuclear Physics}.
 \newblock Springer New York, New York, NY, 1979.
+
+\bibitem{kemble}
+E.~C. Kemble.
+\newblock A Contribution to the Theory of the B. W. K. Method.
+\newblock {\em Phys. Rev.}, 48:549--561, Sep 1935.
+\newblock http://link.aps.org/doi/10.1103/PhysRev.48.549.
 
 \bibitem{2011arXiv1106.1065N}
 C.-S. {Ng}.
