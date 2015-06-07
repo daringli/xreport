@@ -107,14 +107,14 @@ By integrating over $E^*$, we get $\hbar \frac{d P_\nu}{dt} = \Gamma_\nu$, which
 Provided that the characteristic life-time $\Gamma_\text{tot}^{-1}$ of the system is short compared to the time resolution of the experimental setup, we may treat the decays as instantanous. Note that the system may undergo multiple decays before it reaches its ground-state, and that time-scale of this entire decay chain must be short by the experimental standards. 
 The time-of-flight resolution of the future \rtb{} setup will be in the picosecond range (\unit[$10^{-12}$]{s})\cite{r3b:online}, which is well above the time-scales of single evaporation given by Gaimard and Schmidt (\unit[$10^{-21}$ -- $10^{-16}$]{s})\cite{gaimard:1991:art}. Hence we will view $\Gamma_x$ as the probability to decay by a given process in an unspecified but short time step.
 
-Since we are interested in simulating a decay chain, we want more information than merely the probability to decay by emitting a specific particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
-\begin{equation}
-\begin{aligned}
-\frac{d\Gamma_{\nu,l}}{dE_f} = \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu), & \quad l \in \{|J_i - S|,...,|J_i+S|\}
-\end{aligned}
-\label{eq:ew}
-\end{equation}
-which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
+%Since we are interested in simulating a decay chain, we want more information than merely the probability to decay by emitting a specific particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
+%\begin{equation}
+%\begin{aligned}
+%\frac{d\Gamma_{\nu,l}}{dE_f} = \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|} T_l(\epsilon_\nu), & \quad l \in \{|J_i - S|,...,|J_i+S|\}
+%\end{aligned}
+%\label{eq:ew}
+%\end{equation}
+%which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
 
 The emitted particle, $\nu$, can in principle be anything a nucleus may decay by emitting. However, the photon must be treated differently as it is massless and thus fully relativistic -- which makes the dististinction between $l$ and the intrinsic spin unnatural -- and removes a polarization state. With this in mind, we obtain
 \begin{align}
@@ -166,39 +166,40 @@ P(M) = \frac{1}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\
 \end{equation}
 and hence the density of states $\omega$ with spin-projection $M$ specified becomes
 \begin{equation}
-\omega(E^*)_M =  \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)}.
+\omega(E^*,M) =  \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)}.
 \end{equation}
 Finally, using the fact that for each fixed $J$, say $J'$, there is only one state of each $M \in [-J',\dots,J']$, we may subtract contributions from all states with higher\footnote{states with lower $J$, $J<J'$, do not contribute, since they do not contain a $M=J'$ state.} $J$ by:
 \begin{equation}
-\rho_{J'}(E^*) \equiv \omega(E^*)_{M=J', J=J'} = \omega(E^*)_{M=J'}  -\omega(E^*)_{M=J'+1},
+\rho(E^*,J') \equiv \omega(E^*,M=J',J=J') = \omega(E^*,M=J')  -\omega(E^*,M=J'+1),
 \end{equation}
-where the equivalence is due to the fact that $\rho_J(E^*) = \omega(E^*)_{M, J}$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
+where the equivalence is due to the fact that $\rho(E^*,J) = \omega(E^*,M=J, J)$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
 \begin{equation}
-\rho_J(E^*) \approx - \frac{d}{dM} \left( \omega(E^*)_{M}\right)_{M=J+1/2},
+\rho(E^*,J) \approx - \frac{d}{dM} \left( \omega(E^*,M)\right)|_{M=J+1/2},
 \end{equation}
 which gives the $J$ dependence as
 \begin{equation}
-\rho_J(E^*) \approx \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \frac{2J+1}{2} \exp{\left(-\frac{M^2}{2\langle (J+1/2)^2\rangle}\right)}.\label{eq:rhoj}
+\rho(E^*,J) \approx \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \frac{2J+1}{2} \exp{\left(-\frac{(J+1/2)^2}{2\langle M^2\rangle}\right)}.\label{eq:rhoj}
 \end{equation}
 
-Secondly, for higher excitation energy, it makes sense to smear out the discrete levels in order to get a continous function -- and get it on a closed form. The usual way this is done is by observing that the grand partition function 
+Secondly, for higher excitation energy, it makes sense to smear out the discrete levels in order to get a continous function, and get it on a closed form. The usual way this is done is by observing that the grand partition function 
 \begin{equation}
-Z(\alpha,\beta) = \sum_{i,A} \rho(E,A) \exp{(\alpha A - \beta E_i(A))}
+Z(\alpha,\beta) = \sum_{i,A} \rho(E,A) \exp{(\alpha A - \beta E_i(A))},
 \end{equation}
-formally is the Laplace-transform of the density of states, which gives us
+formally is the Laplace-transform of the density of states
+Here, $E$ is the energy and $A$ is any other quantum number, often taken to be the number of nucleons since that grand partition function often is known or possible to derive.
+Performing the inverse Laplace transform gives us
 \begin{equation}
-\rho(E,X) = \frac{1}{2\pi i} \int_{-i\infty}^{i\infty} Z(E,X)\exp{(\beta E - \alpha A)}.
+\rho(E,A) = \frac{1}{2\pi i} \int_{-i\infty}^{i\infty} Z(E,A)\exp{(\beta E - \alpha A)},
 \end{equation} 
-The ``smearing out'' is now done by applying a saddle-point approximation to the above integral; see, for example,  Goutis et. al.\cite{saddle1999}.
+and the ``smearing out'' is now done by applying a saddle-point approximation to the above integral; see, for example,  Goutis et. al.\cite{saddle1999}.
 
-Having said this, we now present the expression for the level density used in this work:
+The above fact will be useful to understand the form and some results surrounding the level density used in this work, which we do not derive here:
 \begin{equation}
 \rho(E^*,J) = \frac{1}{\sqrt{2}24}
 \frac{1}{\sigma a^{1/4} U^{5/4}} \exp{(2\sqrt{aU})}
-\frac{2J+1}{\Theta_\text{eff}/(\hbar^2\beta)}\ exp{\left(-(J+\tfrac{1}{2})^2/(2\Theta_\text{eff}/(\hbar^2\beta))\right)},\label{eq:rho}
+\frac{2J+1}{\Theta_\text{eff}/(\hbar^2\beta)}\ exp{\left(-(J+\tfrac{1}{2})^2/(2\Theta_\text{eff}/(\hbar^2\beta))\right)}.\label{eq:rho}
 \end{equation}
-which is a version of the widely-used expression for the level density of a \emph{Fermi gas} that takes angular momentum $J$ into account, in accordance with the theory presented above\cite{ripl:2006}. 
-
+This is a version of the widely-used expression for the level density of a \emph{Fermi gas} that takes angular momentum $J$ into account, in accordance with the theory presented above\cite{ripl:2006}. 
 Here, $U$ is an effective excitation energy above the \emph{yrast line}, corrected for shell and pairing effects. It is given by
 \begin{equation}
 U=E_\text{eff} + f(E_\text{eff})\delta S + g(E_\text{eff})\delta P,\label{eq:u}
