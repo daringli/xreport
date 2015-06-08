@@ -1,1 +1,8 @@
-This thesis describes...
+This thesis describes various models implemented in a code to simulate nuclear reactions that go through a compound nucleus state, an intermediate excited state long lived enough that the nucleus has time to reach equilibrium between each subsequent decay. This implies that the decay is effectively characterized by macroscopic conserved quantities such as the excitation energy $E^*$ and its spin $J$, in addition to the proton and neutron number, $Z$ and $N$, respectively.
+
+Specifically, the reactions under consideration are quasi-elastic scattering reactions, in which the collision is modeled as taking place between essentially free nucleons or clusters in the target and projectile. A Feynman diagram formalism is used to describe this first, fast knock-out reaction.
+The unaffected nucleons in the projectile will then form an excited compound nucleus, and the final reaction products are determined by decaying this compound system. 
+
+The codes to simulate the initial fast reaction and subsequent decay are separate programs. Results are presented regarding the prefered decay modes of nuclei with a given excitation energy, utilizing the decay part of the code. The results obtained for an excitation energy of $\unit[20]{MeV}$ were compared with the output of another program, \prgname{Talys}, for nuclei with $Z\in [10,90]$ and $N \in [10,130]$. 
+
+Finally, the quasi-elastic scattering code and the compound nucleus deexcitation code were coupled in order to allow the code to be used as an event generator. The output of the event generator was used in simulations to bench mark the performance of the addback algorithm used to determine gamma energies and multiplicites from actual experimental data. The tentative results indicate that the addback algorithm is unable to identify the number of $\gamma$-rays emitted in the reaction, although further investigations are needed to arrive at a conclusive result.

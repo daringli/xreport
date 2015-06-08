@@ -6,16 +6,21 @@ GSI - R3B, 2014.
   \newline\url{https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b.htm}.
 \newblock (accessed 2015-04-16).
 
-\bibitem{allison:2006:art}
-J.~Allison, K.~Amako, J.~Apostolakis, et~al.
-\newblock Geant4 developments and applications.
-\newblock {\em IEEE Transactions on Nuclear Science}, 53(1):270 --278, Feb.
-  2006.
+\bibitem{simon:2013:thesis}
+S.~Lindberg.
+\newblock Optimised Use of Detector Systems for Relativistic Radioactive Beams.
+\newblock Master's thesis, Chalmers University of Technology, 2013.
 
 \bibitem{johansson:2013:online}
 H.~Johansson.
 \newblock ggland - command-line simulation wrapper, Apr 2013.
 \newblock \newline\url{http://fy.chalmers.se/~f96hajo/ggland/}.
+
+\bibitem{allison:2006:art}
+J.~Allison, K.~Amako, J.~Apostolakis, et~al.
+\newblock Geant4 developments and applications.
+\newblock {\em IEEE Transactions on Nuclear Science}, 53(1):270 --278, Feb.
+  2006.
 
 \bibitem{gollerthan:1988:thesis}
 U.~Gollerthan.
@@ -214,10 +219,5 @@ G.~Audi.
 \newblock Experimental Chart of Nuclides 2000.
 \newblock \newline\url{ie.lbl.gov/systematics/chart_qsp.pdf}.
 \newblock (accessed 31 May 2015).
-
-\bibitem{simon:2013:thesis}
-S.~Lindberg.
-\newblock Optimised Use of Detector Systems for Relativistic Radioactive Beams.
-\newblock Master's thesis, Chalmers University of Technology, 2013.
 
 \end{thebibliography}

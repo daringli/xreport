@@ -19,6 +19,8 @@ The different kinds of programs may be used in a pipe, like
 list | run | process
 \end{lstlisting}
 
+In addition, there are a few \prgname{Octave} scripts distributed with the code to generate plots.
+
 \subsection{List generating programs}
 The first kind of program simply generates lists of nuclei to perform calculations for. The output of these programs are of the form illustrated by this example output:
 \begin{lstlisting}
@@ -38,7 +40,7 @@ Each nucleus is placed in a separate event.
 
 \subsubsection{\prgname{Quasi}}
 This program simulates a quasi-elastic scattering event, producing an excited prefragment as well as the participating knocked-out cluster and target fragment.
-The beam energy, the number of events, the colliding nuclei must be specified, and the excitation energy and spin of the spectator prefragment may be specified.
+The beam energy, the number of events, the colliding nuclei must be specified, as well as the excitation energy and spin of the spectator prefragment.
 
 The target and cluster fragments are assumed to be in their ground states, which should be a good assumption for lighter clusters and targets.
 
@@ -47,17 +49,32 @@ Each scattering event is placed in a separate event.
 \subsection{Programs to run on nuclei-lists}
 These programs can be run on a list produced by the above programs in order to perform various calculations. 
 
-\subsubsection{\prgname{Spectra}}
+\subsubsection{\prgname{spectra}}
 This program, primarily intended to be run on the output of \prgname{Nuclist}, prints the probabilities of various decay modes from the initial states specified by the nuclie-list. The \texttt{--details} flag controls to which level of detail the spectra are printed. This is essentially a program to illustate the decay widths as calculated by the program, and hence it ignores event numbers.
 
-\subsubsection{\prgname{Deexcite}}
+\subsubsection{\prgname{deexcite}}
 The bulk work of an event generator is performed in this program. Each nucleus in each event in the input file is deexcited until it is below a specified threshold energy, or, alternatively, a given number of deexcitation steps can be specified. The resulting nuclei are printed to a new list, with the event number inherited from their mother nuclei. Combined with the output of \prgname{Quasi} and the post-processing program \prgname{List2gun}, this program is able to act as an event generator for \prgname{Geant4} through the wrapper \prgname{ggland}.
 
-\subsubsection{\prgname{Rho}}
+\subsubsection{\prgname{rho}}
 This program produces a \emph{tab-separated value} (tsv) file of the level density for each nucleus in the input list. By default, only the $Z, N$ and $J$ of the nuclei is used, and the level density is plotted for a range of excitation energies, rather than the actual energy of the nuclei in the input files, which are ignored in this mode.
 
-\subsubsection{\prgname{Pot}}
+\subsubsection{\prgname{pot}}
 Like \prgname{Rho}, this program produces a \emph{tab-separated value} (tsv) file for each nucleus in the input list, this time of the potential a particle has to tunnel through to be emitted by the nuclei in the list. The potential for a given particle-decay can be exported for a range of $l$ values.
+
+\subsubsection{\prgname{trans}}
+This program calculates transmission coefficients and prints these to a tsv-file. It takes the same input as\prgname{Pot}.
+
+
+\subsection{Programs to process the output of the above programs}
+These programs are used to convert the output to formats more suitable for storage and analysis, or to make it possible to use them as input for other simulations.
+\subsubsection{\prgname{out2gun}}
+This program creates a \prgname{ggland} \emph{gun file}, which can be used to specify particles and their initial momenta in \prgname{ggland}. This allows the output of the above program to be propagated through a simulated experimenta setup.
+
+\subsubsection{\prgname{out2root}}
+This converts the tsv-files produced by the above programs to a \prgname{ROOT}-file with a tree. This makes it easier to analyze how the output of the ismulation depends on the input.
+
+\subsubsection{\prgname{out-spectra2root}}
+Like \prgname{out2root}, this creates a \prgname{ROOT}-file with a tree. Unlike the previous program, this is intended to be run on the output of the \prgname{spectra} program, and thus does not represent informations about stochastically generated particles, but rather the underlying propabilities.
 
 %\subsection{Transition Probabilities}
 %The transition probability $d^2 P_\nu/dtdE$ from an initial state $i$ to a final state $f$ by the process $\nu$ is roughly given by

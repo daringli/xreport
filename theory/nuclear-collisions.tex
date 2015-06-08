@@ -29,14 +29,20 @@ In the participant-spectator picture, the fast process consists of a collision b
 \caption{\label{fig:fast} The fast process. The projectile ($A$) is viewed as a system of a cluster and prefragment. The collision then takes place between the cluster and the target.}
 \end{figure}
 
-The \emph{Goldhaber model} states that the 3-momentum distribution is given by a Guassian with the width determined by the expectation value of the momentum of an individual nucleon, explicitly
+The \emph{Goldhaber model} states that the 3-momentum distribution in the projectile frame is given by a Guassian with zero mean and with a width determined by the expectation value of the momentum of an individual nucleon, explicitly
 \begin{equation}
 \sigma^2 = \langle \vec{p}_\text{nucleons}^2 \rangle A'\frac{A_\text{C}}{A-1},
 \end{equation}
-where $A$ is the number of nucleons in the projectile, $A' = A-A_\text{cluster}$ the nucleon number of the prefragment, and $\langle \vec{p}_\text{nucleons}^2 \rangle$ is the expectation value of the 3-momentum of an individual nucleon. For a Fermi-gas, $\langle \vec{p}^2 \rangle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
+where $A$ is the number of nucleons in the projectile, $A' = A-A_\text{cluster}$ the nucleon number of the prefragment, and $\langle \vec{p}_\text{nucleons}^2 \rangle$ is the expectation value of the 3-momentum of an individual nucleon. This model assumes that the prefragment and cluster momenta can be expressed as a sum of individual nucleon momenta drawn from the same distribution
+\begin{equation}
+\sigma^2 = \langle \left[\sum_i^A \vec{p}_i\right]^2 \rangle
+\end{equation}
+For a Fermi-gas, $\langle \vec{p}^2 \rangle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
 The nuclear Fermi-momentum, assuming a constant density, is about $\unit[270]{MeV}$, which is in reasonable agreement with experiments for heavier ($A>40$), non-exotic nuclei\cite{moniz:1971}. 
 
-However, \rtb{} experiments are not necesarilly about heavy (and non-exotic) nuclei. Another model -- also a ``Goldhaber model'', since it uses a Guassian momentum distribution -- gives $\sigma^2$ as
+However, \rtb{} experiments are not necesarilly about heavy (and non-exotic) nuclei. For lighter nuclei, the Fermi momentum may be considerable lower\cite{bartke2009introduction}, and for exotic nuclei, such as halo nuclei, the individual nucleons will not have the same momentum distribution.
+
+Another model -- also a ``Goldhaber model'', since it uses a Guassian momentum distribution -- gives $\sigma^2$ as
 \begin{equation}
 \sigma^2 = 2 (M_{A'} + M_\text{C} -M_A) \frac{M_\text{C}M_{A'}}{M_\text{C}+M_{A'}} = -2 Q \mu(M_\text{C},M_{A'}),
 \end{equation}
@@ -61,7 +67,7 @@ $\gamma = 1 + T/M_A$, where $T$ is the kinetic energy of the projectile.
 
 Since the collision between the target and the cluster is easier to do in their center-of-mass (CM) frame\footnote{Strictly speaking, their zero momentum frame, or center-of-momentum frame.}, we also need to transform between the laboratory and that frame. This is readily done by noting
 \begin{equation}
-\bar{\vec{P}} \equiv \vec{p}_\text{C} + \vec{p}_\text{T} = \gamma(\beta_\text{ZM}) \bar{m} \vec{\beta}_\text{CM} = \bar{E}\vec{\beta}_\text{CM} \implies \vec{\beta}_\text{CM} = (\vec{p}_\text{C} + \vec{p}_\text{T})/\bar{E},
+\bar{\vec{P}} \equiv \vec{p}_\text{C} + \vec{p}_\text{T} = \gamma(\beta_\text{CM}) \bar{m} \vec{\beta}_\text{CM} = \bar{E}\vec{\beta}_\text{CM} \implies \vec{\beta}_\text{CM} = (\vec{p}_\text{C} + \vec{p}_\text{T})/\bar{E},
 \end{equation}
 where the barred quantities are of the system of both particles. Since we want the $\beta$ between the laboratory and the CM frame, we evaluate all the quantities in the laboratory frame
 \begin{equation}
@@ -73,7 +79,7 @@ The scattering between target and cluster is back-to-back in the CM frame, and w
 E_\text{C} &= \frac{s+M_\text{C,off} - M_\text{T}}{2\sqrt{s}} \\
 |\vec{p}_\text{C}| &= \sqrt{E_\text{C,initial}^2 - M_\text{C,off}^2} \\
 |\vec{q}_\text{C}| &= \sqrt{E_\text{C,final}^2 - M_\text{C}^2} \approx |\vec{p}_\text{C}|\\
-\cos{\theta} &\approx \frac{t-N_\text{C}^2-N_\text{C}^2 + 2E_\text{C}^2}{2|\vec{p}_\text{C}|^2},
+\cos{\theta} &\approx \frac{t-M_\text{C}^2-M_\text{C,off}^2 + 2E_\text{C}^2}{2|\vec{p}_\text{C}|^2},
 \end{align}
 the approximations being valid under the assumption of a quasi-elastic scattering, more explicitly when $M_\text{C,off} \approx M_\text{C}$, so that $\vec{p}_\text{C} = -\vec{q}_\text{C}$ in the CM frame, which is the assumption used in deriving the equation for $\cos{\theta}$. %Together with \eqref{eq:offmass}, this quanitifies the notition of a collision being excited enough to approximately conserve kinetic energy:
 %\begin{equation}
@@ -94,12 +100,12 @@ The formula used to describe this gives the probability of decaying by evaporati
 \begin{equation}
 \frac{d^2 P_\nu}{dE_f^* dt} = \frac{1}{\hbar} \frac{\rho(E_f^*,J_f)}{\rho(E_i^*,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|}\sum_{l=|J_i-S|}^{|J_i+S|} T_l(\epsilon_\nu),\qquad\cite{schmidt:1991:art}\label{eq:ew}
 \end{equation}
-where $P$ is the probability, $E_f^*$ the final-state excitation energy, $J_f$ the final-state spin, $\rho$ the level densities and 
+where $P$ is the probability, $E_f^*$ the final-state excitation energy, $J_f$ the spin of the daughter nucleus, $\rho$ the level densities and 
 \begin{equation}
 \epsilon_\nu \approx E_f^*-E_i^*-S_\nu\label{eq:kine}
 \end{equation}
 the kinetic energy of the evaporated particle, $S_\nu$ being its separation energy $S_\nu = M_f + m_\nu - M_i$\footnote{The approximation is due to neglecting the kinetic energy of the daughter nucleus, which should be a good approximation when the evaporated particle $\nu$ is light. This is not a necesary approximation, though, and a more exact formula is $\tfrac{m_\nu}{\mu}\epsilon_\nu \approx E_f^*-E_i^*-S_\nu$. The separation energy does not enter as a cost of removing the particle $\nu$, but rather to relate the two excitation energies $E_f^*$ and $E_i^*$ to an absolute scale.}. 
- Continueing: $s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of that state with respect to its center of mass. The sums express all the ways to couple these angular momenta while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. Finally, $T_l$ is the transition probability.% from initial to final states. 
+ Continueing: $s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of the evaporated nucleus with respect to the center of mass. The sums express all the ways to couple these angular momenta while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. Finally, $T_l$ is the transition probability.% from initial to final states. 
 %, here assumed to depend only on $l$ and $\epsilon_\nu$.
 
 By integrating over $E^*$, we get $\hbar \frac{d P_\nu}{dt} = \Gamma_\nu$, which is proportional to the probability to decay via the channel $\nu$, $P_\nu = \Gamma_\nu/\Gamma_{\text{tot}}$. 
@@ -244,7 +250,7 @@ The critical energy $E_\text{c}$ is approximately $\unit[10]{MeV}$ and is taken 
 \begin{equation}
 E_\text{c} = \unit[10]{MeV}\sqrt{1-(J/J_\text{c})^2},
 \end{equation}
-where the critical angular momentum $J_\text{c}$ has been set to $12\hbar$\footnote{The value of the critical angular momentum and the momentum dependence in general is from the \prgname{CODEX} code. I have not been able to find any other source.}. 
+where the critical angular momentum $J_\text{c}$\footnote{The value of the critical angular momentum and the momentum dependence in general is from the \prgname{CODEX} code. I have not been able to find any other source.}  has been set to $12\hbar$.
 \paragraph{Moment of inertia}
 Since we have restricted ourselves to spherical nuclei in \eqref{eq:a}, we also have the moments of inertia $\Theta_\perp = \Theta_\parallel$. In particular, for a sphere with constant density, we have
 \begin{equation}
