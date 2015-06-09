@@ -40,13 +40,13 @@ where $A$ is the number of nucleons in the projectile, $A' = A-A_\text{cluster}$
 For a Fermi-gas, $\langle \vec{p}^2 \rangle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
 The nuclear Fermi-momentum, assuming a constant density, is about $\unit[270]{MeV}$, which is in reasonable agreement with experiments for heavier ($A>40$), non-exotic nuclei\cite{moniz:1971}. 
 
-However, \rtb{} experiments are not necesarilly about heavy (and non-exotic) nuclei. For lighter nuclei, the Fermi momentum may be considerable lower\cite{bartke2009introduction}, and for exotic nuclei, such as halo nuclei, the individual nucleons will not have the same momentum distribution.
+However, \rtb{} experiments are not necessarily about heavy (and non-exotic) nuclei. For lighter nuclei, the Fermi momentum may be considerable lower\cite{bartke2009introduction}, and for exotic nuclei, such as halo nuclei, the individual nucleons will not have the same momentum distribution.
 
 Another model -- also a ``Goldhaber model'', since it uses a Guassian momentum distribution -- gives $\sigma^2$ as
 \begin{equation}
 \sigma^2 = 2 (M_{A'} + M_\text{C} -M_A) \frac{M_\text{C}M_{A'}}{M_\text{C}+M_{A'}} = -2 Q \mu(M_\text{C},M_{A'}),
 \end{equation}
-where $M_\text{C}$ is the mass of the participant cluster, $M_A$ the mass of the projectile and $M_{A'}$ the mass of the prefragment. If we take $-Q=T = \mu v^2/2$, we get $\sigma^2 = \mu^2 v^2$, which is the initial squared momentum of the cluster, provided that we can neglect the kinetic energy of $A'$. This model is suitable for lighter particles, since it requires that $M_{A'} + M_\text{C} -M_A = -Q >0$, or $\sigma^2$ becomes negative. This is the model used in this work.
+where $M_\text{C}$ is the mass of the participant cluster, $M_A$ the mass of the projectile and $M_{A'}$ the mass of the prefragment. If we take $-Q=T = \mu v^2/2$, we get $\sigma^2 = \mu^2 v^2$, which is the initial squared momentum of the cluster. This model is suitable for lighter particles, since it requires that $M_{A'} + M_\text{C} -M_A = -Q >0$, or $\sigma^2$ becomes negative. This is the model used in this work.
 
 Momentum conservation implies that
 \begin{align}
@@ -180,7 +180,7 @@ Finally, using the fact that for each fixed $J$, say $J'$, there is only one sta
 \end{equation}
 where the equivalence is due to the fact that $\rho(E^*,J) = \omega(E^*,M=J, J)$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
 \begin{equation}
-\rho(E^*,J) \approx - \frac{d}{dM} \left( \omega(E^*,M)\right)|_{M=J+1/2},
+\rho(E^*,J) \approx - \frac{d}{dM} \left( \omega(E^*,M)\right)|_{M=J+1/2},\label{eq:odm}
 \end{equation}
 which gives the $J$ dependence as
 \begin{equation}
@@ -214,17 +214,18 @@ where $f$ and $g$ describe the damping of shell and pairing effects with increas
 \begin{equation}
 E_\text{yrast} = \frac{J(J+1)\hbar^2}{2\Theta_\perp},
 \end{equation}
-which is the energy corresponding to a quantum-mechanical axial-symmetric rotor rotating around a symmetry axis perpendicular to its elongation. This yrast energy is not, strictly speaking, the lowest energy for a given $J$, but the energy of a collective rotational excitation\cite{ericson:1960}.
+which is the energy corresponding to a quantum-mechanical axial-symmetric rotor rotating around a symmetry axis perpendicular to its elongation. $\Theta$ is the moment of inertia of the nucleus, which also enters into \eqref{eq:rho}. This yrast energy is not, strictly speaking, the lowest energy for a given $J$, but the energy of a collective rotational excitation\cite{ericson:1960}.
 As may be interfered by comparing \eqref{eq:rhoj} with \eqref{eq:rho}, the expectation value $\langle M^2 \rangle$ is closely connected to the moment of inertia $\Theta$.
 Ericson\cite{ericson:1960} provides a simple, although not especially rigirous, explanation for this:
 If we assume that a nucleus of spin $J$ has some of its energy in a rotational excitation of the form expected of a classical rotor, $\frac{\hbar^2J^2}{2\Theta}$, then it will not have this energy available for intrinsic excitations\footnote{The $\hbar$ being there to compensate for the fact that $J$ is dimensionless in our notation.}. Hence, we adjust the energy according to $E^* \to E^* - \frac{\hbar^2J^2}{2\Theta}$, as we have done above in the effective excitation energy \eqref{eq:u}. Furthermore, if we approximate the rapidly growing $\rho(E^*)$ as an exponential, we can write
 \begin{equation}
-\rho(E^* - \frac{\hbar^2J^2}{2\Theta}) = \rho(E^*) \exp{(\frac{\hbar^2J^2}{2\Theta})},
+\rho(E^* - \frac{\hbar^2J^2}{2\Theta}) = \rho(E^*) \exp{(-\frac{\hbar^2J^2}{2\Theta})},
 \end{equation}
 and comparing this equation with \eqref{eq:rhoj} gives a direct relation between $\Theta$ and $\langle M^2 \rangle$. We now return to \autoref{eq:u}.
 \paragraph{Shell and pairing energy}
 The pairing energy $\delta P$ can be estimated from the average separation energy for the surrounding nuclei (in an $(N,Z)$ plot, like an isotope chart), which is close to the actual observed shift between odd and even nuclei\cite{ericson:1960}. Neutrons and protons have different pairing energies, which is to be added or subtracted when neutron or proton number, respectively, is odd or even. 
-The shell energy $\delta S$ can either be calculated from a microscopic model, or -- as I have done -- can be be estimated together with the pairing energy by comparing experimental masses with masses predicted by a macroscopic model, and taking the difference, as suggested by Schmidt and Morawek\cite{schmidt:1991:art}. I used the macroscopic part of the 1992 edition of the Finite-Range Droplet Model (FRDM-1992)\cite{moller1995}, which is presented in more detail in \autoref{sec:frdm1995}.
+The shell energy $\delta S$ can either be calculated from a microscopic model, or -- as we have done -- can be be estimated together with the pairing energy by subtracting masses predicted by a macroscopic models from experimental masses, as suggested by Schmidt and Morawek\cite{schmidt:1991:art}. This yields the microscopic contribution to the masses, which is identified with the sum $\delta S + \delta P$. 
+For this purpose, the macroscopic part of the 1992 edition of the Finite-Range Droplet Model (FRDM-1992)\cite{moller1995} was used. This model is presented in more detail in \autoref{sec:frdm1995}.
 
 The damping of shell effects with energy can be described by an exponential function
 \begin{equation}
@@ -285,11 +286,12 @@ from a suitable initial guess $(a/\beta)_{0}$. $(a/\beta)_{0}=\sqrt{aU}$ was use
 The level density of $~^{20}\mathrm{Ne}$ for different spin with and without subtracting the yrast-energy is illustrated in \autoref{fig:rhospin}. 
 As can be seen in the figure, the level densities for higher spin start at a lower value for low energies, way lower than $\unit[1]{level/MeV}$, which indicates that the continous view of energy levels fails at these energies. 
 The spins appear to be split up in $2$ groups, one for $J \le 1$ and one for $J>1$.
-The level densities for $4 \ge J> 1$ initially grow rapidly, until they overtake the lower spin level densities and settle at a seemingly proportional relationship with each other. As a result of the $(2J+1)\exp{(-(J+1/2)^2)}$ dependence on $J$, moderate $J$ values give the largest level density.
+The level densities for $4 \ge J> 1$ initially grow rapidly, until they overtake the lower spin level densities and settle at a seemingly proportional relationship with each other. The $J$ dependence seem to saturate at higher $J$, but the $(2J+1)\exp{(-\hbar^2\beta(J+1/2)^2/2\Theta)}$ factor indicates that there is a maximum in $J$. The actual behaviour may be a bit different, though, since $U$ has a complicated dependence on $J$.
+Note that the approximation \eqref{eq:odm} is not valid for higher $J$, so this maximum in $J$ is probably not physical.
 The same general behaviour is seen for the other nuclei at the $A=20$ isobar.
 
-In order to see if this is a general feature of our model, we also investigate $~^{99}\mathrm{Zr}$ -- this nucleus is being chosen arbitrarily as an example of a non-fissile nucleus far form the $A=20$ isobar. The corresponding plots of the level densities are seen in \autoref{fig:rhospin2}. We note that the inclusion of the yrast energy is not nearly as significant for the spins under consideration, since the larger value of $\Theta$ reduces the yrast energy of a given $J$. This also explains why $J=4$ has the highest density of states in this case: a higher $\Theta$ means that the $\exp{(-(J+1/2)^2/\Theta)}$ factor does not supress the level density as rapidly with increasing spin. 
-We also see that it is only for $J\ge 3$ that we see the hint of a dip for lower energies. This could perhaps indicate that the pronounced spin-dependence seen for the $A=20$ isobar will reveal itself for yet higher spin -- a natural consequence of the higher moment of inertia for heavier nuclei.
+In order to see if these are general feature of our model, we also investigate $~^{99}\mathrm{Zr}$ -- this nucleus is being chosen arbitrarily as an example of a non-fissile nucleus far form the $A=20$ isobar. The corresponding plots of the level densities are seen in \autoref{fig:rhospin2}. We note that the inclusion of the yrast energy is not nearly as significant for the spins under consideration, since the larger value of $\Theta$ reduces the yrast energy of a given $J$. This also explains why $J=4$ has the highest density of states in this case: a higher $\Theta$ means that the $\exp{(-(J+1/2)^2/\Theta)}$ factor does not supress the level density as rapidly with increasing spin. 
+Another thing to note is that it is only for $J\ge 3$ that we see a hint of a dip for lower energies. This could perhaps indicate that the pronounced spin dependence seen for lower energies in the $A=20$ isobar will reveal itself for yet higher spin. This would be a consequence of the greater moment of inertia, since the spin only appears in $\rho$ together with $\Theta$.
 
 \begin{figure}
 \begin{center}
@@ -393,7 +395,7 @@ V_\text{C} = \begin{cases}\frac{Z_1 Z_2 e^2}{r} &\quad r>r_\text{ch} \\ \frac{Z_
 where we here use the more common formula for the charge radius, $r_\text{ch} = r_0 A^{1/3}$.
 
  In \autoref{fig:np-Z10N10}, we illustrate the total potential of $~^{20}\mathrm{Ne}$ for tunneling of protons and neutrons. The individual contributions to the total potential may be discerned by looking at the potential for the emission of $l=0$ neutrons (which are only affected by the proximity potential) and $l=0$ protons (which have to tunnel through the sum of the Coulomb and the proximity potential). %Since these potentials are only used for tunneling calculations, their shape below $E=0$ is not significant, since the particles cannot escape if their energy is less than $0$, and we will hence not display the $V<0$ parts in subsequent figures, in order to focus on the relevant details.
-On this energy scale, the barrier the protons have to tunnel through is merely \unit[2]{MeV} high, but since the proton separation energy for $~^{20}\mathrm{Ne}$ is \unit[12]{MeV}, it will only happen for excitation above \unit[12]{MeV}, as the proton does not have a positive energy otherwise. Neutrons with a positive energy and $l=0$ do not have to tunnel at all, and exist as resonances above the potential barrier. The tunneling formalism does not apply in this case, and we instead use \eqref{eq:t0n}, which we discuss later.
+On this energy scale, the barrier the protons have to tunnel through is merely \unit[2]{MeV} high, but since the proton separation energy for $~^{20}\mathrm{Ne}$ is \unit[12]{MeV}, it will only happen for excitation energies above \unit[12]{MeV}, as the proton does not have a positive energy otherwise\footnote{Note that this separation does not coincide with the depth of the potential well: we only use the potential to calculate transmission coefficients.}. Neutrons with a positive energy and $l=0$ do not have to tunnel at all, and exist as resonances above the potential barrier. The tunneling formalism does not apply in this case, and we instead use \eqref{eq:t0n}, which we discuss later.
 
 We also see that the centrifugal part quickly dominates, essentially a result of protons and neutrons being relatively light particles: for $\alpha$-decay, the centrifugal part is about a fourth of the values displayed above, and the $l$-dependence of the tunneling probability is not very significant for low $l$\cite{weisskopf:1979}.  
 This strong $l$-dependence makes proton radioactivity a sensitive probe for the orbital angular momentum of valence protons for proton emitting nuclei\cite{proton-alpha-proxy:2005}. However, in this case, it also poses a problem, since, for high $l$-values, it removes the potential well created by the Coulomb and proximity potential. Even for moderate $l$ values, it makes particles with low energy classically forbidden within the the radius of barrier (see \autoref{fig:np-Z10N10}), which appears inconsistent with the picture of a preformed particle tunneling through said barrier.
@@ -435,7 +437,7 @@ T_{0,\text{n}} = \frac{4\sqrt{E}\sqrt{E+V_0}}{(\sqrt{E}+\sqrt{E+V_0})^2},\label{
 \end{equation}
 where we use the depth $V_0=\unit[40]{MeV}$, the value being chosen to approximate the depth of the nuclear potential\cite{welldepth}. This was the formula used in \prgname{Codex}.
 
-The transmission coefficients corresponding to the potentials in \autoref{fig:np-Z10N10} are presented in \autoref{fig:np-tZ10N10}.  We see that the $l=0$ neutrons do not behave as expected, in that they have a lower transmission coeffiecient than both protons and $l=1$ neutrons. We also see the very sudden increase of the transmission coeffiecients for higher $l$-values, a result of our choice to set the transmission probability to zero for $E<V_{l,\text{min}}$ and to not cut the centrifugal potential below some $r$-value.
+The transmission coefficients corresponding to the potentials in \autoref{fig:np-Z10N10} are presented in \autoref{fig:np-tZ10N10}.  We see that the $l=0$ neutrons do not behave as expected, in that they have a lower transmission coeffiecient than both protons and $l=1$ neutrons. We also see the very sudden jump from zero to non-zero in the transmission coeffiecients for higher $l$-values, a result of our choice to set the transmission probability to zero for $E<V_{l,\text{min}}$ and to not cut the centrifugal potential below some $r$-value.
 
 \begin{figure}
 \begin{center}

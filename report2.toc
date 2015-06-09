@@ -14,27 +14,27 @@
 \contentsline {paragraph}{Shell and pairing energy}{12}{section*.8}
 \contentsline {paragraph}{Moment of inertia}{13}{section*.9}
 \contentsline {paragraph}{Reciprocal tempeture $\beta $}{13}{section*.10}
-\contentsline {subsubsection}{Transition Probabilities}{17}{section*.14}
-\contentsline {paragraph}{$\gamma $-decay}{21}{section*.18}
-\contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{23}{section.2.2}
-\contentsline {chapter}{\numberline {3}The Code}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Programs}{24}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}List generating programs}{25}{subsection.3.1.1}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{25}{section*.19}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{25}{section*.20}
-\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{25}{subsection.3.1.2}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {spectra}}}{26}{section*.21}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {deexcite}}}{26}{section*.22}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {rho}}}{26}{section*.23}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {pot}}}{26}{section*.24}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {trans}}}{26}{section*.25}
-\contentsline {subsection}{\numberline {3.1.3}Programs to process the output of the above programs}{26}{subsection.3.1.3}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out2gun}}}{26}{section*.26}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out2root}}}{27}{section*.27}
-\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out-spectra2root}}}{27}{section*.28}
-\contentsline {chapter}{\numberline {4}Results}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}Prefered Decay Channels}{28}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}A more detailed spectra of the $A=28$ isobar.}{32}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Gamma Multiplicities}{36}{section.4.2}
-\contentsline {chapter}{\numberline {5}Outlook and Conclusions}{42}{chapter.5}
-\contentsline {chapter}{\numberline {A}Retrieving and running the \textsmaller {\MakeUppercase {Codez}}{} code}{47}{appendix.A}
+\contentsline {subsubsection}{Transition Probabilities}{18}{section*.14}
+\contentsline {paragraph}{$\gamma $-decay}{22}{section*.18}
+\contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{24}{section.2.2}
+\contentsline {chapter}{\numberline {3}The Code}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Programs}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}List generating programs}{26}{subsection.3.1.1}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Nuclist}}}{26}{section*.19}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {Quasi}}}{26}{section*.20}
+\contentsline {subsection}{\numberline {3.1.2}Programs to run on nuclei-lists}{26}{subsection.3.1.2}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {spectra}}}{27}{section*.21}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {deexcite}}}{27}{section*.22}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {rho}}}{27}{section*.23}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {pot}}}{27}{section*.24}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {trans}}}{27}{section*.25}
+\contentsline {subsection}{\numberline {3.1.3}Programs to process the output of the above programs}{27}{subsection.3.1.3}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out2gun}}}{27}{section*.26}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out2root}}}{28}{section*.27}
+\contentsline {subsubsection}{\textsmaller {\MakeUppercase {out-spectra2root}}}{28}{section*.28}
+\contentsline {chapter}{\numberline {4}Results}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Prefered Decay Channels}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}A more detailed spectra of the $A=28$ isobar.}{33}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Gamma Multiplicities}{37}{section.4.2}
+\contentsline {chapter}{\numberline {5}Outlook and Conclusions}{43}{chapter.5}
+\contentsline {chapter}{\numberline {A}Retrieving and running the \textsmaller {\MakeUppercase {Codez}}{} code}{48}{appendix.A}

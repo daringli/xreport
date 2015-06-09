@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report2.aux
 The style file: joelspropack.bst
 Database file #1: bibli.bib
-I was expecting a `,' or a `}'---line 584 of file bibli.bib
+I was expecting a `,' or a `}'---line 595 of file bibli.bib
  : 
  : @book{knoll:2000:book,
 (Error may have been on previous line)
@@ -11,45 +11,45 @@ I'm skipping whatever remains of this entry
 Warning--empty publisher in bowman:1973:book
 Warning--empty publisher in ripl:2006
 Warning--empty journal in Chomaz:1997
-You've used 37 entries,
+You've used 38 entries,
             2209 wiz_defined-function locations,
-            744 strings with 10994 characters,
-and the built_in function-call counts, 8350 in all, are:
-= -- 813
-> -- 319
+            750 strings with 11137 characters,
+and the built_in function-call counts, 8519 in all, are:
+= -- 829
+> -- 323
 < -- 2
-+ -- 151
-- -- 75
-* -- 498
-:= -- 1295
-add.period$ -- 131
-call.type$ -- 37
++ -- 153
+- -- 76
+* -- 501
+:= -- 1322
+add.period$ -- 135
+call.type$ -- 38
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 386
-empty$ -- 838
-format.name$ -- 75
-if$ -- 1898
+cite$ -- 41
+duplicate$ -- 398
+empty$ -- 859
+format.name$ -- 76
+if$ -- 1939
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 35
-newline$ -- 207
-num.names$ -- 36
-pop$ -- 195
+int.to.str$ -- 38
+missing$ -- 37
+newline$ -- 213
+num.names$ -- 37
+pop$ -- 203
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 162
+skip$ -- 164
 stack$ -- 0
 substring$ -- 541
-swap$ -- 36
+swap$ -- 37
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 64
-width$ -- 39
-write$ -- 434
+while$ -- 65
+width$ -- 40
+write$ -- 446
 (There was 1 error message)
