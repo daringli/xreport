@@ -10,7 +10,7 @@ That being said, the identification procedure outlined above is a simplification
 
 While simulations are used to study how a given reaction product propagates throughout the experimental setup, they are not necesarilly needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
 In many cases, it is enough to simulate particles with specified initial momenta -- matching the kinematic constraints of the reaction -- and see how they propagate through the experimental setup, which should be able to identify them even if they are not the result of an actual reaction.
-Often, detector efficiencies are evaluated by simulating individual particles and thier propagation through the setup, see for example Simon Lindberg, 2013\cite{simon:2013:thesis}. This may lead to an overestimation of the detector efficiencies, since, in general, more than one particle is produced in each event. The current simulation software (specifically, \prgname{ggland}\cite{johansson:2013:online}, see \autoref{sec:exsoft}) can generate multiple particles sharing momentum according to a phase-space distribution, but this does not take the matrix element into account, or internal degrees of freedom in the nuclei.
+Often, detector efficiencies are evaluated by simulating individual particles and thier propagation through the setup, see for example Simon Lindberg, 2013\cite{simon:2013:thesis}. This may lead to an overestimation of the detector efficiencies, since, in general, more than one particle is produced in each event, which makes the analysis more complicated. The current simulation software (specifically, \prgname{ggland}\cite{johansson:2013:online}, see \autoref{sec:exsoft}) can generate multiple particles sharing momentum according to a phase-space distribution, but this does not take the matrix element into account, or internal degrees of freedom in the nuclei. The latter is crucial, since nuclear physics is all about these internal degrees of freedom. 
 
 %Since the setup should in practice identify only actual reactions products, it would be more efficient if the simulations incorporated some of the theory on the reactions to be studied. 
 
@@ -19,16 +19,22 @@ Often, detector efficiencies are evaluated by simulating individual particles an
 
 \section{Event Generator for \rtb{}}
 As briefly mentioned in the previous section, an experimental event is the result of a reaction between the target and a projectile.
-An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup by another code. %In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
+An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup by another code. 
+%This work describes such a code
+%In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
 
-In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicing the experiment. However, there are good reasons not to implement this event generator, not all of them related to how unfeasible that project would be, considering our present knowledge of nuclear physics. This will be discussed in the following section.
+In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicing the experiment. Considering our present knowledge of nuclear physics, this would be an unfeasible project. Instead, this work will be limited to a certain class of reactions, where a \emph{compound nucleus} is created as part of a \emph{quasi-elastic scattering} event. These terms are explained in more detail in \autoref{sec:theory:nuc-col}, but in essence, an excited nucleus is created by knocking out an internal cluster or nucleon from an existing nucleus.
+
+%In the next section, we will discuss design related
+
+%However, there are good reasons not to implement this event generator, not all of them related to how unfeasible that project would be, considering our present knowledge of nuclear physics. This will be discussed in the following section.
 
 %!!!I AM USING 'I' HERE SINCE I BELEIVE THIS TO BE LESS OF AN OBJECTIVE CONCLUSSION. I'M NOT 100\% SURE ABOUT THIS USAGE, THOUGH!!!
 
 \subsection{Design of an Event Generator}
 An event generator for \rtb{} needs to have certain features:
 Firstly, it does not need to reproduce every feature of the experimental spectra, as long as it reproduces the general features. The actual experiment will determine the details.
-On the other hand, it needs to be easy to change the underlying model and see how this influences the resulting spectra, since quantities in the model -- nuclear level densities, transition rates, etc. -- are influenced by the presence of phenomena the experimenters are actually interested in finding -- such as giant resonances or halo structures -- which are not directly observable in the experimental data.
+On the other hand, it needs to be easy to change the underlying model and see how this influences the resulting spectra, since quantities in the model -- nuclear level densities, transition rates, etcetera -- are influenced by the presence of phenomena the experimenters are actually interested in finding -- such as giant resonances or halo structures -- which are not directly observable in the experimental data.
  
 It is also desirable to be able to steer the event generator to generate specific kinds of events, so that the efficiency of the experimental setup can evaluated for specific reactions.
 

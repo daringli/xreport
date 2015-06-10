@@ -15,7 +15,7 @@
 \contentsline {paragraph}{Moment of inertia}{13}{section*.9}
 \contentsline {paragraph}{Reciprocal tempeture $\beta $}{13}{section*.10}
 \contentsline {subsubsection}{Transition Probabilities}{18}{section*.14}
-\contentsline {paragraph}{$\gamma $-decay}{22}{section*.18}
+\contentsline {paragraph}{$\gamma $-decay}{23}{section*.18}
 \contentsline {section}{\numberline {2.2}Finite-Range Droplet Model}{24}{section.2.2}
 \contentsline {chapter}{\numberline {3}The Code}{25}{chapter.3}
 \contentsline {section}{\numberline {3.1}Programs}{25}{section.3.1}

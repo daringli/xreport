@@ -29,18 +29,18 @@ In the participant-spectator picture, the fast process consists of a collision b
 \caption{\label{fig:fast} The fast process. The projectile ($A$) is viewed as a system of a cluster and prefragment. The collision then takes place between the cluster and the target.}
 \end{figure}
 
-The \emph{Goldhaber model} states that the 3-momentum distribution in the projectile frame is given by a Guassian with zero mean and with a width determined by the expectation value of the momentum of an individual nucleon, explicitly
+The \emph{Goldhaber model} states that the cluster 3-momentum distribution in the projectile frame is given by a Guassian with zero mean and with a width determined by the expectation value of the momentum of an individual nucleon,
 \begin{equation}
-\sigma^2 = \langle \vec{p}_\text{nucleons}^2 \rangle A'\frac{A_\text{C}}{A-1},
+\sigma^2 = \langle \vec{p}_\text{nucleons}^2 \rangle A'\frac{A_\text{C}}{A-1}.
 \end{equation}
-where $A$ is the number of nucleons in the projectile, $A' = A-A_\text{cluster}$ the nucleon number of the prefragment, and $\langle \vec{p}_\text{nucleons}^2 \rangle$ is the expectation value of the 3-momentum of an individual nucleon. This model assumes that the prefragment and cluster momenta can be expressed as a sum of individual nucleon momenta drawn from the same distribution
+Here, $A$ is the number of nucleons in the projectile, $A' = A-A_\text{cluster}$ the nucleon number of the prefragment, and $\langle \vec{p}_\text{nucleons}^2 \rangle$ is the expectation value of the 3-momentum of an individual nucleon. This model assumes that the prefragment and cluster momenta can be expressed as a sum of individual nucleon momenta drawn from the same distribution
 \begin{equation}
-\sigma^2 = \langle \left[\sum_i^A \vec{p}_i\right]^2 \rangle
+\sigma^2 = \left\langle \left[\sum_i^A \vec{p}_i\right]^2 \right\rangle.
 \end{equation}
 For a Fermi-gas, $\langle \vec{p}^2 \rangle$ may be written in terms of the Fermi-momentum $\vec{p}_f$ as $\tfrac{3}{5} \vec{p}_f^2$\cite{goldhaber:1974:art}.
-The nuclear Fermi-momentum, assuming a constant density, is about $\unit[270]{MeV}$, which is in reasonable agreement with experiments for heavier ($A>40$), non-exotic nuclei\cite{moniz:1971}. 
+Assuming a constant nuclear density, the nuclear Fermi-momentum is about $\unit[270]{MeV}$, which is in reasonable agreement with experiments for heavier ($A>40$), non-exotic nuclei\cite{moniz:1971}. 
 
-However, \rtb{} experiments are not necessarily about heavy (and non-exotic) nuclei. For lighter nuclei, the Fermi momentum may be considerable lower\cite{bartke2009introduction}, and for exotic nuclei, such as halo nuclei, the individual nucleons will not have the same momentum distribution.
+However, \rtb{} experiments are not necesarilly concerned with $A>40$ (and non-exotic) nuclei. For lighter nuclei, the Fermi momentum may be considerable lower\cite{bartke2009introduction}, and for exotic nuclei, such as halo nuclei, the individual nucleons will not have the same momentum distribution.
 
 Another model -- also a ``Goldhaber model'', since it uses a Guassian momentum distribution -- gives $\sigma^2$ as
 \begin{equation}
@@ -94,9 +94,9 @@ A random polar angle $\phi$ in $[0,2\pi]$ is then generated, which together with
 %Hence, we expect the transition probability to depend on the type of particle emitted, $\nu$, the kinetic energy of this particle, $\epsilon_\nu$, and the angular momentum carried away by it.
 %We will restrict ourselves to the case where this transition probability only depends on the type of particle
 %There are at least two models for the decay of a compound nucleus popular in the literature, the Hauser-Feshbach and the Ewing-Weisskopf formulas. Both aim to describe how a compound nucleus in a given macro-state ($E*$, $J$, $Z$, $A$) will decay.
-To describe the decay of a compound nucleus in a given macro-state ($E^*$, $J$, $Z$, $A$), we need the probabilities to go from this state to any other macro-state. Since the only way an isolated nuclei can lose energy, angular momentum, or nucleons is by emitting particles, it is natural to view the transition probability as in terms of quantities related to particle emission.
+To describe the decay of a compound nucleus in a given macro state ($E^*$, $J$, $Z$, $A$), we need the probabilities to go from this state to any other macro state. Since the only way an isolated nuclei can lose energy, angular momentum, or nucleons is by emitting particles, it is natural to view the transition probability probabilities for particle emission.
 
-The formula used to describe this gives the probability of decaying by evaporating a particle $\nu$ as
+The probability of decaying by emitting a particle $\nu$ can be written as
 \begin{equation}
 \frac{d^2 P_\nu}{dE_f^* dt} = \frac{1}{\hbar} \frac{\rho(E_f^*,J_f)}{\rho(E_i^*,J_i)} \sum_{S=|J_f-s|}^{|J_f+s|}\sum_{l=|J_i-S|}^{|J_i+S|} T_l(\epsilon_\nu),\qquad\cite{schmidt:1991:art}\label{eq:ew}
 \end{equation}
@@ -104,13 +104,13 @@ where $P$ is the probability, $E_f^*$ the final-state excitation energy, $J_f$ t
 \begin{equation}
 \epsilon_\nu \approx E_f^*-E_i^*-S_\nu\label{eq:kine}
 \end{equation}
-the kinetic energy of the evaporated particle, $S_\nu$ being its separation energy $S_\nu = M_f + m_\nu - M_i$\footnote{The approximation is due to neglecting the kinetic energy of the daughter nucleus, which should be a good approximation when the evaporated particle $\nu$ is light. This is not a necesary approximation, though, and a more exact formula is $\tfrac{m_\nu}{\mu}\epsilon_\nu \approx E_f^*-E_i^*-S_\nu$. The separation energy does not enter as a cost of removing the particle $\nu$, but rather to relate the two excitation energies $E_f^*$ and $E_i^*$ to an absolute scale.}. 
- Continueing: $s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of the evaporated nucleus with respect to the center of mass. The sums express all the ways to couple these angular momenta while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. Finally, $T_l$ is the transition probability.% from initial to final states. 
+the kinetic energy of the evaporated particle\footnote{The approximation is due to neglecting the kinetic energy of the daughter nucleus, which should be a good approximation when the evaporated particle $\nu$ is light. This is not a necesary approximation, though, and a more exact formula is $\tfrac{m_\nu}{\mu}\epsilon_\nu \approx E_f^*-E_i^*-S_\nu$. The separation energy does not, strictly speaking, enter as a cost of removing the particle $\nu$, but rather to relate the two excitation energies $E_f^*$ and $E_i^*$ to an absolute scale.}, $S_\nu$ being its separation energy $S_\nu = M_f + m_\nu - M_i$. 
+ Continueing: $s$ is the intrinsic spin of the evaporated particle, $S$ is the spin of the system consisting of the final state nucleus and evaporated particle, with $l$ being the orbital angular momentum of the evaporated nucleus with respect to the center of mass. The sums express all the ways to couple these angular momenta while conserving the total angular momentum $\vec{J}_f+\vec{s} +\vec{l}= \vec{S} +\vec{l}= \vec{J}_i$. Finally, $T_l$ is the transmission coefficient. We will describe this in more detail later in this section, along with the level densities.% from initial to final states. 
 %, here assumed to depend only on $l$ and $\epsilon_\nu$.
 
 By integrating over $E^*$, we get $\hbar \frac{d P_\nu}{dt} = \Gamma_\nu$, which is proportional to the probability to decay via the channel $\nu$, $P_\nu = \Gamma_\nu/\Gamma_{\text{tot}}$. 
 
-Provided that the characteristic life-time $\Gamma_\text{tot}^{-1}$ of the system is short compared to the time resolution of the experimental setup, we may treat the decays as instantanous. Note that the system may undergo multiple decays before it reaches its ground-state, and that time-scale of this entire decay chain must be short by the experimental standards. 
+Provided that the characteristic life-time $\hbar\Gamma_\text{tot}^{-1}$ of the system is short compared to the time resolution of the experimental setup, we may treat the decays as instantanous. Note that the system may undergo multiple decays before it reaches its ground-state, and that time-scale of this entire decay chain must be short by the experimental standards. 
 The time-of-flight resolution of the future \rtb{} setup will be in the picosecond range (\unit[$10^{-12}$]{s})\cite{r3b:online}, which is well above the time-scales of single evaporation given by Gaimard and Schmidt (\unit[$10^{-21}$ -- $10^{-16}$]{s})\cite{gaimard:1991:art}. Hence we will view $\Gamma_x$ as the probability to decay by a given process in an unspecified but short time step.
 
 %Since we are interested in simulating a decay chain, we want more information than merely the probability to decay by emitting a specific particle. We thus take a step back from \eqref{eq:ew}, and undo the summation over $l$
@@ -122,14 +122,14 @@ The time-of-flight resolution of the future \rtb{} setup will be in the picoseco
 %\end{equation}
 %which finally gives us the decay probability (per unit energy) from an initial state $(E_i,J_i)$ to a final state $(E_f,J_f)$ by emmiting a particle $\nu$ with angular momentum $l$.
 
-The emitted particle, $\nu$, can in principle be anything a nucleus may decay by emitting. However, the photon must be treated differently as it is massless and thus fully relativistic -- which makes the dististinction between $l$ and the intrinsic spin unnatural -- and removes a polarization state. With this in mind, we obtain
+The emitted particle, $\nu$, can in principle be anything a nucleus may decay by emitting. However, since the photon is massless, and thus fully relativistic, it must be treated differently. For a relativistic particle, the dististinction between $l$ and the intrinsic spin unnatural, and massless particles have one less polarization state. With this in mind, we modify the sums in \eqref{eq:ew}, and obtain the decay width for gamma emission
 \begin{align}
 &\frac{d\Gamma_{\gamma}}{dE_f} = \frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} \sum_{l=|J_f-J_i|}^{|J_f+J_i|} T_l(\epsilon_\gamma) \\
 \implies & \frac{d\Gamma_{\gamma,l}}{dE_f} =\frac{\rho(E_f,J_f)}{\rho(E_i,J_i)} T_l(\epsilon_\gamma),\label{eq:gammagamma}
 \end{align}
 where $l>0$ is an integer.
 
-Although $\nu$ could be any particle, it becomes more appropriate to model the decay as a fission process if $\nu$ becomes sufficiently heavy in relation to the compound nucleus. Fission is usual modeled as a transition first to a \emph{transition state}, beyond which the nucleus will inevitably fission\cite{krane:book}. The present work does not include fission, and we will thus not discuss its details here. Swiateck discussed the possibility of treating particle emission and fission in an essentially symmetric fashion, by using a transition state formalism also for lighter particles\cite{swiatecki:1983:art}. 
+Although $\nu$ could be any particle, it becomes more appropriate to model the decay as a fission process if $\nu$ becomes sufficiently heavy in relation to the compound nucleus. Fission is usual modeled as a transition first to a \emph{transition state}, beyond which the nucleus will inevitably fission\cite{krane:book}. The present work does not include fission, and we will thus not discuss its details here. Swiatecki discussed the possibility of treating particle emission and fission in an essentially symmetric fashion, by using a transition state formalism also for lighter particles\cite{swiatecki:1983:art}. 
 
 We will now describe models for the level density $\rho$ and transition probability $T_l$.
 
@@ -165,8 +165,8 @@ and at this point, it may be apparent that we are really investigating the numbe
 
 A few things to note:
 Firstly, there is a distinction between the level density, discussed above, and the \emph{density of states}. In our example above, we may imagine that each configuration of nuclei corresponds to a state with a given spin $J$, which would give us $(2J-1)$ different spin projections for each state. The density of states takes this degeneracy into account, while the level density does not. The density of states is thus greater than the level density.
-Of course, we do not know the $J$ of our states but there is a general argument for the $J$ dependence of the level density.
-Following the derivation by Grossjean and Feldmeier\cite{grossjean1985} we assume that the states are build up from single-particle states with a random spin orientation. More precisely, let the single-particle states spin projection $m$ be a random number. Time-reversal symmetry demands that the expectation value of $m$ is zero, and that their distribution is symmetric. Now, if we assume that our state is formed by exciting a large number of nucleons, the central limit theorem gives the probability of the total spin projection $M$ as
+Often, we do not know the $J$ of our states, but there is a general argument for the $J$ dependence of the level density.
+Following the derivation by Grossjean and Feldmeier\cite{grossjean1985} we assume that the states are build up from single-particle states with a random spin orientation. More precisely, let the single-particle states spin projection $m$ be a random number. Time reversal symmetry demands that the expectation value of $m$ is zero, and that their distribution is symmetric, since $t\to -t$ changes the direction angular momentum. Now, if we assume that our state is formed by exciting a large number of nucleons, the central limit theorem gives the probability of the total spin projection $M$ as
 \begin{equation}
 P(M) = \frac{1}{\sqrt{2\langle M^2\rangle}} \exp{\left(-\frac{M^2}{2\langle M^2\rangle}\right)},
 \end{equation}
@@ -178,26 +178,26 @@ Finally, using the fact that for each fixed $J$, say $J'$, there is only one sta
 \begin{equation}
 \rho(E^*,J') \equiv \omega(E^*,M=J',J=J') = \omega(E^*,M=J')  -\omega(E^*,M=J'+1),
 \end{equation}
-where the equivalence is due to the fact that $\rho(E^*,J) = \omega(E^*,M=J, J)$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
+where the equivalence is due to the fact that $\rho(E^*,J) = \omega(E^*,M, J)$ for any fixed value of $M$. For $J\ll \sqrt{\langle M^2 \rangle}$, this is approximated as
 \begin{equation}
-\rho(E^*,J) \approx - \frac{d}{dM} \left( \omega(E^*,M)\right)|_{M=J+1/2},\label{eq:odm}
+\rho(E^*,J) \approx - \frac{d}{dM} \omega(E^*,M)\big|_{M=J+1/2},\label{eq:odm}
 \end{equation}
 which gives the $J$ dependence as
 \begin{equation}
 \rho(E^*,J) \approx \frac{\omega(E^*)}{\sqrt{2\langle M^2\rangle}} \frac{2J+1}{2} \exp{\left(-\frac{(J+1/2)^2}{2\langle M^2\rangle}\right)}.\label{eq:rhoj}
 \end{equation}
 
-Secondly, for higher excitation energy, it makes sense to smear out the discrete levels in order to get a continous function, and get it on a closed form. The usual way this is done is by observing that the grand partition function 
+Secondly, for excitation energies much greater than the level spacing, it makes sense to smear out the discrete levels in order to get a continuous function, and to get it on a closed form. The usual way this is done is by observing that the grand partition function 
 \begin{equation}
-Z(\alpha,\beta) = \sum_{i,A} \rho(E,A) \exp{(\alpha A - \beta E_i(A))},
+Z(\alpha,\beta) = \sum_{i,A} \omega(E,A) \exp{(\alpha A - \beta E_i(A))},
 \end{equation}
-formally is the Laplace-transform of the density of states
-Here, $E$ is the energy and $A$ is any other quantum number, often taken to be the number of nucleons since that grand partition function often is known or possible to derive.
+formally is the Laplace-transform of the density of states.
+Here, $E$ is the energy and $A$ is any other quantum number, often taken to be the number of nucleons since those grand partition functions often are known or possible to derive.
 Performing the inverse Laplace transform gives us
 \begin{equation}
-\rho(E,A) = \frac{1}{2\pi i} \int_{-i\infty}^{i\infty} Z(E,A)\exp{(\beta E - \alpha A)},
+\omega(E,A) = \frac{1}{2\pi i} \int_{-i\infty}^{i\infty} Z(E,A)\exp{(\beta E - \alpha A)},
 \end{equation} 
-and the ``smearing out'' is now done by applying a saddle-point approximation to the above integral; see, for example,  Goutis et. al.\cite{saddle1999}.
+and the ``smearing out'' is now done by applying a saddle-point approximation to the above integral; see, for example,  Goutis et al.\cite{saddle1999}.
 
 The above fact will be useful to understand the form and some results surrounding the level density used in this work, which we do not derive here:
 \begin{equation}
