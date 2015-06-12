@@ -3,14 +3,14 @@ As a part of the construction of the international FAIR (Facility for Antiproton
 
 The \rtb{} experiment aims to study nuclear physics, in particular the properties of exotic nuclei far from the valley of stability \cite{r3b:online}. The experiments will be performed with radioactive beams, and the aim is to be able to determine the complete kinematics of the reaction. We will here describe a generic experiment of this kind.
 
-The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target -- a so called \emph{event} -- the reaction products are to be indeitifed by the experimental setup. 
+The radioactive beam impinges on a target surrounded by detectors. In the case of a reaction at the target -- a so called \emph{event} -- the reaction products are to be identified by the experimental setup. 
 This is done by recording where they hit the detector, when they hit the detectors (which allows detector output to be attributed to individual events, which yields the initial and final momentum); how much energy they deposit in the detectors (yielding the charge); and their deflection in a magnetic field, which gives their charge-to-mass ratio, and thus their mass. 
 
-That being said, the identification procedure outlined above is a simplification. Complications arise from several factors: the reaction products may decay in-flight, they may be deflected by interactions with air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is non-deterministic. 
+That being said, the identification procedure outlined above is a simplification. Complications arise from several factors: the reaction products may decay in-flight, they may be deflected by interactions with air, or a detector. This is why simulations are used, specifically Monte-Carlo simulations, since the underlying physics is probabilistic. 
 
-While simulations are used to study how a given reaction product propagates throughout the experimental setup, they are not necesarilly needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
+While simulations are used to study how a given reaction product propagates throughout the experimental setup, they are not necessarily needed for the actual reactions at the target, since the purpose of the experiment is to investigate those. 
 In many cases, it is enough to simulate particles with specified initial momenta -- matching the kinematic constraints of the reaction -- and see how they propagate through the experimental setup, which should be able to identify them even if they are not the result of an actual reaction.
-Often, detector efficiencies are evaluated by simulating individual particles and thier propagation through the setup, see for example Simon Lindberg, 2013\cite{simon:2013:thesis}. This may lead to an overestimation of the detector efficiencies, since, in general, more than one particle is produced in each event, which makes the analysis more complicated. The current simulation software (specifically, \prgname{ggland}\cite{johansson:2013:online}, see \autoref{sec:exsoft}) can generate multiple particles sharing momentum according to a phase-space distribution, but this does not take the matrix element into account, or internal degrees of freedom in the nuclei. The latter is crucial, since nuclear physics is all about these internal degrees of freedom. 
+Often, detector efficiencies are evaluated by simulating individual particles and thier propagation through the setup, see for example Simon Lindberg's Master's thesis\cite{simon:2013:thesis}. This may lead to an overestimation of the detector efficiencies, since, in general, more than one particle is produced in each event, which makes the analysis more complicated. The current simulation software (specifically, \prgname{ggland}\cite{johansson:2013:online}, see \autoref{sec:exsoft}) can generate multiple particles sharing momentum according to a phase-space distribution, but this does not take any matrix element into account, or internal degrees of freedom in the nuclei. The latter is crucial, since nuclear physics is all about these internal degrees of freedom. 
 
 %Since the setup should in practice identify only actual reactions products, it would be more efficient if the simulations incorporated some of the theory on the reactions to be studied. 
 
@@ -19,11 +19,11 @@ Often, detector efficiencies are evaluated by simulating individual particles an
 
 \section{Event Generator for \rtb{}}
 As briefly mentioned in the previous section, an experimental event is the result of a reaction between the target and a projectile.
-An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup by another code. 
+An \emph{event generator}, on the other hand, is in this context a code that mimics certain reactions as part of a larger simulation code. The output of such an event generator would be final-state momenta and energies of the reacting particles, which can then be propagated through the simulated experimental setup by another code. 
 %This work describes such a code
 %In principle, an event generator could also give initial positions for the particles to be propaged, but since the reactions takes place on a negliable length scale, compared to the experimental setup, this is in practice not needed.
 
-In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicing the experiment. Considering our present knowledge of nuclear physics, this would be an unfeasible project. Instead, this work will be limited to a certain class of reactions, where a \emph{compound nucleus} is created as part of a \emph{quasi-elastic scattering} event. These terms are explained in more detail in \autoref{sec:theory:nuc-col}, but in essence, an excited nucleus is created by knocking out an internal cluster or nucleon from an existing nucleus.
+In principle, one can think of an event generator that exactily simulates the reactions at the target and returns a final state with a probability mimicking the experiment. Considering our present knowledge of nuclear physics, this would be an unfeasible project. Instead, this work will be limited to a certain class of reactions, where a \emph{compound nucleus} is created as part of a \emph{quasi-elastic scattering} event. These terms are explained in more detail in \autoref{sec:theory:nuc-col}, but in essence, an excited nucleus is created by knocking out an internal cluster or nucleon from an existing nucleus.
 
 %In the next section, we will discuss design related
 
@@ -59,7 +59,7 @@ The software also needs to be suitable for use with other programs in use in the
 \label{sec:exsoft}
 The event generator is intended to be used together with \prgname{Geant4}, which is a widely used toolkit for simulating the interaction of particles in matter\cite{allison:2006:art}. It takes advantage of the wrapper program \prgname{ggland}\cite{johansson:2013:online}, which is designed to make it easy to run the simulations needed for the analysis of the LAND/\rtb{} experiments. \prgname{ggland} passes on information about the experimental setup and tells \prgname{Geant4} which particles to propagate through this setup.
 
-In addition to the software the event generator is intended to work with, there are a few codes which have been helpful during the development process:
+In addition to the software that the event generator is intended to work with, there are a few codes which have been helpful during the development process:
 
 The code is largely based upon \prgname{CODEX}\cite{gollerthan:1988:thesis}, which simulates fusion and the subsequent decay of a compound nucleus. The choice of models in this work is largely based on a setting in \prgname{CODEX}.
 The quasi-elastic scattering part of the code (described in \autoref{sec:fast}) has been adapted from the \prgname{quasi\_elastic} code, written by Leonid Chulkov.

@@ -1,1 +1,20 @@
-TODO.
+The code is available on Github. It may be retrieved by running
+\begin{lstlisting}[language=bash]
+git clone https://github.com/daringli/Codez.git
+\end{lstlisting}
+
+A convenient way to compile the programs is to run \texttt{make}. To compile a program mentioned in \autoref{sec:code}, run 
+\begin{lstlisting}[language=bash]
+make <program name>
+\end{lstlisting}
+In addition, \texttt{make all} will compile and link all the programs, and \texttt{make clean} will remove all the \emph{.o files}.
+
+In order to actually succeed in compiling the programs, a few dependencies need to be satisfied. All the programs rely on \emph{Boost program options} \footnote{Boost program options (Release 1.57): \url{http://www.boost.org/doc/libs/1_57_0/doc/html/program_options.html}, retrieved 2015-06-11} to parse command-line flags, and many rely on \emph{Boost random}\footnote{Boost random (Release 1.57): \url{http://www.boost.org/doc/libs/1_57_0/doc/html/boost_random.html}, retrieved 2015-06-11} to generate random numbers. The function in \texttt{deexcite.cc} also rely on \emph{Boost special functions}\footnote{Boost special (Release 1.57) \url{http://www.boost.org/doc/libs/1_57_0/libs/math/doc/html/special.html}, retrieved 2015-06-11.}.
+
+\prgname{Boost} is a highly regarded C++ library project, which aim to provide general and useful functions to complement the  C++ Standard Library. Many modern Linux distributions provide these files through their packet manager systems, and they may also be downloaded from \url{http://sourceforge.net/projects/boost/files/boost/1.57.0/} or accessed at \texttt{/n/home/bstefan/m/boost\_1\_57\_0/} on the Chalmers subatomic computers. The program options library needs to be built and linked to, while the other libraries just need the appropriate includes. The \texttt{CXXFLAGS} and in the makefile should be changed to include these paths, unless the library is installed in a directory already present in the path variable.
+
+Also required by all the ``2root'' programs is the \prgname{ROOT} library\footnote{\prgname{ROOT}: \url{https://root.cern.ch/drupal/}, retrieved 2015-06-11.}. The location of this library should be set in the \texttt{\prgname{ROOT}\_libs} variable in the makefile. Specifically, \prgname{ROOT 5.34/10} was used in this work.
+
+\emph{Boost random} is used to generate random numbers with the Mersenne Twister algorithm MT19937-64, a functionality which can also be found in the C++11 standard library. \emph{Boost random} was used to make the code compatible with older compilers, and that dependency could in principle be dropped at the cost of making the code incompatible with older C++ standards.
+
+The code was compiled with \prgname{gcc 4.7.2}, although it \emph{should} be standard compliant and thus work with other compilers.

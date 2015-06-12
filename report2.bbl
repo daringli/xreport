@@ -4,7 +4,7 @@
 GSI - R3B, 2014.
 \newblock
   \newline\url{https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b.htm}.
-\newblock (accessed 2015-04-16).
+\newblock (accessed 16 April 2015).
 
 \bibitem{simon:2013:thesis}
 S.~Lindberg.
@@ -12,9 +12,8 @@ S.~Lindberg.
 \newblock Master's thesis, Chalmers University of Technology, 2013.
 
 \bibitem{johansson:2013:online}
-H.~Johansson.
-\newblock ggland - command-line simulation wrapper, Apr 2013.
-\newblock \newline\url{http://fy.chalmers.se/~f96hajo/ggland/}.
+\newline\url{http://fy.chalmers.se/~f96hajo/ggland/}.
+\newblock (Accessed 12 June 2015).
 
 \bibitem{allison:2006:art}
 J.~Allison, K.~Amako, J.~Apostolakis, et~al.
@@ -51,32 +50,27 @@ N.~Metropolis, R.~Bivins, M.~Storm, et~al.
 \newblock Monte Carlo Calculations on Intranuclear Cascades. I. Low-Energy
   Studies.
 \newblock {\em Phys. Rev.}, 110:185--203, Apr 1958.
-\newblock http://link.aps.org/doi/10.1103/PhysRev.110.185.
 
 \bibitem{cucinotta:1998:art}
 F.~Cucinotta, J.~Wilson, J.~Shinn, and R.~Tripathi.
 \newblock Assessment and requirements of nuclear reaction databases for \{GCR\}
   transport in the atmosphere and structures.
 \newblock {\em Advances in Space Research}, 21(12):1753 -- 1762, 1998.
-\newblock http://www.sciencedirect.com/science/article/pii/S0273117798000623.
 
 \bibitem{goldhaber:1974:art}
 A.~Goldhaber.
 \newblock Statistical models of fragmentation processes.
 \newblock {\em Physics Letters B}, 53(4):306 -- 308, 1974.
-\newblock http://www.sciencedirect.com/science/article/pii/0370269374903888.
 
 \bibitem{moniz:1971}
 E.~J. Moniz, I.~Sick, R.~R. Whitney, et~al.
 \newblock Nuclear Fermi Momenta from Quasielastic Electron Scattering.
 \newblock {\em Phys. Rev. Lett.}, 26:445--448, Feb 1971.
-\newblock http://link.aps.org/doi/10.1103/PhysRevLett.26.445.
 
 \bibitem{bartke2009introduction}
 J.~Bartke.
 \newblock {\em Introduction to Relativistic Heavy Ion Physics}.
 \newblock World Scientific, 2009.
-\newblock https://books.google.se/books?id=huWqnD0MbiIC.
 
 \bibitem{schmidt:1991:art}
 K.~H. Schmidt and W.~Morawek.
@@ -98,20 +92,18 @@ W.~J. Swiatecki.
 \newblock Number of partitions of an integer into distinct parts: Introduction
   to partitions, 2015.
 \newblock
-  http://functions.wolfram.com/IntegerFunctions/PartitionsQ/introductions/Partitions/ShowAll.html.
-\newblock (accessed 2015-05-20).
+  \newline\url{http://functions.wolfram.com/IntegerFunctions/PartitionsQ/introductions/Partitions/ShowAll.html}.
+\newblock (accessed 20 May 2015).
 
 \bibitem{grossjean1985}
 M.~Grossjean and H.~Feldmeier.
 \newblock Level density of a Fermi gas with pairing interactions.
 \newblock {\em Nuclear Physics A}, 444(1):113 -- 132, 1985.
-\newblock http://www.sciencedirect.com/science/article/pii/0375947485902945.
 
-\bibitem{saddle1999}
-C.~Goutis and G.~Casella.
-\newblock Explaining the Saddlepoint Approximation.
-\newblock {\em The American Statistician}, 53(3):pp. 216--224, 1999.
-\newblock http://www.jstor.org/stable/2686100.
+\bibitem{arfken2012mathematical}
+G.~Arfken, H.~Weber, and F.~Harris.
+\newblock {\em Mathematical Methods for Physicists: A Comprehensive Guide}.
+\newblock Elsevier, 2012.
 
 \bibitem{ripl:2006}
 {International Atomic Energy Agency}.
@@ -124,7 +116,6 @@ J.~R. Grover.
 \newblock Shell-Model Calculations of the Lowest-Energy Nuclear Excited States
   of Very High Angular Momentum.
 \newblock {\em Phys. Rev.}, 157:832--847, May 1967.
-\newblock http://link.aps.org/doi/10.1103/PhysRev.157.832.
 
 \bibitem{ericson:1960}
 T.~Ericson.
@@ -135,13 +126,11 @@ T.~Ericson.
 P.~Moller, J.~Nix, W.~Myers, and W.~Swiatecki.
 \newblock Nuclear Ground-State Masses and Deformations.
 \newblock {\em Atomic Data and Nuclear Data Tables}, 59(2):185 -- 381, 1995.
-\newblock http://www.sciencedirect.com/science/article/pii/S0092640X85710029.
 
 \bibitem{blocki1977}
 J.~Blocki, J.~Randrup, W.~Swiatecki, and C.~Tsang.
 \newblock Proximity forces.
 \newblock {\em Annals of Physics}, 105(2):427 -- 462, 1977.
-\newblock http://www.sciencedirect.com/science/article/pii/0003491677902494.
 
 \bibitem{fosco:2012}
 C.~D. Fosco, F.~C. Lombardo, and F.~D. Mazzitelli.
@@ -165,7 +154,6 @@ M.~Balasubramaniam and N.~Arunachalam.
 \newblock Proton and $\ensuremath{\alpha}$-radioactivity of spherical proton
   emitters.
 \newblock {\em Phys. Rev. C}, 71:014603, Jan 2005.
-\newblock http://link.aps.org/doi/10.1103/PhysRevC.71.014603.
 
 \bibitem{proton-proxy:2010}
 H.~F. Zhang, Y.~J. Wang, J.~M. Dong, J.~Q. Li, and W.~Scheid.
@@ -178,7 +166,8 @@ W.~D. Myers.
 \newblock Geometric properties of leptodermous distributions with applications
   to nuclei.
 \newblock {\em Nuclear Physics A}, 204(3):465 -- 484, 1973.
-\newblock http://www.sciencedirect.com/science/article/pii/0375947473903886.
+\newblock
+  \newline\url{http://www.sciencedirect.com/science/article/pii/0375947473903886}.
 
 \bibitem{weisskopf:1979}
 J.~M. Blatt and V.~F. Weisskopf.
@@ -189,7 +178,6 @@ J.~M. Blatt and V.~F. Weisskopf.
 E.~C. Kemble.
 \newblock A Contribution to the Theory of the B. W. K. Method.
 \newblock {\em Phys. Rev.}, 48:549--561, Sep 1935.
-\newblock http://link.aps.org/doi/10.1103/PhysRev.48.549.
 
 \bibitem{2011arXiv1106.1065N}
 C.-S. {Ng}.
@@ -200,7 +188,6 @@ C.-S. {Ng}.
 R.~K. Adair.
 \newblock Nuclear Potential Well Depth.
 \newblock {\em Phys. Rev.}, 94:737--738, May 1954.
-\newblock \newline\url{http://link.aps.org/doi/10.1103/PhysRev.94.737}.
 
 \bibitem{Chomaz:1997}
 P.~Chomaz.
@@ -211,14 +198,12 @@ P.~Chomaz.
 J.~M. Moss, C.~M. Rozsa, D.~H. Youngblood, J.~D. Bronson, and A.~D. Bacher.
 \newblock Isoscalar Giant Resonance in Light Nuclei ($A<40$).
 \newblock {\em Phys. Rev. Lett.}, 34:748--751, Mar 1975.
-\newblock http://link.aps.org/doi/10.1103/PhysRevLett.34.748.
 
 \bibitem{speth1991electric}
 J.~Speth.
 \newblock {\em Electric and Magnetic Giant Resonances in Nuclei}.
 \newblock International Review of Nuclear Physics Series. World Scientific
   Publishing Company Incorporated, 1991.
-\newblock https://books.google.se/books?id=o4423vnEoz8C.
 
 \bibitem{audi:1995}
 G.~Audi.

@@ -1,18 +1,18 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  5 JUN 2015 14:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.27)  12 JUN 2015 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report2.t
+**report2.tex
 
 ! Emergency stop.
-<*> report2.t
-             
+<*> report2.tex
+               
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 4 strings out of 493485
- 110 string characters out of 3143525
+ 3 strings out of 493485
+ 108 string characters out of 3143525
  47818 words of memory out of 3000000
  3412 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
